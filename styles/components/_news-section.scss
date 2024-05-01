@@ -1,0 +1,13 @@
+.news {
+  max-width: 384px;
+  margin: 0 auto;
+
+  @include responsive(M) {
+    max-width: 712px;
+
+    .section-title::before {
+      background: url("../../assets/images/ico_tit_news_date29.gif") no-repeat;
+      background-size: contain;
+    }
+  }
+}

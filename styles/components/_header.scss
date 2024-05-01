@@ -66,7 +66,7 @@
     .btn-group {
       button,
       a {
-        width: 18px;
+        width: 20px;
         height: 84px;
         color: transparent;
         position: relative;
@@ -78,10 +78,10 @@
         display: block;
         position: absolute;
         content: "";
-        background-color: #eee;
+        background-color: $bg-gray;
         border-radius: 50%;
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -109,7 +109,7 @@
       line-height: 84px;
       letter-spacing: -0.05rem;
       font-weight: 400;
-      font-size: 15px;
+      font-size: 17px;
       .gnb-list {
         display: flex;
 
@@ -138,7 +138,7 @@
         }
       }
       &:hover {
-        color: gray;
+        color: $font-gray;
 
         .gnb-item:last-child::after {
           background: url("../../assets/images/link-icon-gray.svg") no-repeat;
@@ -164,7 +164,7 @@
       height: 48px;
       white-space: nowrap;
       background-color: black;
-      color: #eee;
+      color: $font-white-gray;
       border-radius: 24px;
       z-index: 10;
 

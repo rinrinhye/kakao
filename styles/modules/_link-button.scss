@@ -1,0 +1,43 @@
+%link-button {
+  display: block;
+  text-align: center;
+  background-color: $bg-gray;
+  position: relative;
+}
+
+%right-arrow {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.round-link-btn {
+  @extend %link-button;
+  height: 48px;
+  line-height: 48px;
+  font-size: 15px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  img {
+    @extend %right-arrow;
+    margin-left: 8px;
+  }
+
+  @include responsive(M) {
+    width: 280px;
+    height: 60px;
+    border-radius: 30px;
+
+    img {
+      margin-left: 12px;
+    }
+  }
+}
+
+.square-link-btn-right {
+  @extend %link-button;
+}

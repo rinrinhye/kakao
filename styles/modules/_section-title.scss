@@ -1,0 +1,35 @@
+%section-title-base {
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: -0.1rem;
+
+  @include responsive(M) {
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 48px;
+      height: 48px;
+      margin-right: 4px;
+    }
+  }
+
+  // @include responsive(XL) {
+  //   font-size: 48px;
+  //   line-height: 72px;
+
+  //   &::before {
+  //     width: 72px;
+  //     height: 72px;
+  //     margin-right: 16px;
+  //   }
+  // }
+}
+
+.section-title {
+  @extend %section-title-base;
+}

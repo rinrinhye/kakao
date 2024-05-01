@@ -1,6 +1,14 @@
 @import "./base/reset";
+@import "./colors";
 @import "./base/globals";
 
 @import "./mixins/responsive";
 
+@import "./modules/section-title";
+@import "./modules/link-button";
+
 @import "./components/header";
+@import "./components/service-section";
+@import "./components/news-section";
+@import "./components/promise-section";
+@import "./components/help-section";
