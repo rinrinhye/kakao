@@ -1,9 +1,6 @@
-.service {
+.section-service {
   max-width: 384px;
   margin: 0 auto;
-  .service-cont {
-    margin-top: 24px;
-  }
 
   .service-list {
     display: flex;
@@ -30,7 +27,7 @@
     background: $bg-gray;
     letter-spacing: -0.1rem;
 
-    .items-box {
+    .link-group {
       position: absolute;
       left: 20px;
       bottom: 20px;
@@ -61,7 +58,7 @@
       background-size: contain;
     }
 
-    .service-cont {
+    .section-content {
       text-align: center;
     }
 
@@ -78,7 +75,7 @@
       margin: 8px 0 0 8px;
       font-size: 18px;
 
-      .items-box {
+      .link-group {
         position: static;
         gap: 9px;
       }
@@ -96,7 +93,7 @@
     .service-item {
       margin: 12px 0 0 12px;
       border-radius: 24px;
-      .items-box {
+      .link-group {
         gap: 8px;
       }
     }

@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="header-inner">
+        <div class="header-wrapper">
           <h1 class="logo">
             <a href="">Kakao</a>
           </h1>
@@ -76,13 +76,13 @@
       </header>
       <main>
         <h2>홈 본문</h2>
-        <section class="service">
+        <section class="section section-service">
           <h3 class="section-title">더 나은 세상을 만드는 카카오 서비스</h2>
-          <div class="service-cont">
+          <div class="section-content">
             <ul class="service-list">
               <li class="service-item">
                 <strong class="title">커뮤니케이션</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao.png);">카카오톡</a>
                   <a href="" class="item" style="background-image: url(./assets/images/service-daum.png);">다음</a>
                   <a href="" class="item  desktop-only" style="background-image: url(./assets/images/service-kakao-story.png);">카카오 스토리</a>
@@ -91,7 +91,7 @@
               </li>
               <li class="service-item">
                 <strong class="title">비즈니스</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-channel.png);">카카오톡 채널</a>
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-cloud.png);">카카오 클라우드</a>
                   <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-kakao-agit.png);">아지트</a>
@@ -100,7 +100,7 @@
               </li>
               <li class="service-item">
                 <strong class="title">일상편의</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-map.png);">카카오 맵</a>
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakaoT.png);">카카오 티</a>
                   <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-kakao-bank.png);">카카오뱅크</a>
@@ -109,7 +109,7 @@
               </li>
               <li class="service-item">
                 <strong class="title">쇼핑</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakaotalk-gift.png);">카카오톡 선물하기</a>
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakaotalk-shopping.png);">카카오톡 쇼핑하기</a>
                   <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-zigzag.png);">지그재그</a>
@@ -118,7 +118,7 @@
               </li>
               <li class="service-item">
                 <strong class="title">엔터테인먼트</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-page.png);">카카오 페이지</a>
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-piccoma.png);">픽코마</a>
                   <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-melon.png);">멜론</a>
@@ -127,20 +127,19 @@
               </li>              
               <li class="service-item">
                 <strong class="title">소셜임팩트</strong>
-                <div class="items-box">
+                <div class="link-group">
                   <a href="" class="item" style="background-image: url(./assets/images/service-kakao-together.png);">같이가치</a>
                   <a href="" class="item">소셜임팩트 더보기</a>
                 </div>
               </li>
             </ul>
             <a class="round-link-btn" href="">서비스 전체보기
-              <img src="./assets/images/right-arrow.svg" alt="">
             </a>
           </div>
         </section>
-        <section class="news">
+        <section class="section section-news">
           <h3 class="section-title">오늘의 뉴스</h3>
-          <div class="news-cont">
+          <div class="section-content">
             <div class="wrap-top">
               <div></div>
             </div>
@@ -150,54 +149,270 @@
             </div>
           </div>
         </section>
-        <section class="promise">
+        <section class="section section-responsible">
           <h3 class="section-title">약속과 책임</h3>
-          <div class="promise-cont">
-            <div class="promise-cont-item esg">
-              <span class="title">
-                <span class="name">ESG</span>       
+          <div class="section-content">
+            <div class="responsible-box esg">
+              <span class="title-area">
+                <span class="title">ESG</span>       
               </span>
-              <img src="./assets/images/esg-inner.gif" alt="">
+              <img class="image" src="./assets/images/esg-inner.gif" alt="">
               <p class="text">모두의 지속가능한 미래를 위한 카카오의 약속과 책임</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
               </span>
             </div>
-            <div class="promise-cont-item green">
-              <span class="title">
-                <span class="name">액티브그린</span>       
+            <div class="responsible-box green">
+              <span class="title-area">
+                <span class="title">액티브그린</span>       
               </span>
-              <img src="./assets/images/green-inner.gif" alt="">
+              <img class="image" src="./assets/images/green-inner.gif" alt="">
               <p class="text">카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
               </span>
             </div>
-            <div class="promise-cont-item policy">
-                            <span class="title">
-                <span class="name">정책매거진</span>       
+            <div class="responsible-box policy">
+              <span class="title-area">
+                <span class="title">정책매거진</span>       
               </span>
-              <img src="./assets/images/policy-inner.gif" alt="">
+              <img class="image" src="./assets/images/policy-inner.gif" alt="">
               <p class="text">기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
               </span>
             </div>
-            <section class="help">
-              <h3 class="section-title"></h3>
-              <div class="section-cont">
-                <div class="wrap-top">
-                  <div class="center-link-group"></div>
-                </div>
-                <div class="wrap-bottom"></div>
-                <a href="" class="round-link-btn"></a>
-              </div>
-            </section>
           </div>
         </section>
+        <section class="section section-help">
+          <h3 class="section-title">
+            무엇을 도와드릴까요?
+          </h3>
+          <div class="section-content">
+            <div class="wrap-top">
+              <div class="center-link-box-group">
+                <a class="center-link-box" href="">
+                  <strong class="title">카카오 고객센터</strong>
+                  <span class="sub-text">바로가기</span>
+                </a>
+                <a class="center-link-box" href="">
+                  <strong class="title">다음 고객센터</strong>
+                  <span class="sub-text">바로가기</span>
+                </a>
+                <a class="center-link-box" href="">
+                  <strong class="title">커머스 고객센터</strong>
+                  <span class="sub-text">바로가기</span>
+                </a>
+              </div>
+              <div class="color-box-group">
+                <div class="social-box">
+                  <strong class="title">카카오의 다양한 소식을 구독하세요!</strong>
+                  <span class="sub-text">공식 소셜 미디어 바로가기</span>
+                  <div class="sns-icon-group">
+                    <a class="kakao " href="">카카오</a>
+                    <a class="youtube" href="">유튜브</a>
+                    <a class="instagram" href="">인스타그램</a>
+                    <a class="facebook" href="">페이스북</a>
+                    <a class="linkedin" href="">링크드인</a>
+                  </div>
+                </div>
+                <div class="recruit-box">
+                  <strong class="title">세상만사에 관심이 많다면,<br>
+                    당신은 이미 카카오 크루</strong>
+                    <a class="sub-link" href="">영입소식</a>
+                </div>
+              </div>
 
+            </div>
+            <div class="wrap-bottom">
+              <a class="kakao-ir-box" href="">
+                <strong class="title">투자정보</strong>
+                <img class="image" src="./assets/images/kakao-ir.png" alt="">
+                <span class="sub-text">바로가기</span>
+              </a>
+              <a class="kakao-privacy-box" href="">
+                <strong class="title">데이터의 연결과 보호의 균형을 위한 카카오의 노력</strong>
+                <img class="image" src="./assets/images/kakao-privacy.png" alt="">
+                <span class="sub-text">바로가기</span>
+              </a>
+            </div>
+            <a href="" class="round-link-btn">카카오 소식 모아보기</a>
+          </div>
+        </section>
       </main>
-      <footer></footer>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <h3 class="footer-title">오늘의 카카오</h3>
+          <div class="wrap-top">
+            <div class="main-service-group">
+              <ul class="service-list">
+                <li>
+                  <a href="">카카오톡 공식 다운로드</a>
+                </li>
+                <li>
+                  <a href="">카카오톡백업</a>
+                </li>
+                <li>
+                  <a href="">#카카오 이모티콘샵</a>
+                </li>
+                <li>
+                  <a href="">#조용한채팅방</a>
+                </li>
+                <li>
+                  <a href="">#카카오맵</a>
+                </li>
+                <li>
+                  <a href="">#지속가능성</a>
+                </li>
+                <li>
+                  <a href="">#개발자도구</a>
+                </li>
+              </ul>
+            </div>
+            <div class="wrap-service-group">
+              <div class="service-group">
+                <button class="title" type="button">
+                  공동체 기업의 서비스
+                </button>
+                <ul class="service-list">
+                  <li><a href="">커뮤니케이션</a></li>
+                  <li><a href="">일상편의</a></li>
+                  <li><a href="">비즈니스</a></li>
+                  <li><a href="">쇼핑</a></li>
+                  <li><a href="">엔터테인먼트</a></li>
+                  <li><a href="">임팩트</a></li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button class="title" type="button">카카오 공동체</button>
+                <ul class="service-list">
+                  <li><a href="">카카오</a></li>
+                  <li><a href="">카카오페이</a></li>
+                  <li><a href="">카카오뱅크</a></li>
+                  <li><a href="">카카오모빌리티</a></li>
+                  <li><a href="">카카오스타일</a></li>
+                  <li><a href="">카카오엔터테인먼트</a></li>
+                  <li><a href="">카카오게임즈</a></li>
+                  <li><a href="">카카오픽코마</a></li>
+                  <li><a href="">카카오브레인</a></li>
+                  <li><a href="">카카오엔터프라이즈</a></li>
+                  <li><a href="">카카오헬스케어</a></li>
+                  <li><a href="">카카오벤처스</a></li>
+                  <li><a href="">카카오인베스트먼트</a></li>
+                  <li><a href="">링키지랩</a></li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button class="title" type="button">IR</button>
+                <ul class="service-list">                  
+                  <li><a href="">기업지배구조</a></li>
+                  <li><a href="">주가정보</a></li>
+                  <li><a href="">재무정보</a></li>
+                  <li><a href="">IR행사</a></li>
+                  <li><a href="">공시정보</a></li>
+                  <li><a href="">공고</a></li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button class="title" type="button">계정 및 지원</button>
+                <ul class="service-list">
+                  <li><a href="">카카오계정</a></li>
+                  <li><a href="">카카오 프라이버시</a></li>
+                  <li><a href="">카카오 고객센터</a></li>
+                  <li><a href="">다음 고객센터</a></li>
+                  <li><a href="">커머스 고객센터</a></li>
+                  <li><a href="">인재영입</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-bottom">
+            <div class="wrap-info">
+              <div>
+                <button type="button">이용약관</button>
+                <div>
+                  <a href="">카카오계정서비스</a>
+                  <a href="">카카오 서비스</a>
+                  <a href="">Daum 서비스</a>
+                </div>
+              </div>
+              <div>
+                <button type="button">위치정보 이용약관</button>
+                <div>
+                  <a href="">카카오 서비스</a>
+                  <a href="">Daum 서비스</a>
+                </div>
+              </div>
+              <div>
+                <button type="button">개인정보처리방침</button>
+                <div>
+                  <a href="">기업사이트</a>
+                  <a href="">카카오 서비스</a>
+                </div>
+              </div>
+              <div>
+                <a type="button">운영정책</a>
+              </div>
+              <div>
+                <button type="button">청소년보호정책</button>
+                <div>
+                  <a href="">카카오 서비스</a>
+                  <a href="">Daum 서비스</a>
+                </div>
+              </div>
+              <div>
+                <a type="button">접근성 안내</a>
+              </div>
+              <div>
+                <a type="button">운영정책</a>
+              </div>
+              <div>
+                <a type="button">브랜드보호정책</a>
+              </div>
+              <div>
+                <a type="button">권리침해진고안내</a>
+              </div>
+              <div>
+                <button type="button">공지사항</button>
+                <div>
+                  <a href="">투자정보 공지</a>
+                  <a href="">카카오 서비스</a>
+                  <a href="">Daum 서비스</a>
+                </div>
+              </div>
+              <div>
+                <a type="button">사이버윤리실</a>
+              </div>
+              <div>
+                <a type="button">Contact Us</a>
+              </div>
+            </div>
+            <div class="wrap-relation">
+              <div>
+                <button type="button">관련사이트</button>
+                <div>
+                  <ul>
+                    <li><a href="">카카오 AI</a></li>
+                    <li><a href="">카카오 프라이버시</a></li>
+                    <li><a href="">카카오 디벨로퍼스</a></li>
+                    <li><a href="">다음 포털 사이트</a></li>
+                    <li><a href="">동반 성장 사이트</a></li>
+                    <li><a href="">제주 with kako</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <small>
+              ©<a href="">Kakao Corp.</a>
+              All rights reserved.
+            </small>
+          </div>
+
+  
+
+        </div>
+   
+      </footer>
     </div>
   </body>
 </html>

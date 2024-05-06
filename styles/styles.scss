@@ -7,8 +7,11 @@
 @import "./modules/section-title";
 @import "./modules/link-button";
 
+@import "./layouts/section-layouts";
+
 @import "./components/header";
-@import "./components/service-section";
-@import "./components/news-section";
-@import "./components/promise-section";
-@import "./components/help-section";
+@import "./components/section-service";
+@import "./components/section-news";
+@import "./components/section-responsible";
+@import "./components/section-help";
+@import "./components/footer";

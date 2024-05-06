@@ -1,6 +1,6 @@
 %rounded-box {
-  border-radius: 16px;
   background-color: $bg-gray;
+  border-radius: 16px;
 
   @include responsive(L) {
     border-radius: 24px;

@@ -3,12 +3,16 @@
   text-align: center;
   background-color: $bg-gray;
   position: relative;
-}
+  letter-spacing: -0.1rem;
 
-%right-arrow {
-  display: block;
-  width: 24px;
-  height: 24px;
+  &::after {
+    content: "";
+    margin-left: 8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/right-arrow-small.svg") no-repeat;
+  }
 }
 
 .round-link-btn {
@@ -22,17 +26,12 @@
   align-items: center;
   margin: 0 auto;
 
-  img {
-    @extend %right-arrow;
-    margin-left: 8px;
-  }
-
   @include responsive(M) {
     width: 280px;
     height: 60px;
     border-radius: 30px;
 
-    img {
+    &::after {
       margin-left: 12px;
     }
   }

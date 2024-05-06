@@ -1,11 +1,8 @@
-.promise {
-  max-width: 384px;
-  margin: 0 auto;
-
-  .promise-cont {
+.section-responsible {
+  .section-content {
   }
 
-  .promise-cont-item {
+  .responsible-box {
     position: relative;
     width: 100%;
     height: 295px;
@@ -15,7 +12,7 @@
       margin-bottom: 20px;
     }
 
-    .title {
+    .title-area {
       position: absolute;
       right: 0;
       padding: 0 0 11px 11px;
@@ -41,7 +38,7 @@
       }
     }
 
-    .name {
+    .title {
       display: inline-block;
       width: 186px;
       height: 40px;
@@ -93,13 +90,13 @@
 
   .esg {
     background-color: $sky-blue;
-    .name {
+    .title {
       background-color: $sky-blue;
     }
   }
   .green {
     background-color: $dark-green;
-    .name {
+    .title {
       background-color: $green;
     }
     .text {
@@ -108,7 +105,7 @@
   }
   .policy {
     background-color: $dark-black;
-    .name {
+    .title {
       background-color: $yellow;
     }
     .text {
@@ -117,8 +114,6 @@
   }
 
   @include responsive(M) {
-    max-width: 712px;
-
     .section-title {
       margin-bottom: 24px;
     }
@@ -127,16 +122,18 @@
       background-size: contain;
     }
 
-    .promise-cont {
+    .section-content {
       display: flex;
       gap: 8px;
     }
 
-    .promise-cont-item {
+    .responsible-box {
       height: 341px;
-      .title {
+
+      .title-area {
         padding: 0 0 12px 12px;
-        .name {
+
+        .title {
           width: 125px;
           height: 32px;
           line-height: 32px;
@@ -144,14 +141,14 @@
         }
       }
 
-      img {
+      .image {
         margin-top: -11px;
       }
 
       .text {
         bottom: 20px;
         left: 20px;
-        max-width: 140px;
+        max-width: 145px;
         font-size: 17px;
       }
 
@@ -185,20 +182,18 @@
   }
 
   @include responsive(L) {
-    max-width: 948px;
-
-    .promise-cont-item {
+    .responsible-box {
       height: 397px;
 
-      .title {
-        .name {
+      .title-area {
+        .title {
           width: 168px;
           height: 40px;
           line-height: 40px;
         }
       }
 
-      img {
+      .image {
         height: 180px;
       }
 

@@ -1,5 +1,5 @@
 .header {
-  .header-inner {
+  .header-wrapper {
     margin: 0 auto;
     max-width: 412px;
     padding: 0 14px;
@@ -10,6 +10,7 @@
 
   .logo {
     color: transparent;
+
     a {
       display: block;
       width: 74px;
@@ -51,14 +52,14 @@
   }
 
   @include responsive(M) {
-    .header-inner {
+    .header-wrapper {
       padding: 0;
       max-width: 712px;
     }
   }
 
   @include responsive(L) {
-    .header-inner {
+    .header-wrapper {
       max-width: 952px;
       height: 84px;
     }
