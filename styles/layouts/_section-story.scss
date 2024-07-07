@@ -1,0 +1,64 @@
+.section-story {
+  .section-content {
+  }
+
+  .story-slide-list {
+    display: flex;
+  }
+
+  .js-marquee-wrapper,
+  .js-marquee {
+    display: flex;
+  }
+
+  .slide-button-wrapper {
+    position: relative;
+    height: 32px;
+    margin: 0 auto 20px auto;
+
+    .slide-button {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../../assets/images/ico_pause.svg") no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  @include responsive(M) {
+    position: relative;
+
+    .section-title::before {
+      background-image: url("../../assets/images/ico_tit_story.gif");
+      background-size: contain;
+    }
+
+    .slide-button-wrapper {
+      position: absolute;
+      top: 80px;
+      height: 48px;
+      width: 32px;
+      right: 0;
+    }
+  }
+
+  @include responsive(L) {
+    .slide-button-wrapper {
+    }
+
+    @include responsive(XL) {
+      .slide-button-wrapper {
+        height: 72px;
+
+        .slide-button {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+  }
+}

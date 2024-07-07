@@ -1,11 +1,16 @@
 .header {
-  .header-wrapper {
-    margin: 0 auto;
-    max-width: 412px;
-    padding: 0 14px;
-    height: 72px;
+  position: sticky;
+  top: 0;
+  background: $white;
+
+  .header-inner {
     display: flex;
     justify-content: space-between;
+
+    max-width: 412px;
+    height: 72px;
+    margin: 0 auto;
+    padding: 0 14px;
   }
 
   .logo {
@@ -13,8 +18,10 @@
 
     a {
       display: block;
+
       width: 74px;
       height: 72px;
+
       background: url("/assets/images/kakao-logo.svg") no-repeat;
       background-size: contain;
     }
@@ -52,14 +59,14 @@
   }
 
   @include responsive(M) {
-    .header-wrapper {
-      padding: 0;
+    .header-inner {
       max-width: 712px;
+      padding: 0;
     }
   }
 
   @include responsive(L) {
-    .header-wrapper {
+    .header-inner {
       max-width: 952px;
       height: 84px;
     }
@@ -67,26 +74,30 @@
     .btn-group {
       button,
       a {
+        position: relative;
         width: 20px;
         height: 84px;
         color: transparent;
-        position: relative;
       }
 
       .search-btn:hover::after,
       .darkmode-btn:hover::after,
       .lang-btn:hover::after {
-        display: block;
-        position: absolute;
         content: "";
-        background-color: $bg-gray;
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
+
+        position: absolute;
+        z-index: -10;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: -10;
+
+        display: block;
+
+        width: 36px;
+        height: 36px;
+
+        background-color: $bg-gray;
+        border-radius: 50%;
       }
 
       .darkmode-btn,
@@ -95,49 +106,58 @@
       }
 
       .darkmode-btn {
+        vertical-align: top;
         background: url("../../assets/images/moon-icon.png") no-repeat center;
         background-size: contain;
-        vertical-align: top;
       }
+
       .lang-btn {
+        vertical-align: top;
         background: url("../../assets/images/globe-icon.png") no-repeat center;
         background-size: contain;
-        vertical-align: top;
       }
     }
 
     .gnb {
+      font-size: 17px;
+      font-weight: 400;
       line-height: 84px;
       letter-spacing: -0.05rem;
-      font-weight: 400;
-      font-size: 17px;
+
       .gnb-list {
         display: flex;
 
         .gnb-item {
+          cursor: pointer;
           position: relative;
           padding: 0 20px;
-          cursor: pointer;
         }
 
         .gnb-item:hover {
           color: black;
         }
+
         .gnb-item:hover:last-child::after {
           background: url("../../assets/images/link-icon.svg") no-repeat;
         }
+
         .gnb-item:last-child::after {
-          display: block;
           content: "";
+
           position: absolute;
-          background: url("../../assets/images/link-icon.svg") no-repeat;
+          top: 50%;
+          right: 5%;
+          transform: translateY(-50%);
+
+          display: block;
+
           width: 9px;
           height: 9px;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 5%;
+
+          background: url("../../assets/images/link-icon.svg") no-repeat;
         }
       }
+
       &:hover {
         color: $font-gray;
 
@@ -156,18 +176,22 @@
     }
 
     .lnb {
-      display: none;
       position: absolute;
+      z-index: 10;
       top: 60px;
       left: 50%;
       transform: translateX(-50%);
-      padding: 0 24.5px;
+
+      display: none;
+
       height: 48px;
-      white-space: nowrap;
-      background-color: black;
+      padding: 0 24.5px;
+
       color: $font-white-gray;
+      white-space: nowrap;
+
+      background-color: black;
       border-radius: 24px;
-      z-index: 10;
 
       li {
         display: inline-block;

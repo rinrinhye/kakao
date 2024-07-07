@@ -1,33 +1,37 @@
-.section {
+.section,
+.footer-inner {
   max-width: 384px;
   margin: 0 auto;
-  padding-top: 80px;
 
   @include responsive(M) {
     max-width: 712px;
   }
+
   @include responsive(L) {
     max-width: 948px;
+  }
+
+  @include responsive(XL) {
+    max-width: 1316px;
   }
 }
 
-.footer-wrapper {
-  max-width: 384px;
-  margin: 0 auto;
-
-  @include responsive(M) {
-    max-width: 712px;
-  }
-  @include responsive(L) {
-    max-width: 948px;
-  }
+.section:not(.section-visual) {
+  padding-top: 80px;
 }
 
 main {
-  padding-top: 72px;
-  padding-bottom: 80px;
-
   @include responsive(L) {
-    padding-top: 84px;
+    // padding-top: 84px;
   }
+
+  // padding-top: 72px;
+  padding-bottom: 80px;
+}
+
+body {
+  overflow-x: hidden;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 }

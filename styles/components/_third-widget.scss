@@ -1,0 +1,141 @@
+.third-widget {
+  display: flex;
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+    cursor: pointer;
+
+    &.slick-next {
+      background: url("../../assets/images/ico_slide_next_white.svg") no-repeat;
+      background-size: contain;
+      right: 12px;
+    }
+
+    &.slick-prev {
+      background: url("../../assets/images/ico_slide_prev_white.svg") no-repeat;
+      background-size: contain;
+      left: 12px;
+    }
+  }
+
+  .content-01,
+  .content-02 {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 220px;
+
+    text-align: center;
+
+    border-radius: 24px;
+
+    .title {
+    }
+  }
+
+  .content-01 {
+    background-color: $yellow;
+
+    img {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  .content-02 {
+    position: relative;
+    overflow: hidden;
+    background: url("../../assets/images/banner-history.webp") no-repeat center;
+    background-size: contain;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0.2;
+      background: $black;
+    }
+
+    .title {
+      position: relative;
+      color: $white;
+    }
+  }
+
+  @include responsive(M) {
+    width: 232px;
+
+    .content-01,
+    .content-02 {
+      height: 232px;
+    }
+
+    .slick-arrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @include responsive(L) {
+    width: 192px;
+
+    .content-01,
+    .content-02 {
+      height: 120px;
+      position: relative;
+      border-radius: 16px 0 0 16px;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        background: url("../../assets/images/bubble.svg") no-repeat;
+        right: -2px;
+        top: -2px;
+        width: 28px;
+        height: 124px;
+      }
+    }
+
+    .slick-arrow {
+      &.slick-next {
+        right: 22px;
+      }
+    }
+  }
+
+  @include responsive(XL) {
+    width: 215px;
+
+    .content-01,
+    .content-02 {
+      height: 124px;
+      position: relative;
+      border-radius: 16px 0 0 16px;
+
+      &:after {
+        background: url("../../assets/images/bubble-large.svg") no-repeat;
+        width: 36px;
+        height: 128px;
+      }
+    }
+  }
+}

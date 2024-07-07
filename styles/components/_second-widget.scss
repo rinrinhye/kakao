@@ -1,0 +1,110 @@
+.second-widget {
+  display: flex;
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 24px;
+
+    li {
+      padding: 8px;
+      button {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: $black;
+        border-radius: 4px;
+        font-size: 0;
+        opacity: 0.45;
+        cursor: pointer;
+      }
+
+      &.slick-active {
+        button {
+          width: 24px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .content-01,
+  .content-02,
+  .content-03 {
+    flex-shrink: 0;
+    height: 180px;
+    padding: 20px;
+
+    width: 100%;
+
+    background: $bg-gray;
+    border-radius: 16px;
+
+    .badge {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .content-01 {
+  }
+
+  .content-02 {
+  }
+
+  .content-03 {
+  }
+
+  .wrap-tags {
+    span {
+      font-size: 14px;
+      color: $font-medium-gray;
+    }
+  }
+
+  @include responsive(M) {
+    width: 232px;
+
+    .content-01,
+    .content-02,
+    .content-03 {
+      height: 232px;
+    }
+  }
+  @include responsive(L) {
+    width: 180px;
+
+    .content-01,
+    .content-02,
+    .content-03 {
+      height: 170px;
+    }
+
+    .slick-dots {
+      bottom: 4px;
+    }
+  }
+
+  @include responsive(XL) {
+    width: 206px;
+
+    .content-01,
+    .content-02,
+    .content-03 {
+      height: 259px;
+    }
+
+    .slick-dots {
+      bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.customer-center-box {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 128px;
+  padding: 16px 16px 52px;
+
+  background: $bg-gray;
+  border-radius: 12px;
+
+  &:hover {
+    .sub-text::after {
+      opacity: 0.8;
+    }
+  }
+
+  .title {
+    display: inline-block;
+
+    max-width: 80px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.1rem;
+    word-break: keep-all;
+  }
+
+  .sub-text {
+    position: absolute;
+    bottom: 16px;
+    font-size: 0;
+
+    &::after {
+      content: "";
+
+      transform: rotate(-45deg);
+
+      display: block;
+
+      width: 25px;
+      height: 25px;
+
+      background: url("../../assets/images/right-arrow-small.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .icon {
+    display: none;
+  }
+
+  @include responsive(M) {
+    height: 74px;
+    padding: 24px;
+    border-radius: 16px;
+
+    .title {
+      max-width: none;
+      font-size: 17px;
+    }
+
+    .sub-text {
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+
+  @include responsive(L) {
+    height: 110px;
+    border-radius: 20px;
+
+    .sub-text {
+      bottom: 24px;
+      left: 24px;
+      right: auto;
+      font-size: 14px;
+      line-height: 24px;
+
+      &::after {
+        position: absolute;
+        top: 0px;
+        left: auto;
+        right: -33px;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @include responsive(XL) {
+    height: 153px;
+    padding: 36px 40px;
+
+    .title {
+      font-size: 26px;
+    }
+
+    .sub-text {
+      font-size: 17px;
+      line-height: 1.58;
+      bottom: 36px;
+      left: 40px;
+    }
+
+    .icon {
+      width: 84px;
+      height: 84px;
+      right: 40px;
+    }
+  }
+}

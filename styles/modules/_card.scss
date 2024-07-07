@@ -1,0 +1,74 @@
+%card {
+  position: relative;
+  padding: 21px 20px 0;
+  background: $bg-gray;
+  border-radius: 16px;
+  // width: 384px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  a {
+    display: block;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .ico-cate {
+      height: 32px;
+      width: 32px;
+    }
+
+    .date {
+      color: $dark-black;
+    }
+  }
+
+  .thumb {
+    margin: 0 -20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+%news-card {
+  @extend %card;
+
+  .info {
+    margin-bottom: 8px;
+
+    .ico-cate {
+      margin-right: 4px;
+    }
+
+    .date {
+      font-size: 12px;
+      margin-left: 8px;
+    }
+  }
+
+  .title {
+    display: block;
+    height: 78px;
+    letter-spacing: -0.7px;
+    font-size: 16px;
+    line-height: 1.62;
+    -webkit-line-clamp: 3;
+    word-break: keep-all;
+  }
+
+  @include responsive(M) {
+    .info {
+      .ico-cate {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

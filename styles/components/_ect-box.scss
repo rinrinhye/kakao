@@ -1,0 +1,114 @@
+.ect-box {
+  position: relative;
+
+  display: block;
+
+  min-height: 94px;
+  padding: 16px 16px 52px;
+
+  font-size: 16px;
+
+  background: $bg-gray;
+  border-radius: 16px;
+
+  .sub-text {
+    font-size: 0;
+  }
+
+  .sub-text::after {
+    content: "";
+
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    transform: rotate(-45deg);
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background: url("../../assets/images/right-arrow-small.svg") no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.8;
+    }
+  }
+
+  .title {
+    display: block;
+
+    max-width: 241px;
+
+    line-height: 1.5;
+    letter-spacing: -0.1rem;
+    word-break: keep-all;
+  }
+
+  .image {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+    width: 62px;
+    height: 62px;
+  }
+
+  @include responsive(M) {
+    flex-basis: 50%;
+    flex-grow: 1;
+    height: 140px;
+    padding: 24px;
+
+    .title {
+      font-size: 17px;
+    }
+
+    .image {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .sub-text {
+      position: absolute;
+      line-height: 24px;
+      bottom: 24px;
+      left: 24px;
+      font-size: 14px;
+    }
+
+    .sub-text::after {
+      left: auto;
+      right: -33px;
+      top: 0;
+    }
+  }
+
+  @include responsive(L) {
+    border-radius: 20px;
+  }
+
+  @include responsive(XL) {
+    padding: 36px 40px;
+    height: 200px;
+    .title {
+      min-width: 365px;
+      font-size: 26px;
+    }
+
+    .sub-text {
+      bottom: 36px;
+      left: 40px;
+      font-size: 17px;
+      line-height: 1.58;
+    }
+
+    .image {
+      width: 84px;
+      height: 84px;
+      right: 40px;
+    }
+  }
+}

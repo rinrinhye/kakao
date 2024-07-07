@@ -1,11 +1,17 @@
 .desktop-only {
-  @media screen and (max-width: 1023px) {
+  @media screen and (width <= 1023px) {
     display: none !important;
   }
 }
 
 .desktop-hidden {
-  @media screen and (min-width: 1025px) {
+  @media screen and (width >= 1025px) {
+    display: none !important;
+  }
+}
+
+.large-hidden {
+  @media screen and (min-width: 1023px) {
     display: none !important;
   }
 }

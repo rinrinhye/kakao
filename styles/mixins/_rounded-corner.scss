@@ -1,0 +1,92 @@
+@mixin rounded-corner($position) {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../../assets/images/promise-item-rounded.svg");
+  }
+
+  @include responsive(XL) {
+    &::before,
+    &::after {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  @if $position == "top" {
+    &::before {
+      top: -2px;
+      left: -16px;
+    }
+
+    &::after {
+      right: -2px;
+      bottom: -16px;
+    }
+
+    @include responsive(XL) {
+      &::before {
+        top: -3px;
+        left: -23px;
+      }
+
+      &::after {
+        right: -3px;
+        bottom: -23px;
+      }
+    }
+  }
+
+  @if $position == "bottom" {
+    &::before,
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      top: -16px;
+      right: -2px;
+    }
+
+    &::after {
+      bottom: -2px;
+      left: -16px;
+    }
+
+    @include responsive(XL) {
+      &::before {
+        top: -23px;
+        right: -3px;
+      }
+
+      &::after {
+        bottom: -3px;
+        left: -23px;
+      }
+    }
+  }
+  // @if $position == "bottom-left" {
+  //   &::before,
+  //   &::after {
+  //     transform: rotate(-180deg);
+  //   }
+
+  //   &::before {
+  //     bottom: -2px;
+  //     right: -16px;
+  //   }
+
+  //   &::after {
+  //     top: -16px;
+  //     left: -16px;
+  //   }
+  // }
+}

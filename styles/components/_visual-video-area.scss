@@ -1,0 +1,181 @@
+.visual-video-area {
+  .visual-video-cont {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 16px 0 16px 16px;
+
+    .visual-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      height: 100%;
+    }
+
+    .link-banner {
+      @include rounded-corner(top);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+      align-items: flex-start;
+
+      padding: 5px 0 6px 11px;
+
+      background: $white;
+      border-radius: 0 0 0 16px;
+
+      .text {
+        position: relative;
+
+        padding: 12px 20px;
+
+        font-size: 12px;
+        line-height: 1.7;
+        color: $white;
+        letter-spacing: -0.02rem;
+
+        background: $black;
+        border-radius: 12px;
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          right: -3px;
+          bottom: 1px;
+
+          display: block;
+
+          width: 10.5px;
+          height: 13px;
+
+          background: url("../../assets/images/speach-bubble-tail.svg")
+            no-repeat;
+        }
+      }
+
+      .icon {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+
+  .visual-title-cont {
+    margin-bottom: 20px;
+    padding: 20px 14px 0;
+
+    .main-title {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 26px;
+      line-height: 1.38;
+    }
+
+    .sub-title {
+      font-size: 15px;
+    }
+  }
+
+  .round-link-btn {
+  }
+
+  @include responsive(M) {
+    position: relative;
+
+    .visual-video-cont {
+      height: 405px;
+
+      .link-banner {
+        border-radius: 0 0 0 20px;
+        padding: 0 0 5px 11px;
+
+        .text {
+          font-size: 14px;
+          padding: 9px 16px;
+          vertical-align: top;
+        }
+
+        .icon {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    .visual-title-cont {
+      position: absolute;
+      width: 400px;
+      left: 50px;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      color: $white;
+
+      .main-title {
+        font-size: 32px;
+        letter-spacing: -0.8;
+      }
+    }
+
+    .round-link-btn {
+      position: absolute;
+      bottom: 0;
+      padding: 15px 28px 16px;
+      width: auto;
+      height: auto;
+      border-radius: 0 20px 0 0;
+      line-height: 24px;
+
+      background: $white;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        transform: rotate(-180deg);
+        width: 22px;
+        height: 22px;
+        background-image: url("../../assets/images/promise-item-rounded.svg");
+      }
+
+      &::before {
+        bottom: -2px;
+        right: -20px;
+      }
+
+      &::after {
+        top: -20px;
+        left: -14px;
+      }
+    }
+  }
+
+  @include responsive(L) {
+    .visual-video-cont {
+      height: 486px;
+    }
+
+    .visual-title-cont {
+      left: 80px;
+      top: 80px;
+    }
+  }
+
+  @include responsive(XL) {
+    .visual-video-cont {
+      height: 621px;
+    }
+
+    .visual-title-cont {
+      left: 80px;
+      top: 80px;
+    }
+  }
+}

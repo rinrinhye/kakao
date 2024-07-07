@@ -3,15 +3,33 @@
 @import "./base/globals";
 
 @import "./mixins/responsive";
+@import "./mixins/rounded-corner";
 
 @import "./modules/section-title";
 @import "./modules/link-button";
+@import "./modules/badge";
+@import "./modules/card";
+@import "./modules/tags-group";
 
 @import "./layouts/section-layouts";
+@import "./layouts/section-story";
+@import "./layouts/section-service";
+@import "./layouts/section-responsible";
+@import "./layouts/section-help";
 
 @import "./components/header";
-@import "./components/section-service";
+@import "./components/section-visual";
 @import "./components/section-news";
-@import "./components/section-responsible";
-@import "./components/section-help";
+@import "./components/news-card";
+@import "./components/sm-news-card";
+@import "./components/customer-center-box";
+@import "./components/color-box";
+@import "./components/ect-box";
+@import "./components/story-card";
+@import "./components/first-widget";
+@import "./components/second-widget";
+@import "./components/third-widget";
+@import "./components/visual-video-area";
+
+@import "./components/responsible-box";
 @import "./components/footer";

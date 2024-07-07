@@ -1,0 +1,96 @@
+.section-help {
+  .wrap-top {
+    margin-bottom: 12px;
+  }
+
+  .wrap-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .customer-center-box-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .color-box-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @include responsive(M) {
+    .section-title::before {
+      background-image: url("../../assets/images/ico_tit_help.gif");
+      background-size: contain;
+    }
+
+    .wrap-top {
+      margin-bottom: 8px;
+    }
+
+    .wrap-bottom {
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    .customer-center-box-group {
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .color-box-group {
+      flex-direction: row;
+      gap: 8px;
+      flex: 1;
+    }
+  }
+
+  @include responsive(L) {
+    .wrap-top {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .wrap-bottom {
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .customer-center-box-group {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 0;
+      width: 308px;
+    }
+
+    .color-box-group {
+      gap: 12px;
+    }
+  }
+
+  @include responsive(XL) {
+    .wrap-top {
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .wrap-bottom {
+      gap: 16px;
+    }
+
+    .customer-center-box-group {
+      gap: 16px;
+      width: 428px;
+    }
+
+    .color-box-group {
+      gap: 16px;
+    }
+  }
+}

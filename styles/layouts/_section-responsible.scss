@@ -1,0 +1,29 @@
+.section-responsible {
+  .responsible-box:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include responsive(M) {
+    .section-title::before {
+      background: url("../../assets/images/ico_tit_promise.gif") no-repeat;
+      background-size: contain;
+    }
+
+    .section-content {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  @include responsive(L) {
+    .section-content {
+      gap: 12px;
+    }
+  }
+
+  @include responsive(XL) {
+    .section-content {
+      gap: 16px;
+    }
+  }
+}
