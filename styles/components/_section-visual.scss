@@ -21,6 +21,7 @@
     .widget-wrap {
       flex-direction: row;
       gap: 8px;
+      justify-content: space-between;
     }
   }
 
@@ -43,6 +44,11 @@
   @include responsive(XL) {
     .visual-video-area {
       width: 1094px;
+    }
+
+    .widget-wrap {
+      width: 206px;
+      height: 621px;
     }
   }
 }

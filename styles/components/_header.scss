@@ -2,6 +2,8 @@
   position: sticky;
   top: 0;
   background: $white;
+  z-index: $header-level;
+  border-bottom: 1px solid $font-white-gray;
 
   .header-inner {
     display: flex;
@@ -22,14 +24,16 @@
       width: 74px;
       height: 72px;
 
-      background: url("/assets/images/kakao-logo.svg") no-repeat;
+      background: url("/assets/images/logo.svg") no-repeat;
       background-size: contain;
+      background-position: center;
     }
   }
 
   .btn-group {
     flex-shrink: 0;
     font-size: 17px;
+    padding-right: 4px;
 
     a {
       display: inline-block;
@@ -47,13 +51,14 @@
     }
 
     .search-btn {
-      background: url("../../assets/images/search-icon.png") no-repeat center;
+      background: url("../../assets/images/icon/ic_search.png") no-repeat center;
       background-size: contain;
     }
 
     .hamburger-btn {
       margin-left: 18px;
-      background: url("../../assets/images/hamburger-icon.png") no-repeat center;
+      background: url("../../assets/images/icon/ic_hamburger.png") no-repeat
+        center;
       background-size: contain;
     }
   }
@@ -69,6 +74,12 @@
     .header-inner {
       max-width: 952px;
       height: 84px;
+    }
+
+    .logo {
+      a {
+        height: 84px;
+      }
     }
 
     .btn-group {
@@ -107,13 +118,14 @@
 
       .darkmode-btn {
         vertical-align: top;
-        background: url("../../assets/images/moon-icon.png") no-repeat center;
+        background: url("../../assets/images/icon/ic_moon.png") no-repeat center;
         background-size: contain;
       }
 
       .lang-btn {
         vertical-align: top;
-        background: url("../../assets/images/globe-icon.png") no-repeat center;
+        background: url("../../assets/images/icon/ic_globe.png") no-repeat
+          center;
         background-size: contain;
       }
     }
@@ -138,7 +150,8 @@
         }
 
         .gnb-item:hover:last-child::after {
-          background: url("../../assets/images/link-icon.svg") no-repeat;
+          background: url("../../assets/images/icon/ic_outlink_black.svg")
+            no-repeat;
         }
 
         .gnb-item:last-child::after {
@@ -154,7 +167,8 @@
           width: 9px;
           height: 9px;
 
-          background: url("../../assets/images/link-icon.svg") no-repeat;
+          background: url("../../assets/images/icon/ic_outlink_black.svg")
+            no-repeat;
         }
       }
 
@@ -162,7 +176,8 @@
         color: $font-gray;
 
         .gnb-item:last-child::after {
-          background: url("../../assets/images/link-icon-gray.svg") no-repeat;
+          background: url("../../assets/images/icon/ic_outlink-gray.svg")
+            no-repeat;
         }
       }
     }
@@ -205,6 +220,21 @@
 
       li:not(:last-child) {
         margin-right: 24px;
+      }
+    }
+  }
+
+  @include responsive(XL) {
+    .header-inner {
+      max-width: 1316px;
+      height: 92px;
+    }
+
+    .gnb {
+      .gnb-list {
+        .gnb-item {
+          padding: 0 30px;
+        }
       }
     }
   }

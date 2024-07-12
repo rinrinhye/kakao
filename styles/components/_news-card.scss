@@ -164,11 +164,10 @@
         font-size: 14px;
         margin-left: 12px;
       }
-    }
 
-    .share-button {
-      top: 41px;
-      right: 30px;
+      .share-button {
+        right: 0;
+      }
     }
 
     .title {
@@ -189,6 +188,148 @@
   }
 }
 
-// .page {
-//   position: absolute;
-// }
+.news-card > .share-overlay-group {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px 12px;
+  z-index: -10;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 16px;
+
+  &.is-active {
+    // display: block;
+    opacity: 1;
+    z-index: 100;
+
+    .share-sns-icon-group {
+      height: 132px;
+
+      .share-icon {
+        height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+
+      .share-icon::after {
+      }
+    }
+  }
+
+  .close-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .share-sns-icon-group {
+    width: 24px;
+    height: 0;
+    transition: height 200ms ease-in-out;
+
+    .share-icon {
+      transition: all 200ms ease-in-out;
+      height: 0;
+      margin-bottom: 0;
+
+      &::after {
+        display: block;
+        content: "";
+        height: 24px;
+        width: 24px;
+        background-color: $font-white-gray;
+        background-repeat: no-repeat;
+        background-size: 65%;
+        background-position: center;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .share-kakao::after {
+    background-image: url("/assets/images/icon/ic_kakao.png");
+  }
+  .share-facebook::after {
+    background-image: url("/assets/images/icon/ic_facebook.png");
+  }
+  .share-twitter::after {
+    background-image: url("/assets/images/icon/ic_twitter.png");
+  }
+  .share-link::after {
+    background-image: url("/assets/images/icon/ic_link.png");
+  }
+
+  @include responsive(L) {
+    padding: 30px 16px;
+
+    &.is-active {
+      .share-sns-icon-group {
+        width: 36px;
+        height: 180px;
+
+        .share-icon {
+          height: 36px;
+        }
+      }
+    }
+
+    .share-sns-icon-group {
+      position: relative;
+      right: -4px;
+      height: 0;
+      width: 36px;
+      .share-icon {
+        width: 36px;
+        height: 0;
+        &::after {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  @include responsive(XL) {
+    padding: 40px 30px;
+    &.is-active {
+      .share-sns-icon-group {
+        width: 36px;
+        .share-icon {
+          height: 36px;
+        }
+      }
+    }
+
+    .share-sns-icon-group {
+      right: -8px;
+      height: 0;
+      width: 36px;
+      .share-icon {
+        width: 36px;
+        height: 0;
+        &::after {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

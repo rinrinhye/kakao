@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kakao</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>카카오</title>
     <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
 ></script>
@@ -17,16 +17,25 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
+<link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#fae100">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="container">
       <header class="header">
         <div class="header-inner">
           <h1 class="logo">
-            <a href="">Kakao</a>
+            <a class="" href="">
+              <span class="sr-only">카카오</span>
+            </a>
           </h1>
           <nav class="gnb desktop-only">
+            <h2 class="sr-only">메인 메뉴</h2>
             <ul class="gnb-list">
               <li class="gnb-item">
                 소개
@@ -74,38 +83,54 @@
             </ul>
           </nav>
           <div class="btn-group">
-            <button class="search-btn" type="button"></button>
-            <button class="hamburger-btn desktop-hidden" type="button"></button>
-            <a href="" class="lang-btn desktop-only">fff</a>
-            <a href="" class="darkmode-btn desktop-only">gg</a>
+            <button 
+            class="search-btn" 
+            type="button"
+          >
+          <span class="sr-only">검색창 열기</span>
+          </button>
+          <button 
+          class="hamburger-btn desktop-hidden" 
+          type="button">
+          <span class="sr-only">메인 메뉴 열기</span>
+          </button>
+          <a href="" class="lang-btn desktop-only" 
+          aria-label="영어로 보기"></a>
+          <a href="" 
+          class="darkmode-btn desktop-only" 
+          aria-label="다크모드로 보기">
+          </a>
           </div>
         </div>
       </header>
       <main>
-        <h2>홈 본문</h2>
+        <h2 class="sr-only" >홈 본문</h2>
         <section class="section section-visual">
           <div class="section-content">
             <div class="wrap-top">
               <div class="visual-video-area">
                 <div class="visual-video-cont">
-                  <video class="visual-video" autoplay src="./assets/videos/main-video.mp4" ></video>
-                  <a class="link-banner" href="">
-                    <span class="text">카카오 소식 모아보기</span>
-                    <img class="icon" src="./assets/images/ico_info.gif" alt="">
-                  </a>
+                  <video class="visual-video" autoplay muted loop playsinline src="./assets/videos/main-video.mp4" ></video>
+
                 </div>
+                <a class="link-banner" href="">
+                    <span class="text">카카오 소식 모아보기</span>
+                    <img class="icon" src="./assets/images/kakao-icon/ico_info.gif" alt="">
+                  </a>
                 <div class="visual-title-cont">
                   <strong class="main-title">모두의 삶<br>모두의 기술</strong>
                   <p class="sub-title">모두의 삶 프로젝트 Ep.2</p>
                 </div>
-                <button class="round-link-btn" type="button">영상 보러가기
-                  <img src="./assets/images/right-arrow-small.svg" alt="">
-                </button>
+                <a class="round-link-btn" href="" target="_blank" title="새 창 열림
+                ">영상 보러가기
+                  <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
+                </a>
               </div>
             </div>
             <div class="wrap-bottom">
               <div class="widget-wrap">
                 <div class="first-widget">
+                  <div class="first-widget-slide">
                   <div class="content-01">
                     <a href="">
                       <span class="inner-text">기부에 함께 해주신 착한 마음들</span>
@@ -117,8 +142,11 @@
                   </div>
                   <div class="content-02">
                     <a href="">
-                      <!-- <img src="./assets/images/banner-impact.png" alt=""> -->
                     </a>
+                  </div>
+                  </div>
+                  <div class="custom-paging sm-only">
+                    <span class="num_current">1</span> <span  class="txt_divide"> / </span> <span class="num_total">2</span>
                   </div>
                 </div>
                 <div class="second-widget">
@@ -162,8 +190,8 @@
                 <div class="third-widget">
                   <div class="content-01">
                     <a href="">
-                      <img src="./assets/images/banner-community.png" alt="">
-                      <span class="title">공동체</span>
+                      <img src="./assets/images/widget/widget_community.png" alt="">
+                      <span class="title">카카오 그룹</span>
                     </a>
                   </div>
                   <div class="content-02">
@@ -188,7 +216,7 @@
                 <li>
                   <div class="story-card">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_card.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_card.webp" alt="">
                       <span class="badge badge-white">더 가깝게</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -213,7 +241,7 @@
                         <span>#카카오톡채널</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_01.webp" alt="">
+                        <img src="./assets/images/story/img_story_01.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -221,7 +249,7 @@
                 <li>                
                   <div class="story-card reverse">
                   <div class="info">
-                    <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                    <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                     <span class="badge badge-white">임팩트</span>
                     <button class="share-button">          
                       <svg viewBox="-10 0 24 24">
@@ -245,7 +273,7 @@
                       <span>#파트너상생</span>
                     </div> 
                     <div class="thumb">
-                      <img src="./assets/images/img_story_02.webp" alt="">
+                      <img src="./assets/images/story/img_story_02.webp" alt="">
                     </div>
                   </a>
                 </div>
@@ -253,7 +281,7 @@
                 <li>                
                     <div class="story-card">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_card.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_card.webp" alt="">
                       <span class="badge  badge-white">임팩트</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -279,7 +307,7 @@
                         <span>#약속과책임</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_03.webp" alt="">
+                        <img src="./assets/images/story/img_story_03.webp" alt="">
                       </div>
                     </a>
                   </div
@@ -288,7 +316,7 @@
                 <li>                
                     <div class="story-card reverse">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                       <span class="badge  badge-white">서비스</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -312,7 +340,7 @@
                         <span>#카카오톡</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_04.webp" alt="">
+                        <img src="./assets/images/story/img_story_04.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -320,7 +348,7 @@
                 <li>                
                     <div class="story-card wide wide-01">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_picture.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_picture.webp" alt="">
                       <span class="badge badge-white">뚝딱뚝딱 성장기</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -338,8 +366,12 @@
                       </button>
                     </div>
                     <a class="story-card-link" href="">                  
-                      <div class="title">지역 정보 매체에서<br>위치 기반 상호작용<br>
+                      <div class="title lg-hidden xl-hidden">지역 정보 매체에서<br>위치 기반 상호작용<br>
                         플랫폼으로
+                      </div>
+                      <div class="title sm-hidden md-hidden">
+                        지역 정보 매체에서<br>
+                        위치 기반 상호작용 플랫폼으로
                       </div>
                       <span class="sub-text">카카오맵에서 일어난<br>
                       24년 간의 업데이트 이야기</span>
@@ -348,8 +380,8 @@
                         <span>#카카오맵</span>
                       </div> 
                       <div class="thumb">
-                        <img class="default-img" src="./assets/images/img_story_05.webp" alt="">
-                        <img class="wide-img"  src="./assets/images/img_story_05_squre.webp" alt="">
+                        <img class="default-img" src="./assets/images/story/img_story_05.webp" alt="">
+                        <img class="wide-img"  src="./assets/images/story/img_story_05_squre.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -357,7 +389,7 @@
                 <li>                
                     <div class="story-card reverse">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                       <span class="badge badge-white">더 가깝게</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -382,7 +414,7 @@
                         <span>#웹툰</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_06.webp" alt="">
+                        <img src="./assets/images/story/img_story_06.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -390,7 +422,7 @@
                 <li>                
                     <div class="story-card">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                       <span class="badge badge-white">서비스</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -415,7 +447,7 @@
                         <span>#카톡이지</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_07.webp" alt="">
+                        <img src="./assets/images/story/img_story_07.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -423,7 +455,7 @@
                 <li>                
                     <div class="story-card reverse">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                       <span class="badge badge-white">서비스</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -447,7 +479,7 @@
                         <span>#카카오톡</span>
                       </div> 
                       <div class="thumb">
-                        <img src="./assets/images/img_story_08.webp" alt="">
+                        <img src="./assets/images/story/img_story_08.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -455,7 +487,7 @@
                 <li>                
                     <div class="story-card wide wide-02">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_film.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_film.webp" alt="">
                       <span class="badge badge-white">임팩트</span>
                       <button class="share-button">          
                         <svg viewBox="-10 0 24 24">
@@ -482,8 +514,8 @@
                         <span>#카카오톡상생활동</span>
                       </div> 
                       <div class="thumb">
-                        <img class="default-img" src="./assets/images/img_story_09.webp" alt="">
-                        <img class="wide-img" src="./assets/images/img_story_09_square.webp" alt="">
+                        <img class="default-img" src="./assets/images/story/img_story_09.webp" alt="">
+                        <img class="wide-img" src="./assets/images/story/img_story_09_square.webp" alt="">
                       </div>
                     </a>
                   </div>
@@ -498,59 +530,59 @@
               <li class="service-item">
                 <strong class="title">커뮤니케이션</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao.png);">카카오톡</a>
-                  <a href="" class="item" style="background-image: url(./assets/images/service-daum.png);">다음</a>
-                  <a href="" class="item  desktop-only" style="background-image: url(./assets/images/service-kakao-story.png);">카카오 스토리</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao.png);">카카오톡</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-daum.png);">다음</a>
+                  <a href="" class="item  desktop-only" style="background-image: url(./assets/images/service/service-kakao-story.png);">카카오 스토리</a>
                   <a href="" class="item">커뮤니케이션 더보기</a>
                 </div>
               </li>
               <li class="service-item">
                 <strong class="title">비즈니스</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-channel.png);">카카오톡 채널</a>
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-cloud.png);">카카오 클라우드</a>
-                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-kakao-agit.png);">아지트</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-channel.png);">카카오톡 채널</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-cloud.png);">카카오 클라우드</a>
+                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service/service-kakao-agit.png);">아지트</a>
                   <a href="" class="item">비즈니스 더보기</a>
                 </div>
               </li>
               <li class="service-item">
                 <strong class="title">일상편의</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-map.png);">카카오 맵</a>
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakaoT.png);">카카오 티</a>
-                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-kakao-bank.png);">카카오뱅크</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-map.png);">카카오 맵</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakaoT.png);">카카오 티</a>
+                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service/service-kakao-bank.png);">카카오뱅크</a>
                   <a href="" class="item">일상편의 더보기</a>
                 </div>
               </li>
               <li class="service-item">
                 <strong class="title">쇼핑</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakaotalk-gift.png);">카카오톡 선물하기</a>
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakaotalk-shopping.png);">카카오톡 쇼핑하기</a>
-                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-zigzag.png);">지그재그</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakaotalk-gift.png);">카카오톡 선물하기</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakaotalk-shopping.png);">카카오톡 쇼핑하기</a>
+                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service/service-zigzag.png);">지그재그</a>
                   <a href="" class="item">쇼핑 더보기</a>
                 </div>
               </li>
               <li class="service-item">
                 <strong class="title">엔터테인먼트</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-page.png);">카카오 페이지</a>
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-piccoma.png);">픽코마</a>
-                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service-melon.png);">멜론</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-page.png);">카카오 페이지</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-piccoma.png);">픽코마</a>
+                  <a href="" class="item desktop-only" style="background-image: url(./assets/images/service/service-melon.png);">멜론</a>
                   <a href="" class="item">엔터테인먼트 더보기</a>
                 </div>
               </li>              
               <li class="service-item">
                 <strong class="title">소셜임팩트</strong>
                 <div class="link-group">
-                  <a href="" class="item" style="background-image: url(./assets/images/service-kakao-together.png);">같이가치</a>
+                  <a href="" class="item" style="background-image: url(./assets/images/service/service-kakao-together.png);">같이가치</a>
                   <a href="" class="item">소셜임팩트 더보기</a>
                 </div>
               </li>
             </ul>
             <a class="round-link-btn" href="">
               서비스 전체보기
-              <img src="./assets/images/right-arrow-small.svg" alt="">
+              <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
             </a>
           </div>
         </section>
@@ -562,7 +594,7 @@
                 <div class="news-card-slide">
                   <div class="news-card" >
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_article.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_article.webp" alt="">
                       <span class="badge badge-white">보도자료</span>
                       <span class="date">2024.05.28</span>
                       <button class="share-button">          
@@ -588,25 +620,25 @@
                         <span>#대한민국숙박세일페스타</span>
                       </div>
                       <div class="thumb">
-                        <img src="./assets/images/thumb_article_02.webp" alt="">
+                        <img src="./assets/images/news/thumb_article_01.webp" alt="">
                       </div>
                     </a>
                      <div class="share-overlay-group">
                       <button class="close-button">
-                        <img src="./assets/images/ico_close.svg" alt="">
+                        <img src="./assets/images/ic_close_white.svg" alt="">
                       </button>
                       <div class="share-sns-icon-group">                   
-                        <a class="share-kakao" href="">                     
+                        <a class="share-icon share-kakao" href="">                   
                         </a>
-                        <a class="share-facebook" href="">
+                        <a class="share-icon share-facebook" href="">
                         </a>
-                        <a class="share-twitter" href=""></a>
-                        <a class="share-linkedin" href=""></a></div>
+                        <a class="share-icon share-twitter" href=""></a>
+                        <a class="share-icon share-link" href=""></a></div>
                      </div>
                   </div>
                   <div class="news-card" >
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_article.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_article.webp" alt="">
                       <span class="badge badge-white">보도자료</span>
                       <span class="date">2024.05.27</span>
                       <button class="share-button">          
@@ -633,26 +665,26 @@
                         <span>#카쇼라 이벤트</span>
                       </div>
                       <div class="thumb">
-                        <img src="./assets/images/thumb_article_01.webp" alt="">
+                        <img src="./assets/images/news/thumb_article_02.webp" alt="">
                       </div>
                     </a>
-                     <div class="share-overlay-group">
+                     <div class="share-overlay-group ">
                       <button class="close-button">
-                        <img src="./assets/images/ico_close.svg" alt="">
+                        <img src="./assets/images/ic_close_white.svg" alt="">
                       </button>
                       <div class="share-sns-icon-group">                   
-                        <a class="share-kakao" href="">
+                        <a class="share-icon share-kakao" href="">
                                                
                         </a>
-                        <a class="share-facebook" href="">
+                        <a class="share-icon share-facebook" href="">
                         </a>
-                        <a class="share-twitter" href=""></a>
-                        <a class="share-linkedin" href=""></a></div>
+                        <a class="share-icon share-twitter" href=""></a>
+                        <a class="share-icon share-link" href=""></a></div>
                      </div>
                   </div>
                   <div class="news-card" >
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_article.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_article.webp" alt="">
                       <span class="badge badge-white">보도자료</span>
                       <span class="date">2024.05.28</span>
                       <button class="share-button">          
@@ -678,21 +710,22 @@
                         <span>#이커머스</span>
                       </div>
                       <div class="thumb">
-                        <img src="./assets/images/thumb_article_03.webp" alt="">
+                        <img src="./assets/images/news/thumb_article_03.webp" alt="">
                       </div>
                     </a>
 
                      <div class="share-overlay-group">
                       <button class="close-button">
-                        <img src="./assets/images/ico_close.svg" alt="">
+                        <img src="./assets/images/ic_close_white.svg" alt="">
                       </button>
                       <div class="share-sns-icon-group">                   
-                        <a class="share-kakao" href="">                     
+                        <a class="share-icon  share-kakao" href="">                     
                         </a>
-                        <a class="share-facebook" href="">
+                  
+                        <a class="share-icon  share-facebook" href="">
                         </a>
-                        <a class="share-twitter" href=""></a>
-                        <a class="share-linkedin" href=""></a></div>
+                        <a class="share-icon share-twitter" href=""></a>
+                        <a class="share-icon share-link" href=""></a></div>
                      </div>
                   </div>
                 </div>
@@ -705,25 +738,80 @@
                 <div class="sm-news-card-slide">
                   <div class="sm-news-card">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_article.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_article.webp" alt="">
                       <span class="badge badge-white">보도자료</span>
                       <span class="date">2024.05.20</span>
+                      <button class="share-button" tabindex="0">          
+                        <svg viewBox="-10 0 24 24">
+                          <g stroke-width="1.6">
+                            <g>
+                              <circle data-v-ae75f7f2="" cx="2" cy="2" r="2">
+                              </circle>
+                              <circle data-v-ae75f7f2="" cx="2" cy="10" r="2">
+                              </circle>
+                              <circle data-v-ae75f7f2="" cx="2" cy="18" r="2">
+                              </circle>
+                           </g>
+                         </g>
+                        </svg>                 
+                      </button>
                     </div>
                     <a href="">
                       <strong class="title">
                         카카오 톡학생증, 출시 1년 만에 누적 발급 수 100만 명 돌파
                       </strong>
                     </a>
+
+                    <div class="share-overlay-group">
+                      <button class="close-button">
+                        <img src="./assets/images/ic_close_white.svg" alt="">
+                      </button>
+                      <div class="share-sns-icon-group">                   
+                        <a class="share-icon  share-kakao" href="">                     
+                        </a>
+                  
+                        <a class="share-icon  share-facebook" href="">
+                        </a>
+                        <a class="share-icon share-twitter" href=""></a>
+                        <a class="share-icon share-link" href=""></a></div>
+                     </div>
                   </div>
                   <div class="sm-news-card">
                     <div class="info">
-                      <img class="ico-cate" src="./assets/images/ico_article.webp" alt="">
+                      <img class="ico-cate" src="./assets/images/kakao-icon/ico_article.webp" alt="">
                       <span class="badge badge-white">보도자료</span>
                       <span class="date">2024.05.16</span>
+                      <button class="share-button" tabindex="0">          
+                        <svg viewBox="-10 0 24 24">
+                          <g stroke-width="1.6">
+                            <g>
+                              <circle data-v-ae75f7f2="" cx="2" cy="2" r="2">
+                              </circle>
+                              <circle data-v-ae75f7f2="" cx="2" cy="10" r="2">
+                              </circle>
+                              <circle data-v-ae75f7f2="" cx="2" cy="18" r="2">
+                              </circle>
+                           </g>
+                         </g>
+                        </svg>                 
+                      </button>
                     </div>
                     <a href="">
                       <strong class="title">카카오, 디지털 소외계층 위한 ‘더 쉬운 카톡설명서’ 공개</strong>
                     </a>
+                    <div class="share-overlay-group ">
+                      <button class="close-button">
+                        <img src="./assets/images/ic_close_white.svg" alt="">
+                      </button>
+                      <div class="share-sns-icon-group">                   
+                        <a class="share-icon  share-kakao" href="">                     
+                        </a>
+                  
+                        <a class="share-icon  share-facebook" href="">
+                        </a>
+                        <a class="share-icon share-twitter" href=""></a>
+                        <a class="share-icon share-link" href=""></a></div>
+                     </div>
                   </div>
                 </div>
               </div>
@@ -732,19 +820,19 @@
                   전체뉴스
                   <span>
                     바로가기
-                    <img src="./assets/images/right-arrow-small.svg" alt="">
+                    <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
                   </span>
                 </a>
                 <a href="" class="square-link-btn">보도자료
                   <span>
                     바로가기
-                    <img src="./assets/images/right-arrow-small.svg" alt="">
+                    <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
                   </span>
                 </a>
                 <a href="" class="square-link-btn">참고자료
                   <span>
                     바로가기
-                    <img src="./assets/images/right-arrow-small.svg" alt="">
+                    <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
                   </span>
                 </a>
               </div>
@@ -758,7 +846,7 @@
               <span class="title-area">
                 <span class="title">ESG</span>       
               </span>
-              <img class="img-responsible" src="./assets/images/esg-inner.gif" alt="">
+              <img class="img-responsible" src="./assets/images/responsible/esg_inner.gif" alt="">
               <p class="text-responsible">모두의 지속가능한 미래를 위한 카카오의 약속과 책임</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
@@ -768,7 +856,7 @@
               <span class="title-area">
                 <span class="title">액티브그린</span>       
               </span>
-              <img class="img-responsible" src="./assets/images/green-inner.gif" alt="">
+              <img class="img-responsible" src="./assets/images/responsible/green_inner.gif" alt="">
               <p class="text-responsible">카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
@@ -778,7 +866,7 @@
               <span class="title-area">
                 <span class="title">정책매거진</span>       
               </span>
-              <img class="img-responsible" src="./assets/images/policy-inner.gif" alt="">
+              <img class="img-responsible" src="./assets/images/responsible/policy_inner.gif" alt="">
               <p class="text-responsible">기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다</p>
               <span class="link-button-area" >
                 <a href="#a"class="link-button"></a>
@@ -796,17 +884,17 @@
                 <a class="customer-center-box" href="">
                   <strong class="title">카카오 고객센터</strong>
                   <span class="sub-text">바로가기</span>
-                  <img class="icon" src="./assets/images/kakao-customer-center.webp" alt="">
+                  <img class="icon" src="./assets/images/help/customer_center_kakao.webp" alt="">
                 </a>
                 <a class="customer-center-box" href="">
                   <strong class="title">다음 고객센터</strong>
                   <span class="sub-text">바로가기</span>
-                  <img class="icon" src="./assets/images/daum-customer-center.webp" alt="">
+                  <img class="icon" src="./assets/images/help/customer_center_daum.webp" alt="">
                 </a>
                 <a class="customer-center-box" href="">
                   <strong class="title">커머스 고객센터</strong>
                   <span class="sub-text">바로가기</span>
-                  <img class="icon" src="./assets/images/commerce-customer-center.webp" alt="">
+                  <img class="icon" src="./assets/images/help/customer_center_commerce.webp" alt="">
                 </a>
               </div>
               <div class="color-box-group">
@@ -832,17 +920,17 @@
             <div class="wrap-bottom">
               <a class="ect-box kakao-ir-box" href="">
                 <strong class="title">투자정보</strong>
-                <img class="image" src="./assets/images/kakao-ir.png" alt="">
+                <img class="image" src="./assets/images/help/kakao-ir.png" alt="">
                 <span class="sub-text">바로가기</span>
               </a>
               <a class="ect-box kakao-privacy-box" href="">
                 <strong class="title">데이터의 연결과 보호의 균형을 위한 카카오의 노력</strong>
-                <img class="image" src="./assets/images/kakao-privacy.png" alt="">
+                <img class="image" src="./assets/images/help/kakao-privacy.png" alt="">
                 <span class="sub-text">바로가기</span>
               </a>
             </div>
             <a href="" class="round-link-btn">카카오 소식 모아보기
-              <img src="./assets/images/right-arrow-small.svg" alt="">
+              <img src="./assets/images/icon/ic_circle_arrow_black_lg.svg" alt="">
             </a>
           </div>
         </section>
@@ -851,6 +939,7 @@
         <div   class="footer-inner">
           <h3 class="footer-title">오늘의 카카오</h3>
           <div class="wrap-top">
+            <h2 class="sr-only">하단 메뉴</h2>
             <div class="main-service-group">
               <ul class="main-service-list">
                 <li>
@@ -992,6 +1081,7 @@
             </div>
           </div>
           <div class="wrap-bottom">
+            <h2 class="sr-only">서비스 이용정보</h2>
             <div class="wrap-info-group">
               <div class="info-group">
                 <button class="text" type="button">이용약관</button>
@@ -1009,7 +1099,8 @@
                 </div>
               </div>
               <div class="info-group">
-                <button class="text link-emph" type="button">개인정보처리방침</button>
+                <button class="text link-emph" type="button">
+                  개인정보처리방침</button>
                 <div class="list-box">
                   <a href=""><span>기업사이트</span></a>
                   <a href=""><span>카카오 서비스</span></a>
@@ -1051,17 +1142,55 @@
             </div>
             <div class="wrap-relation">
               <div class="relation-group">
-                <button class="text" type="button">관련사이트</button>
-                <div>
-                  <ul>
-                    <li><a href=""><span>카카오 AI</span></a></li>
-                    <li><a href=""><span>카카오 프라이버시</span></a></li>
-                    <li><a href=""><span>카카오 디벨로퍼스</span></a></li>
-                    <li><a href=""><span>다음 포털 사이트</span></a></li>
-                    <li><a href=""><span>동반 성장 사이트</span></a></li>
-                    <li><a href=""><span>제주 with kakao</span></a></li>
+                <button 
+                class="text relation-site-button" type="button">
+                관련사이트
+
+                </button>
+                  <ul class="relation-site-list">
+                    <li>
+                      <a href="">
+                        <span>
+                          카카오 AI
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                          카카오 프라이버시
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                        카카오 디벨로퍼스
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                          다음 포털 사이트
+                        </span>
+                      </a>
+                      </li>
+                    <li>
+                      <a href="">
+                        <span>
+                        동반 성장 사이트
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                          제주 with kakao
+                        </span>
+                      </a>
+                    </li>
                   </ul>
-                </div>
               </div>
             </div>
             <small>
@@ -1076,6 +1205,7 @@
    
       </footer>
     </div>
+    <script src="./js/header.js"></script>
     <script src="./js/story-slide.js"></script>
     <script src="./js/news-card-slide.js"></script>
     <script src="./js/card-overlay.js"></script>

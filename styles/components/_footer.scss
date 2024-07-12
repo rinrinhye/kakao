@@ -65,7 +65,8 @@
         margin-top: 4px;
         margin-right: 12px;
 
-        background: url("../../assets/images/footer-arrow.svg") no-repeat;
+        background: url("../../assets/images/icon/ic_arrow_black_footer.svg")
+          no-repeat;
         background-size: contain;
       }
     }
@@ -106,7 +107,7 @@
 
       .text::after {
         transform: rotate(-90deg);
-        background: url("../../assets/images/footer-arrow.svg");
+        background: url("../../assets/images/icon/ic_arrow_black_footer.svg");
       }
     }
 
@@ -127,7 +128,7 @@
 
         &::after {
           transform: rotate(-90deg);
-          background: url("../../assets/images/footer-arrow.svg");
+          background: url("../../assets/images/icon/ic_arrow_black_footer.svg");
         }
       }
     }
@@ -151,7 +152,8 @@
       height: 9px;
       margin-top: 4px;
 
-      background: url("../../assets/images/footer-arrow-gray.svg") no-repeat;
+      background: url("../../assets/images/icon/ic_arrow_black_footer.svg")
+        no-repeat;
     }
 
     .list-box {
@@ -182,7 +184,8 @@
           color: #111;
 
           span::after {
-            background: url("../../assets/images/link-icon.svg") no-repeat;
+            background: url("../../assets/images/icon/ic_outlink_black.svg")
+              no-repeat;
           }
         }
 
@@ -203,7 +206,8 @@
           width: 9px;
           height: 9px;
 
-          background: url("../../assets/images/footer-link-icon.svg") no-repeat;
+          background: url("../../assets/images/icon/ic_link_gray_footer.svg")
+            no-repeat;
         }
       }
     }
@@ -227,16 +231,16 @@
     border-radius: 24px;
 
     &.is-active {
-      .text::after {
+      .relation-site-button::after {
         transform: translateY(-50%) rotate(45deg);
       }
 
-      ul {
+      .relation-site-list {
         display: block;
       }
     }
 
-    .text {
+    .relation-site-button {
       letter-spacing: -0.05rem;
 
       &::after {
@@ -252,11 +256,11 @@
         width: 14px;
         height: 14px;
 
-        background: url("../../assets/images/ico_plus_gray.svg") no-repeat;
+        background: url("../../assets/images/icon/ic_plus_gray.svg") no-repeat;
       }
     }
 
-    ul {
+    .relation-site-list {
       position: absolute;
       bottom: 52px;
       left: 0;
@@ -285,7 +289,8 @@
             color: #111;
 
             span::after {
-              background: url("../../assets/images/link-icon.svg") no-repeat;
+              background: url("../../assets/images/icon/ic_outlink_black.svg")
+                no-repeat;
             }
           }
 
@@ -306,7 +311,7 @@
             width: 9px;
             height: 9px;
 
-            background: url("../../assets/images/footer-link-icon.svg")
+            background: url("../../assets/images/icon/ic_link_gray_footer.svg")
               no-repeat;
           }
         }
@@ -326,7 +331,11 @@
 
   @include responsive(M) {
     .wrap-bottom {
-      overflow: hidden;
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
 
     .wrap-relation {

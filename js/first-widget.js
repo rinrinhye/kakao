@@ -5,6 +5,7 @@ $(".first-widget-slide").slick({
   autoplay: true,
   dots: true,
   fade: true,
+  arrows: false,
 
   responsive: [
     {
@@ -16,10 +17,6 @@ $(".first-widget-slide").slick({
         dots: true,
         fade: false,
         arrows: true,
-        customPaging: (slider, i) => {
-          console.log(slider);
-          return i + 1;
-        },
       },
     },
     {
@@ -54,3 +51,19 @@ $(".first-widget-slide").slick({
     },
   ],
 });
+
+$(".first-widget-slide").on(
+  "init reinit beforeChange",
+  function (e, slick, currentSlide) {
+    const customPaging =
+      document.documentElement.querySelector(".custom-paging");
+
+    const currentNumberSpan = customPaging.querySelector(".num_current");
+
+    if (currentSlide === 0) {
+      currentNumberSpan.innerHTML = 2;
+    } else {
+      currentNumberSpan.innerHTML = 1;
+    }
+  }
+);

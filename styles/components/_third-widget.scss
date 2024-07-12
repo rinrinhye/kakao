@@ -12,13 +12,15 @@
     cursor: pointer;
 
     &.slick-next {
-      background: url("../../assets/images/ico_slide_next_white.svg") no-repeat;
+      background: url("../../assets/images/icon/ic_slide_next_white.svg")
+        no-repeat;
       background-size: contain;
       right: 12px;
     }
 
     &.slick-prev {
-      background: url("../../assets/images/ico_slide_prev_white.svg") no-repeat;
+      background: url("../../assets/images/icon/ic_slide_prev_white.svg")
+        no-repeat;
       background-size: contain;
       left: 12px;
     }
@@ -26,11 +28,6 @@
 
   .content-01,
   .content-02 {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-
     width: 100%;
     height: 220px;
 
@@ -38,7 +35,14 @@
 
     border-radius: 24px;
 
-    .title {
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 
@@ -54,14 +58,15 @@
   .content-02 {
     position: relative;
     overflow: hidden;
-    background: url("../../assets/images/banner-history.webp") no-repeat center;
+    background: url("../../assets/images/widget/widget_history.webp") no-repeat
+      center;
     background-size: contain;
 
     &::before {
       content: "";
 
       position: absolute;
-      z-index: 0;
+      z-index: -1;
       top: 0;
       left: 0;
 
@@ -107,11 +112,27 @@
         position: absolute;
         display: block;
         content: "";
-        background: url("../../assets/images/bubble.svg") no-repeat;
+        background: url("../../assets/images/icon/shape_bubble_sm.svg")
+          no-repeat;
         right: -2px;
         top: -2px;
         width: 28px;
         height: 124px;
+      }
+    }
+
+    .content-01 {
+      img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        transform: translateX(-10%);
+        margin-bottom: 4px;
+      }
+
+      .title {
+        display: block;
+        transform: translateX(-5%);
       }
     }
 
@@ -129,12 +150,19 @@
     .content-02 {
       height: 124px;
       position: relative;
-      border-radius: 16px 0 0 16px;
+      border-radius: 24px 0 0 24px;
 
       &:after {
-        background: url("../../assets/images/bubble-large.svg") no-repeat;
+        background: url("../../assets/images/icon/shape_bubble_lg.svg")
+          no-repeat;
         width: 36px;
         height: 128px;
+      }
+
+      .title {
+        font-size: 22px;
+        line-height: 1.36;
+        letter-spacing: -0.6px;
       }
     }
   }

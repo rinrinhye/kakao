@@ -21,7 +21,8 @@
 
   @include responsive(M) {
     .section-title::before {
-      background: url("../../assets/images/ico_tit_news_date29.gif") no-repeat;
+      background: url("../../assets/images/kakao-icon/ico_tit_news_date29.gif")
+        no-repeat;
       background-size: contain;
     }
 
@@ -100,66 +101,11 @@
   }
 }
 
-.share-overlay-group {
-  // display: none;
-  position: absolute;
-  padding: 16px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -10;
-  opacity: 1;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.55);
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-
-  &.is-active {
-    display: block;
-    opacity: 1;
-    z-index: 100;
-  }
-
-  .close-button {
-    position: absolute;
-    top: 22px;
-    right: 8px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .share-sns-icon-group {
-  }
-
-  @include responsive(L) {
-    .close-button {
-      top: 30px;
-      right: 16px;
-    }
-  }
-
-  @include responsive(XL) {
-    .close-button {
-      top: 39px;
-      right: 32px;
-    }
-  }
-}
-
 .news-card-slide-arrows {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 55%;
   width: 100%;
+  height: 32px;
 
   &.is-disabled {
     display: none;
@@ -180,12 +126,14 @@
   }
 
   .slick-prev {
-    background: url("../../assets/images/ico_slide_prev.svg") no-repeat;
+    background: url("../../assets/images/icon/ic_slide_prev_black.svg")
+      no-repeat;
     left: 16px;
   }
 
   .slick-next {
-    background: url("../../assets/images/ico_slide_next.svg") no-repeat;
+    background: url("../../assets/images/icon/ic_slide_next_black.svg")
+      no-repeat;
     right: 16px;
   }
 }

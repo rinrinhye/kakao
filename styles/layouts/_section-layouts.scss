@@ -5,6 +5,7 @@
 
   @include responsive(M) {
     max-width: 712px;
+    padding: 0;
   }
 
   @include responsive(L) {
@@ -20,18 +21,16 @@
   padding-top: 80px;
 }
 
-main {
-  @include responsive(L) {
-    // padding-top: 84px;
-  }
+main,
+footer {
+  padding: 0 14px;
+}
 
-  // padding-top: 72px;
+main {
   padding-bottom: 80px;
+  overflow: hidden;
 }
 
 body {
   overflow-x: hidden;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
 }

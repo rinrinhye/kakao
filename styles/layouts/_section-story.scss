@@ -21,7 +21,7 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      background: url("../../assets/images/ico_pause.svg") no-repeat;
+      background: url("../../assets/images/icon/ic_pause.svg") no-repeat;
       background-size: contain;
       width: 32px;
       height: 32px;
@@ -33,7 +33,7 @@
     position: relative;
 
     .section-title::before {
-      background-image: url("../../assets/images/ico_tit_story.gif");
+      background-image: url("../../assets/images/kakao-icon/ico_tit_story.gif");
       background-size: contain;
     }
 

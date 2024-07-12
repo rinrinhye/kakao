@@ -1,12 +1,12 @@
 @mixin responsive($screen) {
   @if $screen == "M" {
-    @media screen and (width >= 769px) {
+    @media screen and (width >= 768px) {
       @content;
     }
   }
 
   @if $screen == "L" {
-    @media screen and (width >= 1025px) {
+    @media screen and (width >= 1024px) {
       @content;
     }
   }
