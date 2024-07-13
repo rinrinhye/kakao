@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $header-level;
+  background: $white;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    max-width: 412px;
+    padding: 0 14px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    color: transparent;
+
+    a {
+      display: block;
+      width: 74px;
+      height: 72px;
+      background: url('/assets/images/logo.svg') no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .btn-group {
+    flex-shrink: 0;
+    padding-right: 4px;
+    font-size: 17px;
+
+    button,
+    a {
+      display: inline-block;
+      width: 24px;
+      height: 74px;
+      cursor: pointer;
+    }
+
+    .search-btn {
+      background: url('../../assets/images/icon/ic_search.png') no-repeat center;
+      background-size: contain;
+    }
+
+    .hamburger-btn {
+      margin-left: 18px;
+      background: url('../../assets/images/icon/ic_hamburger.png') no-repeat
+        center;
+      background-size: contain;
+    }
+  }
+
+  @include responsive(M) {
+    .header-inner {
+      max-width: 712px;
+      padding: 0;
+    }
+  }
+
+  @include responsive(L) {
+    .header-inner {
+      height: 84px;
+      max-width: 952px;
+    }
+
+    .logo {
+      a {
+        height: 84px;
+      }
+    }
+
+    .btn-group {
+      button,
+      a {
+        position: relative;
+        width: 20px;
+        height: 84px;
+        color: transparent;
+      }
+
+      .search-btn:hover::after,
+      .darkmode-btn:hover::after,
+      .lang-btn:hover::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 36px;
+        height: 36px;
+        background-color: $bg-gray;
+        border-radius: 50%;
+        content: '';
+        transform: translate(-50%, -50%);
+      }
+
+      .darkmode-btn,
+      .lang-btn {
+        margin-left: 24px;
+      }
+
+      .darkmode-btn {
+        vertical-align: top;
+        background: url('../../assets/images/icon/ic_moon.png') no-repeat center;
+        background-size: contain;
+      }
+
+      .lang-btn {
+        vertical-align: top;
+        background: url('../../assets/images/icon/ic_globe.png') no-repeat
+          center;
+        background-size: contain;
+      }
+    }
+  }
+
+  @include responsive(XL) {
+    .header-inner {
+      height: 92px;
+      max-width: 1316px;
+    }
+  }
+}
