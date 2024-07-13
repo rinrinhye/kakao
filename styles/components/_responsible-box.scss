@@ -37,28 +37,22 @@
   }
 
   .title-area {
+    @include rounded-corner(18);
     position: absolute;
     right: 0;
-
     padding: 0 0 11px 11px;
-
     background: $white;
     border-radius: 0 0 0 20px;
   }
 
   .title {
-    @include rounded-corner(top);
-
     display: inline-block;
-
     width: 186px;
     height: 40px;
-
     font-size: 13px;
     line-height: 40px;
-    text-align: center;
     letter-spacing: -0.5px;
-
+    text-align: center;
     border-radius: 20px;
   }
 
@@ -66,19 +60,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
     height: 140px;
     margin-top: -5px;
+    transform: translate(-50%, -50%);
   }
 
   .text-responsible {
     position: absolute;
     bottom: 24px;
     left: 24px;
-
     max-width: 220px;
-
     font-size: 16px;
     line-height: 1.52rem;
     letter-spacing: -0.1em;
@@ -92,11 +83,9 @@
 
     .link-button {
       display: block;
-
       width: 48px;
       height: 48px;
-
-      background: url("../../assets/images/icon/ic_circle_arrow_black_sm.svg")
+      background: url('../../assets/images/icon/ic_circle_arrow_black_sm.svg')
         no-repeat;
       background-size: contain;
 
@@ -132,7 +121,7 @@
     }
 
     .link-button-area {
-      @include rounded-corner(bottom);
+      @include rounded-corner(18, bottom, right);
 
       right: 0;
       bottom: 0;
@@ -176,14 +165,15 @@
     border-radius: 24px;
 
     .title-area {
+      @include rounded-corner(26);
       padding: 0 0 15px 15px;
 
       .title {
         width: 205px;
         height: 50px;
+        font-size: 17px;
         line-height: 50px;
         border-radius: 25px;
-        font-size: 17px;
       }
     }
 
@@ -192,17 +182,19 @@
     }
 
     .text-responsible {
-      left: 40px;
       bottom: 40px;
+      left: 40px;
       max-width: 330px;
+      font-size: 26px;
       line-height: 1.46;
       letter-spacing: -0.6px;
-      font-size: 26px;
     }
 
     .link-button-area {
+      @include rounded-corner(26, bottom, right);
       padding: 15px 0 0 15px;
       border-radius: 36px 0 0 0;
+
       .link-button {
         width: 55px;
         height: 55px;

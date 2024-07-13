@@ -1,43 +1,29 @@
-.first-widget-slide {
-  display: flex;
+.first-widget {
   position: relative;
-  margin-right: -100%;
+
+  .first-widget-slide {
+    position: relative;
+    display: flex;
+    margin-right: -100%;
+  }
 
   .content-01,
   .content-02 {
-    width: 340px;
     flex-shrink: 0;
+    width: 340px;
     height: 220px;
+    margin-right: 12px;
     overflow: hidden;
     border-radius: 24px;
-    margin-right: 12px;
 
     a {
-      text-align: center;
       display: flex;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       width: 100%;
       height: 100%;
-    }
-  }
-
-  .slick-arrow {
-    position: absolute;
-    top: -40px;
-    font-size: 0;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-
-    &.slick-prev {
-      background: url("../../assets/images/icon/ic_slide_prev.svg") no-repeat;
-    }
-
-    &.slick-next {
-      background: url("../../assets/images/icon/ic_slide_next.svg") no-repeat;
-      left: 40px;
+      text-align: center;
     }
   }
 
@@ -63,19 +49,53 @@
   }
 
   .content-02 {
-    background: url("../../assets/images/widget/widget_impact.png") no-repeat;
+    background: url('../../assets/images/widget/widget_impact.png') no-repeat;
     background-size: cover;
   }
 
+  .slick-arrow {
+    position: absolute;
+    top: -40px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    cursor: pointer;
+
+    &.slick-prev {
+      background: url('../../assets/images/icon/ic_slide_prev.svg') no-repeat;
+    }
+
+    &.slick-next {
+      left: 40px;
+      background: url('../../assets/images/icon/ic_slide_next.svg') no-repeat;
+    }
+  }
+
+  .custom-paging {
+    position: absolute;
+    top: -30px;
+    left: 80px;
+    display: flex;
+    font-size: 12px;
+    color: $font-gray;
+
+    span {
+      padding: 2px;
+    }
+  }
+
   @include responsive(M) {
-    width: 232px;
-    margin-right: 0;
+    .first-widget-slide {
+      width: 232px;
+      margin-right: 0;
+    }
 
     .content-01,
     .content-02 {
       width: 232px;
       height: 232px;
       margin-right: 0;
+      border-radius: 16px;
     }
 
     .content-01 {
@@ -97,7 +117,7 @@
     }
 
     .content-02 {
-      background: url("../../assets/images/widget/widget_impact_sm.webp")
+      background: url('../../assets/images/widget/widget_impact_sm.webp')
         no-repeat;
       background-size: cover;
     }
@@ -106,21 +126,21 @@
       position: absolute;
       bottom: 12px;
       left: 50%;
-      transform: translateX(-50%);
       display: flex;
+      transform: translateX(-50%);
 
       li {
         padding: 8px;
 
         button {
           display: block;
-          font-size: 0;
           width: 8px;
           height: 8px;
-          background: $white;
-          border-radius: 4px;
-          border: 1px solid $font-gray;
+          font-size: 0;
           cursor: pointer;
+          background: $white;
+          border: 1px solid $font-gray;
+          border-radius: 4px;
         }
 
         &.slick-active {
@@ -134,7 +154,9 @@
   }
 
   @include responsive(L) {
-    width: 180px;
+    .first-widget-slide {
+      width: 180px;
+    }
 
     .content-01,
     .content-02 {
@@ -160,7 +182,9 @@
   }
 
   @include responsive(XL) {
-    width: 206px;
+    .first-widget-slide {
+      width: 206px;
+    }
 
     .content-01,
     .content-02 {
@@ -170,12 +194,14 @@
 
     .content-01 {
       .inner-text {
-        font-size: 17px;
         max-width: 144px;
+        font-size: 17px;
       }
+
       .count-number {
         font-size: 26px;
       }
+
       .count-text {
         font-size: 16px;
       }
@@ -184,21 +210,5 @@
     .slick-dots {
       bottom: 12px;
     }
-  }
-}
-
-.first-widget {
-  position: relative;
-}
-.custom-paging {
-  display: flex;
-  position: absolute;
-  top: -30px;
-  left: 80px;
-  font-size: 12px;
-  color: $font-gray;
-
-  span {
-    padding: 2px;
   }
 }

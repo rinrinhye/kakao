@@ -1,72 +1,64 @@
 .visual-video-area {
+  position: relative;
+
   .visual-video-cont {
     position: relative;
-    overflow: hidden;
     height: 250px;
+    overflow: hidden;
     border-radius: 16px;
 
     .visual-video {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-
       height: 100%;
+      transform: translate(-50%, -50%);
     }
   }
-  .link-banner {
-    @include rounded-corner(top);
 
+  .link-banner {
+    @include rounded-corner(18);
     position: absolute;
     top: 0;
     right: 0;
-
     display: flex;
     align-items: flex-start;
-
     padding: 5px 0 6px 11px;
-
     background: $white;
     border-radius: 0 0 0 16px;
 
     .text {
       position: relative;
-
       padding: 12px 20px;
-
       font-size: 12px;
       line-height: 1.7;
-      color: $white;
       letter-spacing: -0.02rem;
-
+      color: $white;
       background: $black;
       border-radius: 12px;
-
-      &::after {
-        content: '';
-
-        position: absolute;
-        right: -3px;
-        bottom: 1px;
-
-        display: block;
-
-        width: 10.5px;
-        height: 13px;
-
-        background: url('../../assets/images/icon/ic_bubble_tail.svg') no-repeat;
-      }
     }
 
     .icon {
       width: 46px;
       height: 46px;
     }
+
+    /* 말풍선 꼬리 */
+    .text::after {
+      position: absolute;
+      right: -3px;
+      bottom: 1px;
+      display: block;
+      width: 10.5px;
+      height: 13px;
+      background: url('../../assets/images/icon/ic_bubble_tail.svg') no-repeat;
+      content: '';
+    }
   }
 
   .visual-title-cont {
-    margin-bottom: 20px;
     padding: 20px 14px 0;
+    margin-bottom: 20px;
 
     .main-title {
       display: block;
@@ -85,20 +77,19 @@
   }
 
   @include responsive(M) {
-    position: relative;
-
     .visual-video-cont {
       height: 405px;
-      border-radius: 20px 0 20px 20px;
+      border-radius: 20px;
     }
 
     .link-banner {
-      border-radius: 0 0 0 20px;
+      @include rounded-corner(22);
       padding: 0 0 5px 11px;
+      border-radius: 0 0 0 20px;
 
       .text {
-        font-size: 14px;
         padding: 9px 16px;
+        font-size: 14px;
         vertical-align: top;
       }
 
@@ -110,50 +101,29 @@
 
     .visual-title-cont {
       position: absolute;
-      width: 400px;
-      left: 50px;
       top: 50px;
-      margin: 0;
+      left: 50px;
+      width: 400px;
       padding: 0;
+      margin: 0;
       color: $white;
 
       .main-title {
         font-size: 32px;
-        letter-spacing: -0.8;
+        letter-spacing: -0.8px;
       }
     }
 
     .round-link-btn {
+      @include rounded-corner(22, bottom, left);
       position: absolute;
       bottom: 0;
-      padding: 15px 28px 16px;
       width: auto;
       height: auto;
-      border-radius: 0 20px 0 0;
+      padding: 15px 28px 16px;
       line-height: 24px;
-
       background: $white;
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        transform: rotate(-180deg);
-        width: 22px;
-        height: 22px;
-        background-image: url('../../assets/images/icon/shape_rounded.svg');
-      }
-
-      &::before {
-        bottom: -2px;
-        right: -20px;
-      }
-
-      &::after {
-        top: -20px;
-        left: -14px;
-      }
+      border-radius: 0 20px 0 0;
     }
   }
 
@@ -163,93 +133,79 @@
     }
 
     .link-banner {
+      @include rounded-corner(26);
       padding: 5px 5px 6px 17px;
-      z-index: $link-banner-level;
 
       &:hover {
         .text {
+          z-index: $link-banner-level;
           display: block;
         }
       }
 
       .text {
         position: absolute;
+        top: -31px;
+        left: 14px;
         display: none;
         padding: 12px 16px;
         white-space: nowrap;
-        top: -31px;
-        left: 14px;
-
-        &::after {
-          width: 12px;
-          height: 12px;
-          left: 20px;
-          bottom: -8px;
-        }
       }
 
       .icon {
         width: 60px;
         height: 60px;
       }
+
+      /* 말풍선 꼬리 */
+      .text::after {
+        bottom: -8px;
+        left: 20px;
+        width: 12px;
+        height: 12px;
+      }
     }
 
     .round-link-btn {
+      @include rounded-corner(26, bottom, left);
       img {
         margin-left: 8px;
       }
     }
 
     .visual-title-cont {
-      left: 80px;
       top: 80px;
+      left: 80px;
     }
   }
 
   @include responsive(XL) {
     .visual-video-cont {
       height: 621px;
-      border-radius: 36px 0 36px 0;
+      border-radius: 36px;
     }
 
     .link-banner {
+      @include rounded-corner(38);
       padding: 2px 17px 15px;
       border-radius: 0 0 0 36px;
-      .icon {
-        width: 82px;
-        height: 82px;
-      }
-
-      &::after,
-      &::before {
-        display: block;
-        position: absolute;
-        content: '';
-        width: 38px;
-        height: 38px;
-        background: url('../../assets/images/icon/shape_rounded.svg');
-      }
-
-      &::before {
-        top: -4px;
-        left: -34px;
-      }
-
-      &::after {
-        bottom: -34px;
-        right: -4px;
-      }
 
       .text {
         top: -56px;
       }
+
+      .icon {
+        width: 82px;
+        height: 82px;
+      }
     }
 
     .round-link-btn {
-      line-height: 48px;
-      font-size: 22px;
-      letter-spacing: -0.6px;
+      @include rounded-corner(38, bottom, left);
       padding: 23px 23px 28px;
+      font-size: 22px;
+      line-height: 48px;
+      letter-spacing: -0.6px;
       border-radius: 0 36px 0 0;
 
       img {
@@ -257,27 +213,23 @@
         height: 48px;
         margin-left: 16px;
       }
-
-      &::after,
-      &::before {
-        width: 36px;
-        height: 36px;
-      }
-
-      &::before {
-        bottom: -4px;
-        right: -32px;
-      }
-
-      &::after {
-        top: -32px;
-        left: -16px;
-      }
     }
 
     .visual-title-cont {
-      left: 80px;
       top: 80px;
+      left: 90px;
+      letter-spacing: -0.8px;
+
+      .main-title {
+        margin-bottom: 20px;
+        font-size: 48px;
+        line-height: 1.25;
+      }
+
+      .sub-title {
+        font-size: 22px;
+        line-height: 1.36;
+      }
     }
   }
 }
