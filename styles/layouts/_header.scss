@@ -1,11 +1,12 @@
 .header {
   position: sticky;
   top: 0;
+  z-index: $header-level;
   background: $white;
   border-bottom: 0;
 
   &.is-scrolled {
-    z-index: $header-level;
+    z-index: $header-scrolled-level;
     border-bottom: 1px solid $font-white-gray;
   }
 
