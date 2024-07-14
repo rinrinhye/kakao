@@ -1,7 +1,4 @@
 .section-story {
-  .section-content {
-  }
-
   .story-slide-list {
     display: flex;
   }
@@ -15,17 +12,22 @@
     position: relative;
     height: 32px;
     margin: 0 auto 20px auto;
+  }
 
-    .slide-button {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background: url("../../assets/images/icon/ic_pause.svg") no-repeat;
+  .slide-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: url('../../assets/images/icon/ic_pause.svg') no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+
+    &.is-paused {
+      background: url('../../assets/images/icon/ic_play.svg') no-repeat;
       background-size: contain;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
     }
   }
 
@@ -33,32 +35,27 @@
     position: relative;
 
     .section-title::before {
-      background-image: url("../../assets/images/kakao-icon/ico_tit_story.gif");
+      background-image: url('../../assets/images/kakao-icon/ico_tit_story.gif');
       background-size: contain;
     }
 
     .slide-button-wrapper {
       position: absolute;
       top: 80px;
-      height: 48px;
-      width: 32px;
       right: 0;
+      width: 32px;
+      height: 48px;
     }
   }
 
-  @include responsive(L) {
+  @include responsive(XL) {
     .slide-button-wrapper {
+      height: 72px;
     }
 
-    @include responsive(XL) {
-      .slide-button-wrapper {
-        height: 72px;
-
-        .slide-button {
-          width: 56px;
-          height: 56px;
-        }
-      }
+    .slide-button {
+      width: 56px;
+      height: 56px;
     }
   }
 }
