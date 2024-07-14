@@ -3,6 +3,7 @@
 
   .content-01,
   .content-02 {
+    flex-shrink: 0;
     width: 100%;
     height: 220px;
     overflow: hidden;
