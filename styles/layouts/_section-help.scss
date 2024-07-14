@@ -6,14 +6,14 @@
   .wrap-bottom {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     margin-bottom: 24px;
+    gap: 12px;
   }
 
   .customer-center-box-group {
     display: flex;
-    gap: 12px;
     margin-bottom: 12px;
+    gap: 12px;
   }
 
   .color-box-group {
@@ -24,7 +24,7 @@
 
   @include responsive(M) {
     .section-title::before {
-      background-image: url("../../assets/images/kakao-icon/ico_tit_help.gif");
+      background-image: url('../../assets/images/kakao-icon/ico_tit_help.gif');
       background-size: contain;
     }
 
@@ -43,30 +43,30 @@
     }
 
     .color-box-group {
+      flex: 1;
       flex-direction: row;
       gap: 8px;
-      flex: 1;
     }
   }
 
   @include responsive(L) {
     .wrap-top {
       display: flex;
-      gap: 12px;
       justify-content: space-between;
       margin-bottom: 12px;
+      gap: 12px;
     }
 
     .wrap-bottom {
-      gap: 12px;
       margin-bottom: 40px;
+      gap: 12px;
     }
 
     .customer-center-box-group {
       flex-direction: column;
-      gap: 12px;
-      margin-bottom: 0;
       width: 308px;
+      margin-bottom: 0;
+      gap: 12px;
     }
 
     .color-box-group {
@@ -76,8 +76,8 @@
 
   @include responsive(XL) {
     .wrap-top {
-      gap: 16px;
       margin-bottom: 16px;
+      gap: 16px;
     }
 
     .wrap-bottom {
@@ -85,8 +85,8 @@
     }
 
     .customer-center-box-group {
-      gap: 16px;
       width: 428px;
+      gap: 16px;
     }
 
     .color-box-group {

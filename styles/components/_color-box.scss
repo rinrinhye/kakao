@@ -1,13 +1,10 @@
 .color-box {
   position: relative;
-
+  width: 100%;
   height: 172px;
   padding: 20px;
-  width: 100%;
-
   line-height: 1.5rem;
   letter-spacing: -0.1rem;
-
   border-radius: 16px;
 
   .title {
@@ -29,72 +26,64 @@
       display: flex;
       justify-content: space-between;
       margin-top: 19px;
-      color: transparent;
 
       a {
         display: block;
-
         width: 56px;
         height: 56px;
-
         background-repeat: no-repeat;
         background-size: contain;
       }
 
       .kakao {
-        background-image: url("../../assets/images/icon/ic_circle-ch.png");
+        background-image: url('../../assets/images/icon/ic_circle-ch.png');
       }
 
       .youtube {
-        background-image: url("../../assets/images/icon/ic_circle_fb.png");
+        background-image: url('../../assets/images/icon/ic_circle_fb.png');
       }
 
       .instagram {
-        background-image: url("../../assets/images/icon/ic_circle_insta.png");
+        background-image: url('../../assets/images/icon/ic_circle_insta.png');
       }
 
       .facebook {
-        background-image: url("../../assets/images/icon/ic_circle_fb.png");
+        background-image: url('../../assets/images/icon/ic_circle_fb.png');
       }
 
       .linkedin {
-        background-image: url("../../assets/images/icon/ic_circle_li.png");
+        background-image: url('../../assets/images/icon/ic_circle_li.png');
       }
     }
   }
 
   &.recruit-box {
     color: $white;
-
     background-color: $blue;
-    background-image: url("../../assets/images/help/img_recruit_mo.png");
-    background-repeat: no-repeat;
+    background-image: url('../../assets/images/help/img_recruit_mo.png');
     background-position: right 16px bottom 16px;
+    background-repeat: no-repeat;
     background-size: 154px 68px;
 
     &::after {
-      content: "";
       position: absolute;
       display: block;
+      content: '';
     }
 
     .sub-link {
       position: relative;
 
       &::after {
-        content: "";
-
         position: absolute;
         top: 0;
         right: -33px;
-        transform: rotate(-45deg);
-
         display: block;
-
         width: 24px;
         height: 24px;
-
-        background-image: url("../../assets/images/icon/ic_circle_arrow_white_lg.svg");
+        background-image: url('../../assets/images/icon/ic_circle_arrow_white_lg.svg');
+        content: '';
+        transform: rotate(-45deg);
       }
 
       &:hover {
@@ -122,9 +111,9 @@
     }
 
     &.social-box {
-      background-image: url("../../assets/images/help/img_ryan.png");
-      background-repeat: no-repeat;
+      background-image: url('../../assets/images/help/img_ryan.png');
       background-position: bottom 0 left 50%;
+      background-repeat: no-repeat;
       background-size: 60%;
 
       .sns-icon-group {
@@ -136,7 +125,7 @@
     }
 
     &.recruit-box {
-      background-image: url("../../assets/images/help/img_recruit.png");
+      background-image: url('../../assets/images/help/img_recruit.png');
       background-position: bottom 0 left 0;
       background-size: contain;
     }
@@ -147,11 +136,12 @@
     padding: 40px;
 
     .title {
-      font-size: 26px;
-      word-break: keep-all;
-      line-height: 1.38;
       margin-bottom: 12px;
+      font-size: 26px;
+      line-height: 1.38;
+      word-break: keep-all;
     }
+
     .sub-text,
     .sub-link {
       font-size: 17px;
@@ -160,6 +150,7 @@
     &.social-box {
       .sns-icon-group {
         margin-top: 37px;
+
         a {
           width: 60px;
           height: 60px;
