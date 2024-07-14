@@ -1,7 +1,21 @@
+.main-content,
+.footer {
+  padding: 0 14px;
+}
+
+.main-content {
+  padding-bottom: 80px;
+  overflow-x: hidden;
+}
+
 .section,
 .footer-inner {
   max-width: 384px;
   margin: 0 auto;
+
+  &:not(.section-visual) {
+    padding-top: 80px;
+  }
 
   @include responsive(M) {
     max-width: 712px;
@@ -15,21 +29,4 @@
   @include responsive(XL) {
     max-width: 1316px;
   }
-}
-
-.section:not(.section-visual) {
-  padding-top: 80px;
-}
-
-main,
-footer {
-  padding: 0 14px;
-}
-
-main {
-  padding-bottom: 80px;
-}
-
-body {
-  overflow-x: hidden;
 }
