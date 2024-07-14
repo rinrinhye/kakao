@@ -13,10 +13,6 @@
   max-width: 384px;
   margin: 0 auto;
 
-  &:not(.section-visual) {
-    padding-top: 80px;
-  }
-
   @include responsive(M) {
     max-width: 712px;
     padding: 0;
@@ -29,4 +25,8 @@
   @include responsive(XL) {
     max-width: 1316px;
   }
+}
+
+.section:not(.section-visual) {
+  padding-top: 80px;
 }
