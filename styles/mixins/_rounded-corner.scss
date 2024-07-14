@@ -1,124 +1,135 @@
-@mixin rounded-corner($position) {
+@mixin rounded-corner($size, $y: 'top', $x: 'right') {
   &::before,
   &::after {
-    content: "";
-
     position: absolute;
-
     display: block;
-
-    width: 18px;
-    height: 18px;
-
-    background-image: url("../../assets/images/icon/shape_rounded.svg");
+    width: $size + px;
+    height: $size + px;
+    background-image: url('../../assets/images/icon/shape_rounded.svg');
+    content: '';
   }
 
-  @include responsive(M) {
-    &::before,
-    &::after {
-      width: 22px;
-      height: 22px;
+  @if ($y == top) {
+    @if ($size < 20) {
+      &::before {
+        top: -2px;
+        left: -$size + 2px;
+      }
+
+      &::after {
+        right: -2px;
+        bottom: -$size + 2px;
+      }
+    }
+
+    @if ($size > 20) {
+      &::before {
+        top: -3px;
+        left: -$size + 3px;
+      }
+
+      &::after {
+        right: -3px;
+        bottom: -$size + 3px;
+      }
+    }
+
+    @if ($size > 30) {
+      &::before {
+        top: -4px;
+        left: -$size + 4px;
+      }
+
+      &::after {
+        right: -4px;
+        bottom: -$size + 4px;
+      }
     }
   }
 
-  @include responsive(XL) {
-    &::before,
-    &::after {
-      width: 26px;
-      height: 26px;
-    }
-  }
-
-  @if $position == "top" {
+  @if ($y == bottom and $x == right) {
+    &::after,
     &::before {
-      top: -2px;
-      left: -16px;
-    }
-
-    &::after {
-      right: -2px;
-      bottom: -16px;
-    }
-
-    @include responsive(M) {
-      &::before {
-        top: -3px;
-        left: -19px;
-      }
-
-      &::after {
-        right: -3px;
-        bottom: -19px;
-      }
-    }
-
-    @include responsive(XL) {
-      &::before {
-        top: -3px;
-        left: -23px;
-      }
-
-      &::after {
-        right: -3px;
-        bottom: -23px;
-      }
-    }
-  }
-
-  @if $position == "bottom" {
-    &::before,
-    &::after {
       transform: rotate(90deg);
     }
 
-    &::before {
-      top: -16px;
-      right: -2px;
-    }
-
-    &::after {
-      bottom: -2px;
-      left: -16px;
-    }
-
-    @include responsive(M) {
+    @if ($size < 20) {
       &::before {
-        top: -20px;
+        bottom: -2px;
+        left: -$size + 2px;
+      }
+
+      &::after {
+        top: -$size + 2px;
         right: -2px;
       }
+    }
+
+    @if ($size > 20) {
+      &::before {
+        bottom: -3px;
+        left: -$size + 3px;
+      }
 
       &::after {
-        bottom: -2px;
-        left: -20px;
+        top: -$size + 3px;
+        right: -3px;
       }
     }
 
-    @include responsive(XL) {
+    @if ($size > 30) {
       &::before {
-        top: -23px;
-        right: -3px;
+        bottom: -4px;
+        left: -$size + 4px;
       }
 
       &::after {
-        bottom: -3px;
-        left: -23px;
+        top: -$size + 4px;
+        right: -4px;
       }
     }
   }
-  // @if $position == "bottom-left" {
-  //   &::before,
-  //   &::after {
-  //     transform: rotate(-180deg);
-  //   }
 
-  //   &::before {
-  //     bottom: -2px;
-  //     right: -16px;
-  //   }
+  @if ($y == bottom and $x == left) {
+    &::after,
+    &::before {
+      transform: rotate(180deg);
+    }
 
-  //   &::after {
-  //     top: -16px;
-  //     left: -16px;
-  //   }
-  // }
+    @if ($size < 20) {
+      &::before {
+        top: -$size + 2px;
+        left: -2px;
+      }
+
+      &::after {
+        right: -$size + 2px;
+        bottom: -2px;
+      }
+    }
+
+    @if ($size > 20) {
+      &::before {
+        top: -$size + 3px;
+        left: -3px;
+      }
+
+      &::after {
+        right: -$size + 3px;
+        bottom: -3px;
+      }
+    }
+
+    @if ($size > 30) {
+      &::before {
+        top: -$size + 4px;
+        left: -4px;
+      }
+
+      &::after {
+        right: -$size + 4px;
+        bottom: -4px;
+      }
+    }
+  }
 }
