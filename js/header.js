@@ -1,4 +1,4 @@
-const header = document.documentElement.querySelector('.header');
+const header = document.querySelector('.header');
 
 window.addEventListener('scroll', toggleClassListforHeader);
 
