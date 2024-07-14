@@ -1,14 +1,12 @@
 .customer-center-box {
   position: relative;
-
   display: block;
+  flex-shrink: 1;
   width: 100%;
   height: 128px;
   padding: 16px 16px 52px;
-
   background: $bg-gray;
   border-radius: 12px;
-  flex-shrink: 1;
 
   &:hover {
     .sub-text::after {
@@ -18,9 +16,7 @@
 
   .title {
     display: inline-block;
-
     max-width: 80px;
-
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.1rem;
@@ -30,22 +26,19 @@
   .sub-text {
     position: absolute;
     bottom: 16px;
-    font-size: 0;
     left: 16px;
+    font-size: 0;
 
+    /* arrow icon */
     &::after {
-      content: "";
-
-      transform: rotate(-45deg);
-
       display: block;
-
       width: 25px;
       height: 25px;
-
-      background: url("../../assets/images/icon/ic_circle_arrow_black_lg.svg")
+      background: url('../../assets/images/icon/ic_circle_arrow_black_lg.svg')
         no-repeat;
       background-size: contain;
+      content: '';
+      transform: rotate(-45deg);
     }
   }
 
@@ -64,9 +57,9 @@
     }
 
     .sub-text {
-      left: auto;
       right: 24px;
       bottom: 24px;
+      left: auto;
     }
   }
 
@@ -75,17 +68,18 @@
     border-radius: 20px;
 
     .sub-text {
+      right: auto;
       bottom: 24px;
       left: 24px;
-      right: auto;
       font-size: 14px;
       line-height: 24px;
 
+      /* arrow icon */
       &::after {
         position: absolute;
-        top: 0px;
-        left: auto;
+        top: 0;
         right: -33px;
+        left: auto;
       }
     }
 
@@ -93,10 +87,10 @@
       position: absolute;
       top: 50%;
       right: 24px;
-      transform: translateY(-50%);
       display: block;
       width: 60px;
       height: 60px;
+      transform: translateY(-50%);
     }
   }
 
@@ -109,16 +103,16 @@
     }
 
     .sub-text {
-      font-size: 17px;
-      line-height: 1.58;
       bottom: 36px;
       left: 40px;
+      font-size: 17px;
+      line-height: 1.58;
     }
 
     .icon {
+      right: 40px;
       width: 84px;
       height: 84px;
-      right: 40px;
     }
   }
 }
