@@ -1,0 +1,112 @@
+.info-group {
+  position: relative;
+  width: 50%;
+  margin-top: 15px;
+
+  &.is-active {
+    .list-box {
+      display: block;
+    }
+
+    .text {
+      color: $black;
+
+      &.button::after {
+        background: url('../../assets/images/icon/ic_arrow_black_footer.svg');
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .text {
+    position: relative;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.05rem;
+    color: $font-gray;
+    cursor: pointer;
+
+    &:hover {
+      color: $black;
+
+      &::after {
+        background: url('../../assets/images/icon/ic_arrow_black_footer.svg');
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.link-emph {
+      font-weight: 700;
+      color: $dark-black;
+    }
+
+    &.button::after {
+      position: absolute;
+      top: 0;
+      right: -12px;
+      display: block;
+      width: 9px;
+      height: 9px;
+      margin-top: 4px;
+      background: url('../../assets/images/icon/ic_arrow_gray_footer.svg')
+        no-repeat;
+      content: '';
+      transform: rotate(90deg);
+    }
+  }
+
+  .list-box {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    display: none;
+    padding: 16px 0;
+    color: $font-medium-gray;
+    background-color: $bg-gray;
+    border-radius: 12px;
+
+    a {
+      display: block;
+      padding: 0 34px 0 20px;
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+
+      &:hover {
+        color: $black;
+
+        .outlink::after {
+          background: url('../../assets/images/icon/ic_outlink_black.svg')
+            no-repeat;
+        }
+      }
+    }
+
+    .outlink {
+      position: relative;
+    }
+
+    .outlink::after {
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      display: block;
+      width: 9px;
+      height: 9px;
+      background: url('../../assets/images/icon/ic_outlink_gray.svg') no-repeat;
+      content: '';
+      transform: translateY(-50%);
+    }
+  }
+
+  @include responsive(L) {
+    width: auto;
+    margin-top: 6px;
+    margin-left: 30px;
+  }
+}

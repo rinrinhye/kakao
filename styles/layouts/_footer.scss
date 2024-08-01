@@ -1,0 +1,167 @@
+.footer {
+  letter-spacing: -0.05rem;
+  border-top: 1px solid $black;
+
+  .footer-inner {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .footer-title {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .main-service-group {
+    font-size: 13px;
+
+    .main-service-list {
+      li:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .inlink {
+    &:hover {
+      &::after {
+        background: url('/assets/images/icon/ic_arrow_black_footer.svg')
+          no-repeat;
+      }
+    }
+
+    &::after {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      background: url('/assets/images/icon/ic_arrow_gray_footer.svg') no-repeat;
+      content: '';
+    }
+  }
+
+  .wrap-service-group {
+    margin-top: 40px;
+  }
+
+  .wrap-bottom {
+    margin-top: 48px;
+  }
+
+  .wrap-info-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrap-relation {
+    margin-top: 48px;
+  }
+
+  small {
+    display: block;
+    margin-top: 48px;
+    font-size: 13px;
+    letter-spacing: -0.2px;
+    color: #888;
+  }
+
+  @include responsive(M) {
+    .wrap-bottom {
+      &::after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+    }
+
+    .wrap-relation {
+      float: right;
+      width: 298px;
+      margin-top: 58px;
+    }
+
+    small {
+      float: left;
+      margin-top: -30px;
+      clear: both;
+    }
+  }
+
+  @include responsive(L) {
+    .footer-title {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .wrap-top {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -80px;
+    }
+
+    .wrap-bottom {
+      margin-top: 120px;
+    }
+
+    .main-service-group,
+    .service-group {
+      width: 25%;
+      margin-top: 80px;
+    }
+
+    .main-service-group {
+      font-size: 14px;
+
+      .main-service-list {
+        li {
+          line-height: 1.8;
+        }
+
+        li:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .wrap-info-group {
+      float: left;
+      width: 594px;
+      margin-top: -6px;
+      margin-left: -30px;
+    }
+
+    .wrap-relation {
+      width: 208px;
+      margin-top: 0;
+    }
+
+    small {
+      margin-top: 12px;
+    }
+  }
+
+  @include responsive(XL) {
+    .footer-inner {
+      padding-top: 81px;
+    }
+
+    .footer-title {
+      font-size: 26px;
+    }
+
+    .main-service-group,
+    .service-group {
+      width: calc(100% / 6);
+    }
+
+    .service-group {
+      .title {
+        font-size: 16px;
+      }
+    }
+
+    .wrap-info-group {
+      width: auto;
+    }
+  }
+}
