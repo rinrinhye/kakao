@@ -28,7 +28,7 @@
       display: block;
       width: 14px;
       height: 14px;
-      background: url('assets/images/icon/ic_plus_gray.svg') no-repeat;
+      background: url('./assets/icon/ic_plus_gray.svg') no-repeat;
       content: '';
       transform: translateY(-50%);
     }
@@ -61,7 +61,7 @@
           color: #111;
 
           .text::after {
-            background: url('assets/images/icon/ic_outlink_black.svg') no-repeat;
+            background: url('./assets/icon/ic_outlink_black.svg') no-repeat;
           }
         }
 
@@ -75,7 +75,7 @@
             display: block;
             width: 9px;
             height: 9px;
-            background: url('assets/images/icon/ic_outlink_gray.svg') no-repeat;
+            background: url('./assets/icon/ic_outlink_gray.svg') no-repeat;
             content: '';
             transform: translateY(-50%);
           }

@@ -45,12 +45,12 @@
 
     .slick-prev {
       left: 16px;
-      background: url('assets/images/icon/ic_slide_prev_black.svg') no-repeat;
+      background: url('./assets/icon/ic_slide_prev_black.svg') no-repeat;
     }
 
     .slick-next {
       right: 16px;
-      background: url('assets/images/icon/ic_slide_next_black.svg') no-repeat;
+      background: url('./assets/icon/ic_slide_next_black.svg') no-repeat;
     }
   }
 
@@ -85,8 +85,7 @@
 
   @include responsive(M) {
     .section-title::before {
-      background: url('assets/images/kakao-icon/ico_tit_news_date29.gif')
-        no-repeat;
+      background: url('./assets/kakao-icon/ico_tit_news_date29.gif') no-repeat;
       background-size: contain;
     }
 

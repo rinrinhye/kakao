@@ -26,7 +26,7 @@
       display: block;
       width: 74px;
       height: 72px;
-      background: url('/assets/images/logo.svg') no-repeat;
+      background: url('/./assets/logo.svg') no-repeat;
       background-position: center;
       background-size: contain;
     }
@@ -46,13 +46,13 @@
     }
 
     .search-btn {
-      background: url('assets/images/icon/ic_search.png') no-repeat center;
+      background: url('./assets/icon/ic_search.png') no-repeat center;
       background-size: contain;
     }
 
     .hamburger-btn {
       margin-left: 18px;
-      background: url('assets/images/icon/ic_hamburger.png') no-repeat center;
+      background: url('./assets/icon/ic_hamburger.png') no-repeat center;
       background-size: contain;
     }
   }
@@ -108,13 +108,13 @@
 
       .darkmode-btn {
         vertical-align: top;
-        background: url('assets/images/icon/ic_moon.png') no-repeat center;
+        background: url('./assets/icon/ic_moon.png') no-repeat center;
         background-size: contain;
       }
 
       .lang-btn {
         vertical-align: top;
-        background: url('assets/images/icon/ic_globe.png') no-repeat center;
+        background: url('./assets/icon/ic_globe.png') no-repeat center;
         background-size: contain;
       }
     }

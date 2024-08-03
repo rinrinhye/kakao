@@ -26,8 +26,7 @@
   .inlink {
     &:hover {
       &::after {
-        background: url('assets/images/icon/ic_arrow_black_footer.svg')
-          no-repeat;
+        background: url('./assets/icon/ic_arrow_black_footer.svg') no-repeat;
       }
     }
 
@@ -35,7 +34,7 @@
       display: inline-block;
       width: 9px;
       height: 9px;
-      background: url('assets/images/icon/ic_arrow_gray_footer.svg') no-repeat;
+      background: url('./assets/icon/ic_arrow_gray_footer.svg') no-repeat;
       content: '';
     }
   }
