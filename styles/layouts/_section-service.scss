@@ -36,12 +36,13 @@
       background-size: cover;
 
       &:last-child {
-        background: url('./assets/service/service-link-btn.svg') no-repeat;
+        background: url('../assets/service/service-link-btn.svg') no-repeat;
         background-size: contain;
       }
 
       &:last-child:hover {
-        background: url('./assets/service/service-link-btn-black.svg') no-repeat;
+        background: url('../assets/service/service-link-btn-black.svg')
+          no-repeat;
         background-size: contain;
       }
     }
@@ -49,7 +50,7 @@
 
   @include responsive(M) {
     .section-title::before {
-      background: url('./assets/kakao-icon/ico_tit_service.gif') no-repeat;
+      background: url('../assets/kakao-icon/ico_tit_service.gif') no-repeat;
       background-size: contain;
     }
 
