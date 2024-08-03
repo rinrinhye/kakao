@@ -1,0 +1,230 @@
+%share-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+
+  .close-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .share-kakao::after {
+    background-image: url('/assets/images/icon/ic_kakao.png');
+  }
+
+  .share-facebook::after {
+    background-image: url('/assets/images/icon/ic_facebook.png');
+  }
+
+  .share-twitter::after {
+    background-image: url('/assets/images/icon/ic_twitter.png');
+  }
+
+  .share-link::after {
+    background-image: url('/assets/images/icon/ic_link.png');
+  }
+}
+
+.share-overlay-vertical {
+  @extend %share-overlay;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+
+  &.is-active {
+    z-index: 100;
+    opacity: 1;
+
+    .share-sns-icon-group {
+      transition: all 250ms ease-in-out;
+      grid-template-rows: 1fr;
+
+      .share-icon {
+        height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  .share-sns-icon-group {
+    display: grid;
+    width: 24px;
+    transition: all 250ms ease-in-out;
+    grid-template-rows: 0fr;
+
+    .share-icon {
+      height: 0;
+      transition: all 250ms ease-in-out;
+
+      &::after {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: $font-white-gray;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 65%;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+  }
+
+  @include responsive(L) {
+    &.is-active {
+      .share-sns-icon-group {
+        width: 36px;
+
+        .share-icon {
+          height: 36px;
+        }
+      }
+    }
+
+    .share-sns-icon-group {
+      position: relative;
+      right: -4px;
+      width: 36px;
+
+      .share-icon {
+        width: 36px;
+
+        &::after {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  @include responsive(XL) {
+    &.is-active {
+      .share-sns-icon-group {
+        width: 36px;
+
+        .share-icon {
+          height: 36px;
+        }
+      }
+    }
+
+    .share-sns-icon-group {
+      right: -8px;
+      width: 36px;
+      height: 0;
+
+      .share-icon {
+        width: 36px;
+        height: 0;
+
+        &::after {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.share-overlay-horizontal {
+  $icon-size: 36px;
+
+  @extend %share-overlay;
+
+  &.is-active {
+    z-index: 100;
+    opacity: 1;
+
+    .share-sns-icon-group {
+      width: 192px;
+
+      .share-icon {
+        width: 36px;
+        height: 36px;
+
+        &:not(:first-child) {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 23px;
+    right: 12px;
+  }
+
+  .share-sns-icon-group {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 0;
+    padding: 0 calc((100% - $icon-size * 4) / 2);
+    white-space: nowrap;
+    transform: translateY(-50%);
+
+    .share-icon {
+      display: inline-block;
+      width: 0;
+      height: 36px;
+      transition: all 300ms ease-in-out;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+
+      &::after {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background-color: $font-white-gray;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 65%;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+  }
+
+  @include responsive(M) {
+    .close-button {
+      top: 20px;
+    }
+  }
+
+  @include responsive(L) {
+    .close-button {
+      top: 30px;
+      right: 16px;
+    }
+  }
+
+  @include responsive(XL) {
+    .close-button {
+      top: 43px;
+      right: 36px;
+    }
+  }
+}

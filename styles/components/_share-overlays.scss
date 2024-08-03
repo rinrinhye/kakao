@@ -1,0 +1,39 @@
+.news-card .share-overlay {
+  padding: 24px 12px;
+
+  @include responsive(L) {
+    padding: 30px 16px;
+  }
+
+  @include responsive(XL) {
+    padding: 40px 30px;
+  }
+}
+
+.stroy-card .share-overlay {
+  padding: 21px 12px;
+
+  @include responsive(L) {
+    padding: 24px 16px;
+  }
+
+  @include responsive(XL) {
+    padding: 30px 21px;
+  }
+}
+
+.story-card.reverse {
+  .share-overlay {
+    padding-top: 179px + 30px;
+  }
+}
+
+.story-card.wide {
+  &.wide-kakao-map .share-overlay {
+    padding: 30px 461px 20px 30px;
+  }
+
+  &.wide-kakao-channel .share-overlay {
+    padding: 30px 800px 20px 30px;
+  }
+}
