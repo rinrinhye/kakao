@@ -10,7 +10,7 @@
   }
 }
 
-.stroy-card .share-overlay {
+.story-card .share-overlay {
   padding: 21px 12px;
 
   @include responsive(L) {
@@ -23,17 +23,23 @@
 }
 
 .story-card.reverse {
-  .share-overlay {
-    padding-top: 179px + 30px;
+  @include responsive(XL) {
+    .share-overlay {
+      padding-top: 179px + 30px;
+    }
   }
 }
 
 .story-card.wide {
   &.wide-kakao-map .share-overlay {
-    padding: 30px 461px 20px 30px;
+    @include responsive(XL) {
+      padding: 30px 461px 20px 30px;
+    }
   }
 
   &.wide-kakao-channel .share-overlay {
-    padding: 30px 800px 20px 30px;
+    @include responsive(XL) {
+      padding: 30px 800px 20px 30px;
+    }
   }
 }
