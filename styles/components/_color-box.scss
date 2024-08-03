@@ -36,23 +36,23 @@
       }
 
       .kakao {
-        background-image: url('../../assets/images/icon/ic_circle-ch.png');
+        background-image: url('assets/images/icon/ic_circle-ch.png');
       }
 
       .youtube {
-        background-image: url('../../assets/images/icon/ic_circle_fb.png');
+        background-image: url('assets/images/icon/ic_circle_fb.png');
       }
 
       .instagram {
-        background-image: url('../../assets/images/icon/ic_circle_insta.png');
+        background-image: url('assets/images/icon/ic_circle_insta.png');
       }
 
       .facebook {
-        background-image: url('../../assets/images/icon/ic_circle_fb.png');
+        background-image: url('assets/images/icon/ic_circle_fb.png');
       }
 
       .linkedin {
-        background-image: url('../../assets/images/icon/ic_circle_li.png');
+        background-image: url('assets/images/icon/ic_circle_li.png');
       }
     }
   }
@@ -60,7 +60,7 @@
   &.recruit-box {
     color: $white;
     background-color: $blue;
-    background-image: url('../../assets/images/help/img_recruit_mo.png');
+    background-image: url('assets/images/help/img_recruit_mo.png');
     background-position: right 16px bottom 16px;
     background-repeat: no-repeat;
     background-size: 154px 68px;
@@ -81,7 +81,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        background-image: url('../../assets/images/icon/ic_circle_arrow_white_lg.svg');
+        background-image: url('assets/images/icon/ic_circle_arrow_white_lg.svg');
         content: '';
         transform: rotate(-45deg);
       }
@@ -111,7 +111,7 @@
     }
 
     &.social-box {
-      background-image: url('../../assets/images/help/img_ryan.png');
+      background-image: url('assets/images/help/img_ryan.png');
       background-position: bottom 0 left 50%;
       background-repeat: no-repeat;
       background-size: 60%;
@@ -125,7 +125,7 @@
     }
 
     &.recruit-box {
-      background-image: url('../../assets/images/help/img_recruit.png');
+      background-image: url('assets/images/help/img_recruit.png');
       background-position: bottom 0 left 0;
       background-size: contain;
     }
