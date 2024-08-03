@@ -34,15 +34,6 @@
   }
 }
 
-.md-visible {
-}
-
-.lg-visible {
-}
-
-.xl-visible {
-}
-
 .sm-only {
   @media screen and (width >= 768px) {
     display: none !important;
@@ -51,9 +42,9 @@
 
 .sr-only {
   position: absolute;
-  overflow: hidden;
   width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
