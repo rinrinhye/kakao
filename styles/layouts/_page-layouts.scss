@@ -8,7 +8,7 @@
   overflow-x: hidden;
 }
 
-.section,
+.section:not(.section-story),
 .footer-inner {
   max-width: 384px;
   margin: 0 auto;
@@ -29,4 +29,22 @@
 
 .section:not(.section-visual) {
   padding-top: 80px;
+}
+
+.section-story .section-title-wrapper {
+  max-width: 384px;
+  margin: 0 auto;
+
+  @include responsive(M) {
+    max-width: 712px;
+    padding: 0;
+  }
+
+  @include responsive(L) {
+    max-width: 948px;
+  }
+
+  @include responsive(XL) {
+    max-width: 1316px;
+  }
 }
