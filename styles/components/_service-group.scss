@@ -57,7 +57,7 @@
     .outlink {
       &:hover {
         &::after {
-          background: url('/assets/images/icon/ic_outlink_black.svg') no-repeat;
+          background: url('assets/images/icon/ic_outlink_black.svg') no-repeat;
         }
       }
 
@@ -66,7 +66,7 @@
         width: 9px;
         height: 9px;
         margin-left: 4px;
-        background: url('/assets/images/icon/ic_outlink_gray.svg') no-repeat;
+        background: url('assets/images/icon/ic_outlink_gray.svg') no-repeat;
         content: '';
       }
     }
