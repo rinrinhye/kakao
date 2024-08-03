@@ -5,7 +5,7 @@
 
   @include responsive(M) {
     .section-title::before {
-      background: url('../assets/kakao-icon/ico_tit_responsible.gif') no-repeat;
+      background: url('assets/kakao-icon/ico_tit_responsible.gif') no-repeat;
       background-size: contain;
     }
 

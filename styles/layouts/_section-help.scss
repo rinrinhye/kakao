@@ -24,7 +24,7 @@
 
   @include responsive(M) {
     .section-title::before {
-      background-image: url('../assets/kakao-icon/ico_tit_help.gif');
+      background-image: url('assets/kakao-icon/ico_tit_help.gif');
       background-size: contain;
     }
 
