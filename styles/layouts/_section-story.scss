@@ -20,12 +20,12 @@
     width: 32px;
     height: 32px;
     cursor: pointer;
-    background: url('assets/icon/ic_pause.svg') no-repeat;
+    background: url('assets/images/icon/ic_pause.svg') no-repeat;
     background-size: contain;
     transform: translateY(-50%);
 
     &.is-paused {
-      background: url('assets/icon/ic_play.svg') no-repeat;
+      background: url('assets/images/icon/ic_play.svg') no-repeat;
       background-size: contain;
     }
   }
@@ -56,7 +56,7 @@
     }
 
     .section-title::before {
-      background-image: url('assets/kakao-icon/ico_tit_story.gif');
+      background-image: url('assets/images/kakao-icon/ico_tit_story.gif');
       background-size: contain;
     }
 
