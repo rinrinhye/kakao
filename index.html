@@ -14,10 +14,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script
-      src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"
-      type="text/javascript"
-    ></script>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -260,13 +256,16 @@
             </div>
           </section>
           <section class="section section-story">
-            <h3 class="section-title">
-              카카오와 카카오 그룹이 축적해 온 이야기들
-            </h3>
-            <div class="section-content">
+            <div class="section-title-wrapper">
+              <h3 class="section-title">
+                카카오와 카카오 그룹이 축적해 온 이야기들
+              </h3>
               <div class="slide-button-wrapper">
                 <button class="slide-button" type="button"></button>
               </div>
+            </div>
+            <div class="section-content">
+              <div class="story-slide-wrapper">
               <ul class="story-slide-list">
                 <li>
                   <div class="card story-card">
@@ -304,10 +303,10 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">
+                    <a class="link-area" href="">
+                      <strong class="title">
                         무료로 여는<br />톡 안의 두 번째 매장
-                      </div>
+                      </strong>
                       <div class="tags-group">
                         <span>#디지털전환</span>
                         <span>#카카오톡채널</span>
@@ -371,8 +370,8 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">도로 위 히어로즈</div>
+                    <a class="link-area" href="">
+                      <strong class="title">도로 위 히어로즈</strong>
                       <div class="tags-group">
                         <span>#카카오모빌리티</span>
                         <span>#파트너상생</span>
@@ -436,10 +435,10 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">
+                    <a class="link-area" href="">
+                      <strong class="title">
                         카카오가 꿈꾸는<br />지속가능한 미래
-                      </div>
+                      </strong>
                       <div class="tags-group">
                         <span>#ESG</span>
                         <span>#ESG보고서</span>
@@ -504,8 +503,8 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">진화에 누구보다<br />진심인 편</div>
+                    <a class="link-area" href="">
+                      <strong class="title">진화에 누구보다<br />진심인 편</strong>
                       <div class="tags-group">
                         <span>#조승연의탐구생활</span>
                         <span>#카카오톡</span>
@@ -570,15 +569,15 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title lg-hidden xl-hidden">
+                    <a class="link-area" href="">
+                      <strong class="title lg-hidden xl-hidden">
                         지역 정보 매체에서<br />위치 기반 상호작용<br />
                         플랫폼으로
-                      </div>
-                      <div class="title sm-hidden md-hidden">
+                      </strong>
+                      <strong class="title sm-hidden md-hidden">
                         지역 정보 매체에서<br />
                         위치 기반 상호작용 플랫폼으로
-                      </div>
+                      </strong>
                       <span class="sub-text"
                         >카카오맵에서 일어난<br />
                         24년 간의 업데이트 이야기</span
@@ -655,8 +654,8 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">웰 메이드<br />콘텐츠 IP의 저력</div>
+                    <a class="link-area" href="">
+                      <strong class="title">웰 메이드<br />콘텐츠 IP의 저력</strong>
                       <div class="tags-group">
                         <span>#K콘텐츠</span>
                         <span>#웹소설</span>
@@ -721,8 +720,8 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">100명에게<br />물어봤습니다</div>
+                    <a class="link-area" href="">
+                      <strong class="title">100명에게<br />물어봤습니다</strong>
                       <div class="tags-group">
                         <span>#K로드트립</span>
                         <span>#카카오톡</span>
@@ -787,10 +786,10 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">
+                    <a class="link-area" href="">
+                      <strong class="title">
                         접근성<br />어디까지 고민해 봤나요?
-                      </div>
+                      </strong>
                       <div class="tags-group">
                         <span>#K디지털접근성</span>
                         <span>#카카오톡</span>
@@ -855,10 +854,10 @@
                         </svg>
                       </button>
                     </div>
-                    <a class="story-card-link" href="">
-                      <div class="title">
+                    <a class="link-area" href="">
+                      <strong class="title">
                         왕초보 사장님들의<br />단골 만들기 비법
-                      </div>
+                      </strong>
                       <span class="sub-text">
                         마케팅이 어려웠던 사장님이<br />매출 500% 올린 비결
                       </span>
@@ -897,6 +896,7 @@
                   </div>
                 </li>
               </ul>
+              </div>
             </div>
           </section>
           <section class="section section-service">
@@ -1134,7 +1134,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="">
+                      <a href="" class="link-area">
                         <strong class="title"
                           >카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
                           참여</strong
@@ -1202,7 +1202,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="">
+                      <a href="" class="link-area">
                         <strong class="title"
                           >카카오, 카카오쇼핑라이브 일주일간 ‘푸드 위크’
                           진행</strong
@@ -1271,7 +1271,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="">
+                      <a href="" class="link-area">
                         <strong class="title"
                           >카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
                           참여</strong
@@ -1348,7 +1348,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="">
+                      <a href="" class="link-area">
                         <strong class="title">
                           카카오 톡학생증, 출시 1년 만에 누적 발급 수 100만 명
                           돌파
@@ -1407,7 +1407,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="">
+                      <a href="" class="link-area">
                         <strong class="title"
                           >카카오, 디지털 소외계층 위한 ‘더 쉬운 카톡설명서’
                           공개</strong
