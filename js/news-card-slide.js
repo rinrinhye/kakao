@@ -2,14 +2,14 @@ $window = $(window);
 
 $(document).ready(function () {
   if ($window.width() >= 1024) {
-    $(".news-card-slide").slick("unslick");
-    $(".sm-news-card-slide").slick("unslick");
+    $('.news-card-slide').slick('unslick');
+    $('.sm-news-card-slide').slick('unslick');
   } else {
-    $(".news-card-slide").slick({
+    $('.news-card-slide').slick({
       responsive: [
         {
           breakpoint: 9999,
-          settings: "unslick",
+          settings: 'unslick',
         },
         {
           breakpoint: 1024,
@@ -19,17 +19,17 @@ $(document).ready(function () {
             slidesToScroll: 1,
             speed: 500,
             fade: true,
-            appendArrows: $(".news-card-slide-arrows"),
+            appendArrows: $('.news-card-slide-arrows'),
           },
         },
       ],
     });
 
-    $(".sm-news-card-slide").slick({
+    $('.sm-news-card-slide').slick({
       responsive: [
         {
           breakpoint: 9999,
-          settings: "unslick",
+          settings: 'unslick',
         },
         {
           breakpoint: 1024,
@@ -41,7 +41,7 @@ $(document).ready(function () {
             fade: true,
             arrows: false,
             dots: true,
-            dotsClass: "slider-dots",
+            dotsClass: 'slider-dots',
           },
         },
       ],
@@ -49,18 +49,18 @@ $(document).ready(function () {
   }
 });
 
-$(window).on("resize", function () {
+$(window).on('resize', function () {
   if ($(window).width() < 1024) {
     if (
-      $(".news-card-slide").hasClass("slick-initialized") &&
-      $(".sm-news-card-slide").hasClass("slick-initialized")
+      $('.news-card-slide').hasClass('slick-initialized') &&
+      $('.sm-news-card-slide').hasClass('slick-initialized')
     ) {
     } else {
-      $(".news-card-slide").slick({
+      $('.news-card-slide').slick({
         responsive: [
           {
             breakpoint: 9999,
-            settings: "unslick",
+            settings: 'unslick',
           },
           {
             breakpoint: 1024,
@@ -70,16 +70,16 @@ $(window).on("resize", function () {
               slidesToScroll: 1,
               speed: 500,
               fade: true,
-              appendArrows: $(".news-card-slide-arrows"),
+              appendArrows: $('.news-card-slide-arrows'),
             },
           },
         ],
       });
-      $(".sm-news-card-slide").slick({
+      $('.sm-news-card-slide').slick({
         responsive: [
           {
             breakpoint: 9999,
-            settings: "unslick",
+            settings: 'unslick',
           },
           {
             breakpoint: 1024,
@@ -91,7 +91,7 @@ $(window).on("resize", function () {
               fade: true,
               arrows: false,
               dots: true,
-              dotsClass: "slider-dots",
+              dotsClass: 'slider-dots',
             },
           },
         ],
@@ -99,11 +99,11 @@ $(window).on("resize", function () {
     }
   } else if ($window.width() >= 1024) {
     if (
-      $(".news-card-slide").hasClass("slick-initialized") &&
-      $(".sm-news-card-slide").hasClass("slick-initialized")
+      $('.news-card-slide').hasClass('slick-initialized') &&
+      $('.sm-news-card-slide').hasClass('slick-initialized')
     ) {
-      $(".news-card-slide").slick("unslick");
-      $(".sm-news-card-slide").slick("unslick");
+      $('.news-card-slide').slick('unslick');
+      $('.sm-news-card-slide').slick('unslick');
     }
   }
 });
