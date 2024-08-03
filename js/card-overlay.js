@@ -30,7 +30,6 @@ shareButtons.forEach((button) => {
 closeButtons.forEach((closeButton) => {
   closeButton.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
-    console.log(card);
     const overlay = e.target.closest('.share-overlay');
     const shareButton = overlay.parentElement.querySelector('.share-button');
     shareButton.classList.remove('is-disabled');
