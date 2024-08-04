@@ -1,0 +1,175 @@
+.sidebar-gnb {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  padding: 0 14px;
+  padding-bottom: 36px;
+  background: $white;
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+
+  &.is-active {
+    transform: translateX(0);
+  }
+
+  .sidebar-gnb-inner {
+    max-width: 384px;
+    margin: 0 auto;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+
+    .close-button {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      background: url('assets/images/icon/ic_close_black.png');
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .nav {
+    padding: 47px 0 66px;
+  }
+
+  .gnb-item {
+    &.is-active {
+      span:not(:last-child)::after {
+        margin-top: 0;
+        border: 5px solid transparent;
+        border-bottom: 5px solid $black;
+      }
+
+      .lnb {
+        display: block;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 36px;
+    }
+
+    /* text */
+    span {
+      display: flex;
+      align-items: center;
+      height: 52px;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -2.8px;
+      cursor: pointer;
+
+      /* icon */
+      &:not(:last-child)::after {
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 14px;
+        border: 5px solid transparent;
+        border-top: 5px solid $black;
+        content: '';
+      }
+
+      &::before {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+        background-size: contain;
+        content: '';
+      }
+    }
+
+    &:nth-child(1) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_ryan.png');
+    }
+
+    &:nth-child(2) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_film.webp');
+    }
+
+    &:nth-child(3) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_bulb.png');
+    }
+
+    &:nth-child(4) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_heart.png');
+    }
+
+    &:nth-child(5) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_article.webp');
+    }
+
+    &:nth-child(6) span::before {
+      background-image: url('../../assets/images/kakao-icon/ico_graph.png');
+    }
+  }
+
+  .lnb {
+    display: none;
+    margin: 21px 0 36px 68px;
+
+    li {
+      a {
+        display: inline-block;
+        padding: 13px 20px 15px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        background: $font-white-gray;
+        border-radius: 30px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .relation-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .career,
+      .text.link-emph {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .career {
+        line-height: 18px;
+        letter-spacing: -0.05rem;
+        white-space: nowrap;
+      }
+
+      .info-group {
+        margin-top: 0;
+      }
+    }
+
+    .button-area {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .lang-btn,
+      .darkmode-btn {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
