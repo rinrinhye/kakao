@@ -1,5 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
    License: none (public domain)
 */
 
@@ -83,17 +82,16 @@ summary,
 time,
 mark,
 audio,
-video {
-  box-sizing: border-box;
-  margin: 0;
+video,
+button {
   padding: 0;
-
+  margin: 0;
   font: inherit;
-  font-family: "Noto Sans KR", sans-serif !important;
+  font-family: 'Noto Sans KR', sans-serif !important;
   font-size: 100%;
   vertical-align: baseline;
-
   border: 0;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -129,13 +127,12 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
   content: none;
 }
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
@@ -144,7 +141,5 @@ a {
 }
 
 button {
-  padding: 0;
   background: transparent;
-  border: none;
 }
