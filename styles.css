@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
    License: none (public domain)
 */
 html,
@@ -83,15 +82,16 @@ summary,
 time,
 mark,
 audio,
-video {
-  box-sizing: border-box;
-  margin: 0;
+video,
+button {
   padding: 0;
+  margin: 0;
   font: inherit;
   font-family: "Noto Sans KR", sans-serif !important;
   font-size: 100%;
   vertical-align: baseline;
   border: 0;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -127,13 +127,12 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
   content: none;
 }
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
@@ -142,9 +141,7 @@ a {
 }
 
 button {
-  padding: 0;
   background: transparent;
-  border: none;
 }
 
 @media screen and (width <= 1023px) {
@@ -196,6 +193,29 @@ button {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+}
+
+.logo a {
+  display: block;
+  width: 74px;
+  height: 72px;
+  background: url("assets/images/logo.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.darkmode-btn {
+  display: inline-block;
+  vertical-align: top;
+  background: url("assets/images/icon/ic_moon.png") no-repeat center;
+  background-size: contain;
+}
+
+.lang-btn {
+  display: inline-block;
+  vertical-align: top;
+  background: url("assets/images/icon/ic_globe.png") no-repeat center;
+  background-size: contain;
 }
 
 .section-title {
@@ -652,17 +672,6 @@ button {
   padding: 0 14px;
   margin: 0 auto;
 }
-.header .logo {
-  color: transparent;
-}
-.header .logo a {
-  display: block;
-  width: 74px;
-  height: 72px;
-  background: url("assets/images/logo.svg") no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 .header .btn-group {
   flex-shrink: 0;
   padding-right: 4px;
@@ -723,16 +732,6 @@ button {
   .header .btn-group .darkmode-btn,
   .header .btn-group .lang-btn {
     margin-left: 24px;
-  }
-  .header .btn-group .darkmode-btn {
-    vertical-align: top;
-    background: url("assets/images/icon/ic_moon.png") no-repeat center;
-    background-size: contain;
-  }
-  .header .btn-group .lang-btn {
-    vertical-align: top;
-    background: url("assets/images/icon/ic_globe.png") no-repeat center;
-    background-size: contain;
   }
 }
 @media screen and (width >= 1440px) {
@@ -1346,6 +1345,151 @@ button {
   .footer .wrap-info-group {
     width: auto;
   }
+}
+
+.sidebar-gnb {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100vh;
+  padding: 0 14px;
+  padding-bottom: 36px;
+  overflow-y: auto;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+.sidebar-gnb.is-active {
+  transform: translateX(0);
+}
+.sidebar-gnb .sidebar-gnb-inner {
+  max-width: 384px;
+  margin: 0 auto;
+}
+.sidebar-gnb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.sidebar-gnb-header .close-button {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  background: url("assets/images/icon/ic_close_black.png");
+  background-position: center;
+  background-size: contain;
+}
+.sidebar-gnb .nav {
+  padding: 47px 0 66px;
+}
+.sidebar-gnb .gnb-item {
+  /* text */
+}
+.sidebar-gnb .gnb-item.is-active span:not(:last-child)::after {
+  margin-top: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #000;
+}
+.sidebar-gnb .gnb-item.is-active .lnb {
+  display: block;
+}
+.sidebar-gnb .gnb-item:not(:first-child) {
+  margin-top: 36px;
+}
+.sidebar-gnb .gnb-item span {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -2.8px;
+  cursor: pointer;
+  /* icon */
+}
+.sidebar-gnb .gnb-item span:not(:last-child)::after {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 14px;
+  border: 5px solid transparent;
+  border-top: 5px solid #000;
+  content: "";
+}
+.sidebar-gnb .gnb-item span::before {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  background-size: contain;
+  content: "";
+}
+.sidebar-gnb .gnb-item:nth-child(1) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_ryan.png");
+}
+.sidebar-gnb .gnb-item:nth-child(2) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_film.webp");
+}
+.sidebar-gnb .gnb-item:nth-child(3) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_bulb.png");
+}
+.sidebar-gnb .gnb-item:nth-child(4) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_heart.png");
+}
+.sidebar-gnb .gnb-item:nth-child(5) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_article.webp");
+}
+.sidebar-gnb .gnb-item:nth-child(6) span::before {
+  background-image: url("../../assets/images/kakao-icon/ico_graph.png");
+}
+.sidebar-gnb .lnb {
+  display: none;
+  margin: 21px 0 36px 68px;
+}
+.sidebar-gnb .lnb li a {
+  display: inline-block;
+  padding: 13px 20px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  background: #eee;
+  border-radius: 30px;
+}
+.sidebar-gnb .lnb li:not(:first-child) {
+  margin-top: 14px;
+}
+.sidebar-gnb-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-gnb-footer .relation-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sidebar-gnb-footer .relation-area .career,
+.sidebar-gnb-footer .relation-area .text.link-emph {
+  font-size: 14px;
+  font-weight: 500;
+}
+.sidebar-gnb-footer .relation-area .career {
+  line-height: 18px;
+  letter-spacing: -0.05rem;
+  white-space: nowrap;
+}
+.sidebar-gnb-footer .relation-area .info-group {
+  margin-top: 0;
+}
+.sidebar-gnb-footer .button-area {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.sidebar-gnb-footer .button-area .lang-btn,
+.sidebar-gnb-footer .button-area .darkmode-btn {
+  width: 24px;
+  height: 24px;
 }
 
 @media screen and (width >= 1024px) {
