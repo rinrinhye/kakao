@@ -1,12 +1,14 @@
-const gnbItem = document.documentElement.querySelectorAll('.gnb-item');
+const gnbItems = document.documentElement.querySelectorAll('.gnb-item');
 
 let currentGnbItem;
 
-gnbItem.forEach((item) => {
+gnbItems.forEach((item) => {
   item.addEventListener('click', showAndHideLnb);
 });
 
 function showAndHideLnb(e) {
+  if (e.target.closest('.gnb-item').classList.contains('link')) return;
+
   if (!currentGnbItem) {
     /* 선택된 gnb 없을 때 */
     currentGnbItem = e.target;
