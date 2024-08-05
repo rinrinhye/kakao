@@ -1,25 +1,19 @@
 @mixin responsive($screen) {
-  @if $screen == "M" {
+  @if $screen == 'M' {
     @media screen and (width >= 768px) {
       @content;
     }
   }
 
-  @if $screen == "L" {
+  @if $screen == 'L' {
     @media screen and (width >= 1024px) {
       @content;
     }
   }
 
-  @if $screen == "XL" {
+  @if $screen == 'XL' {
     @media screen and (width >= 1440px) {
       @content;
     }
-  }
-}
-
-@mixin mobile-only() {
-  @media screen and (width <= 767px) {
-    @content;
   }
 }
