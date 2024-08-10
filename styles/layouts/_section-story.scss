@@ -32,6 +32,8 @@
 
   .story-slide-wrapper {
     display: flex;
+    margin: 0 -14px;
+    overflow-x: hidden;
   }
 
   .story-slide-list {
