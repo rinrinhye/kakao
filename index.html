@@ -1,2528 +1,3013 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>카카오</title>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<link rel="stylesheet" href="./styles.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="120x120"
-			href="./apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="./favicon-16x16.png"
-		/>
-		<link rel="manifest" href="./site.webmanifest" />
-		<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#fae100" />
-		<meta name="msapplication-TileColor" content="#ffc40d" />
-		<meta name="theme-color" content="#ffffff" />
-	</head>
-	<body>
-		<div class="direct-link">
-			<a href="#home">본문 바로가기</a>
-			<a href="#gnb">메뉴 바로가기</a>
-		</div>
-		<div id="home" class="container">
-			<header class="header">
-				<div class="header-inner">
-					<h1 class="logo">
-						<a href="">
-							<span class="sr-only">카카오 메인 홈페이지 가기</span>
-						</a>
-					</h1>
-					<nav id="gnb" class="gnb desktop-only">
-						<h2 class="sr-only">메인 메뉴</h2>
-						<ul class="gnb-list">
-							<li class="gnb-item" aria-haspopup="true">
-								<button class="gnb-link" aria-expanded="false" type="button">
-									소개
-								</button>
-								<ul class="lnb">
-									<li><a href="">카카오 문화</a></li>
-									<li><a href="">공동체</a></li>
-									<li><a href="">연혁</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item" aria-haspopup="true">
-								<button class="gnb-link" aria-expanded="false" type="button">
-									이야기
-								</button>
-								<ul class="lnb">
-									<li><a href="">콘텐츠 저장소</a></li>
-									<li><a href="">뚝딱뚝딱 성장기</a></li>
-									<li><a href="">숫자로 보는 카카오</a></li>
-									<li><a href="">카카오 나우</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item" aria-haspopup="true">
-								<button class="gnb-link" aria-expanded="false" type="button">
-									기술과 서비스
-								</button>
-								<ul class="lnb">
-									<li><a href="">기술</a></li>
-									<li><a href="">서비스</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item" aria-haspopup="true">
-								<button class="gnb-link" aria-expanded="false" type="button">
-									약속과 책임
-								</button>
-								<ul class="lnb">
-									<li><a href="">카카오의 다짐</a></li>
-									<li><a href="">ESG</a></li>
-									<li><a href="">액티브그린</a></li>
-									<li><a href="">정책</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item" aria-haspopup="true">
-								<button class="gnb-link" aria-expanded="false" type="button">
-									뉴스
-								</button>
-								<ul class="lnb">
-									<li><a href="">보도자료</a></li>
-									<li><a href="">참고자료</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item link">
-								<a href="" class="gnb-link">투자정보</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="btn-group">
-						<button class="search-btn" type="button">
-							<span class="sr-only">검색창 열기</span>
-						</button>
-						<button class="hamburger-btn desktop-hidden" type="button">
-							<span class="sr-only">메인 메뉴 열기</span>
-						</button>
-						<a href="" class="lang-btn desktop-only">
-							<span class="sr-only">영어로 보기</span></a
-						>
-						<a href="" class="darkmode-btn desktop-only">
-							<span class="sr-only">다크모드로 보기</span>
-						</a>
-					</div>
-				</div>
-			</header>
-			<div class="sidebar-gnb">
-				<div class="sidebar-gnb-inner">
-					<header class="sidebar-gnb-header">
-						<h2 class="logo">
-							<a href="">
-								<strong class="sr-only"> 카카오 메인 홈페이지 가기 </strong>
-							</a>
-						</h2>
-						<button class="close-button">
-							<span class="sr-only">메인 메뉴 닫기</span>
-						</button>
-					</header>
-					<nav class="nav">
-						<ul class="gnb">
-							<li class="gnb-item">
-								<span>소개</span>
-								<ul class="lnb">
-									<li><a href="">카카오 그룹</a></li>
-									<li><a href="">연혁</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item">
-								<span>이야기</span>
-								<ul class="lnb">
-									<li><a href="">콘텐츠 저장소</a></li>
-									<li><a href="">뚝딱뚝딱 성장기</a></li>
-									<li><a href="">숫자로 보는 카카오</a></li>
-									<li><a href="">카카오 나우</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item">
-								<span>기술과 서비스</span>
-								<ul class="lnb">
-									<li><a href="">기술</a></li>
-									<li><a href="">서비스</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item">
-								<span>약속과 책임</span>
-								<ul class="lnb">
-									<li><a href="">카카오의 다짐</a></li>
-									<li><a href="">ESG</a></li>
-									<li><a href="">액티브그린</a></li>
-									<li><a href="">정책</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item">
-								<span>뉴스</span>
-								<ul class="lnb">
-									<li><a href="">보도자료</a></li>
-									<li><a href="">참고자료</a></li>
-								</ul>
-							</li>
-							<li class="gnb-item link">
-								<a href=""><span>투자정보</span></a>
-							</li>
-						</ul>
-					</nav>
-					<footer class="sidebar-gnb-footer">
-						<div class="relation-area">
-							<a class="career" href="">인재 영입</a>
-							<div class="info-group is-closed">
-								<button class="text link-emph button" type="button">
-									고객센터
-								</button>
-								<div class="list-box">
-									<a href="" target="_blank">
-										<span class="outlink">카카오 고객센터</span
-										><span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">Daum 고객센터</span
-										><span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">커머스 고객센터</span
-										><span class="sr-only">새창열림</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="button-area">
-							<a href="" class="darkmode-btn">
-								<span class="sr-only">다크모드로 보기</span>
-							</a>
-							<a href="" class="lang-btn">
-								<span class="sr-only">영어로 보기</span>
-							</a>
-						</div>
-					</footer>
-				</div>
-			</div>
-			<main>
-				<h2 class="sr-only">홈 본문</h2>
-				<div class="main-content">
-					<section class="section section-visual">
-						<div class="section-content">
-							<div class="wrap-top">
-								<div class="visual-video-area">
-									<div class="visual-video-cont">
-										<video
-											class="visual-video"
-											autoplay
-											muted
-											loop
-											playsinline
-											src="./assets/videos/main-video.mp4"
-										></video>
-									</div>
-									<a class="link-banner" href="">
-										<span class="text">카카오 소식 모아보기</span>
-										<img
-											class="icon"
-											src="./assets/images/kakao-icon/ico_info.gif"
-											alt=""
-										/>
-									</a>
-									<div class="visual-title-cont">
-										<strong class="main-title"
-											>모두의 삶<br />모두의 기술</strong
-										>
-										<p class="sub-title">모두의 삶 프로젝트 Ep.2</p>
-									</div>
-									<a class="round-link-btn" href="" target="_blank"
-										>영상 보러가기
-										<span class="sr-only">새창열림</span>
-										<img
-											src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-											alt=""
-										/>
-									</a>
-								</div>
-							</div>
-							<div class="wrap-bottom">
-								<div class="widget-wrap">
-									<div class="first-widget">
-										<div class="first-widget-slide">
-											<div class="content-01">
-												<a href="" target="_blank">
-													<span class="inner-text"
-														>기부에 함께 해주신 착한 마음들</span
-													>
-													<span class="sr-only">새창열림</span>
-													<div class="count">
-														<strong class="count-number">
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-															<span class="number">0</span>
-														</strong>
-														<span class="count-text">건</span>
-													</div>
-												</a>
-											</div>
-											<div class="content-02">
-												<a href="" target="_blank">
-													<span class="sr-only"
-														>카카오 임팩트
-														<span>새창열림</span>
-													</span>
-												</a>
-											</div>
-										</div>
-										<div class="custom-paging sm-only">
-											<span class="num_current">1</span>
-											<span class="txt_divide"> / </span>
-											<span class="num_total">2</span>
-										</div>
-									</div>
-									<div class="second-widget">
-										<div class="content-01">
-											<a href="">
-												<span class="badge badge-black">다양성의 가치</span>
-												<strong class="title"
-													>2023<br />
-													카카오 다양성 보고서
-												</strong>
-												<div class="wrap-tags">
-													<span>#다양성</span>
-													<span>#건강한디지털</span>
-												</div>
-											</a>
-										</div>
-										<div class="content-02">
-											<a href="">
-												<span class="badge badge-yellow"
-													>디지털 격차 줄이기</span
-												>
-												<strong class="title"
-													>어르신을 위한<br />
-													개인정보보호 안내
-												</strong>
-												<div class="wrap-tags">
-													<span>#기술복지</span>
-													<span>#피싱범죄예방</span>
-												</div>
-											</a>
-										</div>
-										<div class="content-03">
-											<a href="">
-												<span class="badge badge-yellow">카톡설명서</span>
-												<strong class="title"
-													>모두의 카톡을<br />
-													더 가깝고 안전하게
-												</strong>
-												<div class="wrap-tags">
-													<span>#업데이트소식</span>
-													<span>#톡활용팁</span>
-												</div>
-											</a>
-										</div>
-									</div>
-									<div class="third-widget">
-										<div class="content-01">
-											<a href="">
-												<img
-													src="./assets/images/widget/widget_community.png"
-													alt=""
-												/>
-												<span class="title">카카오 그룹</span>
-											</a>
-										</div>
-										<div class="content-02">
-											<a href="">
-												<span class="title">연혁</span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="section section-story">
-						<div class="section-title-wrapper">
-							<h3 class="section-title">
-								카카오와 카카오 그룹이 축적해 온 이야기들
-							</h3>
-							<div class="slide-button-wrapper">
-								<button class="slide-button" type="button"></button>
-							</div>
-						</div>
-						<div class="section-content">
-							<div class="story-slide-wrapper">
-								<ul class="story-slide-list">
-									<li>
-										<div class="card story-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_card.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">더 가깝게</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title">
-													무료로 여는<br />톡 안의 두 번째 매장
-												</strong>
-												<div class="tags-group">
-													<span>#디지털전환</span>
-													<span>#카카오톡채널</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_01.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card reverse">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_film.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">임팩트</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title">도로 위 히어로즈</strong>
-												<div class="tags-group">
-													<span>#카카오모빌리티</span>
-													<span>#파트너상생</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_02.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_card.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">임팩트</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title">
-													카카오가 꿈꾸는<br />지속가능한 미래
-												</strong>
-												<div class="tags-group">
-													<span>#ESG</span>
-													<span>#ESG보고서</span>
-													<span>#약속과책임</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_03.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card reverse">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_film.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">서비스</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title"
-													>진화에 누구보다<br />진심인 편</strong
-												>
-												<div class="tags-group">
-													<span>#조승연의탐구생활</span>
-													<span>#카카오톡</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_04.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="story-card card wide wide-kakao-map">
-											<div class="wrap-text">
-												<div class="info">
-													<img
-														class="ico-cate"
-														src="./assets/images/kakao-icon/ico_picture.webp"
-														alt=""
-													/>
-													<span class="badge badge-white">뚝딱뚝딱 성장기</span>
-													<button class="share-button">
-														<svg viewBox="-10 0 24 24">
-															<g stroke-width="1.6">
-																<g>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="2"
-																		r="2"
-																	></circle>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="10"
-																		r="2"
-																	></circle>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="18"
-																		r="2"
-																	></circle>
-																</g>
-															</g>
-														</svg>
-													</button>
-												</div>
-												<a class="link-area" href="">
-													<strong class="title lg-hidden xl-hidden">
-														지역 정보 매체에서<br />위치 기반 상호작용<br />
-														플랫폼으로
-													</strong>
-													<strong class="title sm-hidden md-hidden">
-														지역 정보 매체에서<br />
-														위치 기반 상호작용 플랫폼으로
-													</strong>
-													<span class="sub-text"
-														>카카오맵에서 일어난<br />
-														24년 간의 업데이트 이야기</span
-													>
-													<div class="tags-group">
-														<span>#지도플랫폼</span>
-														<span>#카카오맵</span>
-													</div>
-													<div class="thumb">
-														<img
-															class="default-img"
-															src="./assets/images/story/img_story_05.webp"
-															alt=""
-														/>
-													</div>
-												</a>
-											</div>
-											<div class="wrap-img">
-												<img
-													class="wide-img"
-													src="./assets/images/story/img_story_05_squre.webp"
-													alt=""
-												/>
-											</div>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card reverse">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_film.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">더 가깝게</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title"
-													>웰 메이드<br />콘텐츠 IP의 저력</strong
-												>
-												<div class="tags-group">
-													<span>#K콘텐츠</span>
-													<span>#웹소설</span>
-													<span>#웹툰</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_06.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_film.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">서비스</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title"
-													>100명에게<br />물어봤습니다</strong
-												>
-												<div class="tags-group">
-													<span>#K로드트립</span>
-													<span>#카카오톡</span>
-													<span>#카톡이지</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_07.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card reverse">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_film.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">서비스</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a class="link-area" href="">
-												<strong class="title">
-													접근성<br />어디까지 고민해 봤나요?
-												</strong>
-												<div class="tags-group">
-													<span>#K디지털접근성</span>
-													<span>#카카오톡</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/story/img_story_08.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card story-card wide wide-kakao-channel">
-											<div class="wrap-text">
-												<div class="info">
-													<img
-														class="ico-cate"
-														src="./assets/images/kakao-icon/ico_film.webp"
-														alt=""
-													/>
-													<span class="badge badge-white">임팩트</span>
-													<button class="share-button">
-														<svg viewBox="-10 0 24 24">
-															<g stroke-width="1.6">
-																<g>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="2"
-																		r="2"
-																	></circle>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="10"
-																		r="2"
-																	></circle>
-																	<circle
-																		data-v-ae75f7f2=""
-																		cx="2"
-																		cy="18"
-																		r="2"
-																	></circle>
-																</g>
-															</g>
-														</svg>
-													</button>
-												</div>
-												<a class="link-area" href="">
-													<strong class="title">
-														왕초보 사장님들의<br />단골 만들기 비법
-													</strong>
-													<span class="sub-text">
-														마케팅이 어려웠던 사장님이<br />매출 500% 올린 비결
-													</span>
-													<div class="tags-group">
-														<span>#K소상공인지원</span>
-														<span>#카카오톡상생활동</span>
-													</div>
-													<div class="thumb">
-														<img
-															src="./assets/images/story/img_story_09.webp"
-															alt=""
-														/>
-													</div>
-												</a>
-											</div>
-											<div class="wrap-img">
-												<img
-													src="./assets/images/story/img_story_09_square.webp"
-													alt=""
-												/>
-											</div>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section class="section section-service">
-						<h3 class="section-title">더 나은 세상을 만드는 카카오 서비스</h3>
-						<div class="section-content">
-							<ul class="service-list">
-								<li class="service-item">
-									<strong class="title">커뮤니케이션</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao.png);
-											"
-											><span class="sr-only">카카오톡 서비스</span></a
-										>
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-daum.png);
-											"
-											><span class="sr-only">다음 서비스</span></a
-										>
-										<a
-											href=""
-											class="item desktop-only"
-											style="
-												background-image: url(./assets/images/service/service-kakao-story.png);
-											"
-											><span class="sr-only">카카오 스토리 서비스</span></a
-										>
-										<a href="" class="item"
-											><span class="sr-only">커뮤니케이션 더보기</span></a
-										>
-									</div>
-								</li>
-								<li class="service-item">
-									<strong class="title">비즈니스</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-channel.png);
-											"
-											><span class="sr-only">카카오톡 채널 서비스</span></a
-										>
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-cloud.png);
-											"
-											><span class="sr-only">카카오 클라우드 서비스</span></a
-										>
-										<a
-											href=""
-											class="item desktop-only"
-											style="
-												background-image: url(./assets/images/service/service-kakao-agit.png);
-											"
-											><span class="sr-only">아지트 서비스</span></a
-										>
-										<a href="" class="item"
-											><span class="sr-only">비즈니스 더보기</span></a
-										>
-									</div>
-								</li>
-								<li class="service-item">
-									<strong class="title">일상편의</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-map.png);
-											"
-										>
-											<span class="sr-only">카카오 맵 서비스</span></a
-										>
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakaoT.png);
-											"
-										>
-											<span class="sr-only">카카오 티 서비스</span></a
-										>
-										<a
-											href=""
-											class="item desktop-only"
-											style="
-												background-image: url(./assets/images/service/service-kakao-bank.png);
-											"
-											><span class="sr-only">카카오뱅크 서비스</span></a
-										>
-										<a href="" class="item"
-											><span class="sr-only">일상편의 더보기</span></a
-										>
-									</div>
-								</li>
-								<li class="service-item">
-									<strong class="title">쇼핑</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakaotalk-gift.png);
-											"
-											><span class="sr-only">카카오톡 선물하기 서비스</span></a
-										>
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakaotalk-shopping.png);
-											"
-											><span class="sr-only">카카오톡 쇼핑하기 서비스</span></a
-										>
-										<a
-											href=""
-											class="item desktop-only"
-											style="
-												background-image: url(./assets/images/service/service-zigzag.png);
-											"
-											><span class="sr-only">지그재그 서비스</span></a
-										>
-										<a href="" class="item"
-											><span class="sr-only">쇼핑 더보기</span></a
-										>
-									</div>
-								</li>
-								<li class="service-item">
-									<strong class="title">엔터테인먼트</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-page.png);
-											"
-											><span class="sr-only">카카오 페이지 서비스</span></a
-										>
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-piccoma.png);
-											"
-										>
-											<span class="sr-only">픽코마 서비스</span></a
-										>
-										<a
-											href=""
-											class="item desktop-only"
-											style="
-												background-image: url(./assets/images/service/service-melon.png);
-											"
-											><span class="sr-only">멜론 서비스</span></a
-										>
-										<a href="" class="item"
-											><span class="sr-only">엔터테인먼트 더보기</span></a
-										>
-									</div>
-								</li>
-								<li class="service-item">
-									<strong class="title">소셜임팩트</strong>
-									<div class="link-group">
-										<a
-											href=""
-											class="item"
-											style="
-												background-image: url(./assets/images/service/service-kakao-together.png);
-											"
-											><span class="sr-only">같이가치 서비스</span>
-										</a>
-										<a href="" class="item"
-											><span class="sr-only">소셜임팩트 더보기</span></a
-										>
-									</div>
-								</li>
-							</ul>
-							<a class="round-link-btn" href="">
-								서비스 전체보기
-								<img
-									src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-									alt=""
-								/>
-							</a>
-						</div>
-					</section>
-					<section class="section section-news">
-						<h3 class="section-title">오늘의 뉴스</h3>
-						<div class="section-content">
-							<div class="wrap-top">
-								<div class="news-card-slide-wrap">
-									<div class="news-card-slide">
-										<div class="news-card card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_article.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">보도자료</span>
-												<span class="date">2024.05.28</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a href="" class="link-area">
-												<strong class="title"
-													>카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
-													참여</strong
-												>
-												<div class="tags-group">
-													<span>#카카오</span>
-													<span>#카카오톡 예약하기</span>
-													<span>#대한민국숙박세일페스타</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/news/thumb_article_01.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-										<div class="card news-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_article.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">보도자료</span>
-												<span class="date">2024.05.27</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a href="" class="link-area">
-												<strong class="title"
-													>카카오, 카카오쇼핑라이브 일주일간 ‘푸드 위크’
-													진행</strong
-												>
-												<div class="tags-group">
-													<span>#카카오쇼핑라이브</span>
-													<span>#카쇼라</span>
-													<span>#푸드위크</span>
-													<span>#카쇼라 이벤트</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/news/thumb_article_02.webp"
-														alt=""
-													/>
-												</div>
-											</a>
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-										<div class="card news-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_article.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">보도자료</span>
-												<span class="date">2024.05.28</span>
-												<button class="share-button">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a href="" class="link-area">
-												<strong class="title"
-													>카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
-													참여</strong
-												>
-												<div class="tags-group">
-													<span>#선물하기LuX</span>
-													<span>#선물하기 명품</span>
-													<span>#이커머스</span>
-												</div>
-												<div class="thumb">
-													<img
-														src="./assets/images/news/thumb_article_03.webp"
-														alt=""
-													/>
-												</div>
-											</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>카카오</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="./site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="./safari-pinned-tab.svg"
+      color="#fae100"
+    />
+    <meta
+      name="msapplication-TileColor"
+      content="#ffc40d"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+    />
+  </head>
+  <body>
+    <div class="direct-link">
+      <a href="#home">본문 바로가기</a>
+      <a href="#gnb">메뉴 바로가기</a>
+    </div>
+    <div
+      id="home"
+      class="container"
+    >
+      <header class="header">
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="">
+              <span class="sr-only">카카오 메인 홈페이지 가기</span>
+            </a>
+          </h1>
+          <nav
+            id="gnb"
+            class="gnb desktop-only"
+          >
+            <h2 class="sr-only">메인 메뉴</h2>
+            <ul class="gnb-list">
+              <li
+                class="gnb-item"
+                aria-haspopup="true"
+              >
+                <button
+                  class="gnb-link"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  소개
+                </button>
+                <ul class="lnb">
+                  <li><a href="">카카오 문화</a></li>
+                  <li><a href="">공동체</a></li>
+                  <li><a href="">연혁</a></li>
+                </ul>
+              </li>
+              <li
+                class="gnb-item"
+                aria-haspopup="true"
+              >
+                <button
+                  class="gnb-link"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  이야기
+                </button>
+                <ul class="lnb">
+                  <li><a href="">콘텐츠 저장소</a></li>
+                  <li><a href="">뚝딱뚝딱 성장기</a></li>
+                  <li><a href="">숫자로 보는 카카오</a></li>
+                  <li><a href="">카카오 나우</a></li>
+                </ul>
+              </li>
+              <li
+                class="gnb-item"
+                aria-haspopup="true"
+              >
+                <button
+                  class="gnb-link"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  기술과 서비스
+                </button>
+                <ul class="lnb">
+                  <li><a href="">기술</a></li>
+                  <li><a href="">서비스</a></li>
+                </ul>
+              </li>
+              <li
+                class="gnb-item"
+                aria-haspopup="true"
+              >
+                <button
+                  class="gnb-link"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  약속과 책임
+                </button>
+                <ul class="lnb">
+                  <li><a href="">카카오의 다짐</a></li>
+                  <li><a href="">ESG</a></li>
+                  <li><a href="">액티브그린</a></li>
+                  <li><a href="">정책</a></li>
+                </ul>
+              </li>
+              <li
+                class="gnb-item"
+                aria-haspopup="true"
+              >
+                <button
+                  class="gnb-link"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  뉴스
+                </button>
+                <ul class="lnb">
+                  <li><a href="">보도자료</a></li>
+                  <li><a href="">참고자료</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item link">
+                <a
+                  href=""
+                  class="gnb-link"
+                  >투자정보</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="btn-group">
+            <button
+              class="search-btn"
+              type="button"
+            >
+              <span class="sr-only">검색창 열기</span>
+            </button>
+            <button
+              class="hamburger-btn desktop-hidden"
+              type="button"
+            >
+              <span class="sr-only">메인 메뉴 열기</span>
+            </button>
+            <a
+              href=""
+              class="lang-btn desktop-only"
+            >
+              <span class="sr-only">영어로 보기</span></a
+            >
+            <a
+              href=""
+              class="darkmode-btn desktop-only"
+            >
+              <span class="sr-only">다크모드로 보기</span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar-gnb">
+        <div class="sidebar-gnb-inner">
+          <header class="sidebar-gnb-header">
+            <h2 class="logo">
+              <a href="">
+                <strong class="sr-only"> 카카오 메인 홈페이지 가기 </strong>
+              </a>
+            </h2>
+            <button class="close-button">
+              <span class="sr-only">메인 메뉴 닫기</span>
+            </button>
+          </header>
+          <nav class="nav">
+            <ul class="gnb">
+              <li class="gnb-item">
+                <span>소개</span>
+                <ul class="lnb">
+                  <li><a href="">카카오 그룹</a></li>
+                  <li><a href="">연혁</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item">
+                <span>이야기</span>
+                <ul class="lnb">
+                  <li><a href="">콘텐츠 저장소</a></li>
+                  <li><a href="">뚝딱뚝딱 성장기</a></li>
+                  <li><a href="">숫자로 보는 카카오</a></li>
+                  <li><a href="">카카오 나우</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item">
+                <span>기술과 서비스</span>
+                <ul class="lnb">
+                  <li><a href="">기술</a></li>
+                  <li><a href="">서비스</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item">
+                <span>약속과 책임</span>
+                <ul class="lnb">
+                  <li><a href="">카카오의 다짐</a></li>
+                  <li><a href="">ESG</a></li>
+                  <li><a href="">액티브그린</a></li>
+                  <li><a href="">정책</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item">
+                <span>뉴스</span>
+                <ul class="lnb">
+                  <li><a href="">보도자료</a></li>
+                  <li><a href="">참고자료</a></li>
+                </ul>
+              </li>
+              <li class="gnb-item link">
+                <a href=""><span>투자정보</span></a>
+              </li>
+            </ul>
+          </nav>
+          <footer class="sidebar-gnb-footer">
+            <div class="relation-area">
+              <a
+                class="career"
+                href=""
+                >인재 영입</a
+              >
+              <div class="info-group is-closed">
+                <button
+                  class="text link-emph button"
+                  type="button"
+                >
+                  고객센터
+                </button>
+                <div class="list-box">
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오 고객센터</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">Daum 고객센터</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">커머스 고객센터</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="button-area">
+              <a
+                href=""
+                class="darkmode-btn"
+              >
+                <span class="sr-only">다크모드로 보기</span>
+              </a>
+              <a
+                href=""
+                class="lang-btn"
+              >
+                <span class="sr-only">영어로 보기</span>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <main>
+        <h2 class="sr-only">홈 본문</h2>
+        <div class="main-content">
+          <section class="section section-visual">
+            <div class="section-content">
+              <div class="wrap-top">
+                <div class="visual-video-area">
+                  <div class="visual-video-cont">
+                    <video
+                      class="visual-video"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      src="./assets/videos/main-video.mp4"
+                    ></video>
+                  </div>
+                  <a
+                    class="link-banner"
+                    href=""
+                  >
+                    <span class="text">카카오 소식 모아보기</span>
+                    <img
+                      class="icon"
+                      src="./assets/images/kakao-icon/ico_info.gif"
+                      alt=""
+                    />
+                  </a>
+                  <div class="visual-title-cont">
+                    <strong class="main-title"
+                      >모두의 삶<br />모두의 기술</strong
+                    >
+                    <p class="sub-title">모두의 삶 프로젝트 Ep.2</p>
+                  </div>
+                  <a
+                    class="round-link-btn"
+                    href=""
+                    target="_blank"
+                    >영상 보러가기
+                    <span class="sr-only">새창열림</span>
+                    <img
+                      src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="wrap-bottom">
+                <div class="widget-wrap">
+                  <div class="first-widget">
+                    <div class="first-widget-slide">
+                      <div class="content-01">
+                        <a
+                          href=""
+                          target="_blank"
+                        >
+                          <span class="inner-text"
+                            >기부에 함께 해주신 착한 마음들</span
+                          >
+                          <span class="sr-only">새창열림</span>
+                          <div class="count">
+                            <strong class="count-number"></strong>
+                            <span class="count-text">건</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="content-02">
+                        <a
+                          href=""
+                          target="_blank"
+                        >
+                          <span class="sr-only"
+                            >카카오 임팩트
+                            <span>새창열림</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="custom-paging sm-only">
+                      <span class="num_current">1</span>
+                      <span class="txt_divide"> / </span>
+                      <span class="num_total">2</span>
+                    </div>
+                  </div>
+                  <div class="second-widget">
+                    <div class="content-01">
+                      <a href="">
+                        <span class="badge badge-black">다양성의 가치</span>
+                        <strong class="title"
+                          >2023<br />
+                          카카오 다양성 보고서
+                        </strong>
+                        <div class="wrap-tags">
+                          <span>#다양성</span>
+                          <span>#건강한디지털</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content-02">
+                      <a href="">
+                        <span class="badge badge-yellow"
+                          >디지털 격차 줄이기</span
+                        >
+                        <strong class="title"
+                          >어르신을 위한<br />
+                          개인정보보호 안내
+                        </strong>
+                        <div class="wrap-tags">
+                          <span>#기술복지</span>
+                          <span>#피싱범죄예방</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content-03">
+                      <a href="">
+                        <span class="badge badge-yellow">카톡설명서</span>
+                        <strong class="title"
+                          >모두의 카톡을<br />
+                          더 가깝고 안전하게
+                        </strong>
+                        <div class="wrap-tags">
+                          <span>#업데이트소식</span>
+                          <span>#톡활용팁</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="third-widget">
+                    <div class="content-01">
+                      <a href="">
+                        <img
+                          src="./assets/images/widget/widget_community.png"
+                          alt=""
+                        />
+                        <span class="title">카카오 그룹</span>
+                      </a>
+                    </div>
+                    <div class="content-02">
+                      <a href="">
+                        <span class="title">연혁</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-story">
+            <div class="section-title-wrapper">
+              <h3 class="section-title">
+                카카오와 카카오 그룹이 축적해 온 이야기들
+              </h3>
+              <div class="slide-button-wrapper">
+                <button
+                  class="slide-button"
+                  type="button"
+                ></button>
+              </div>
+            </div>
+            <div class="section-content">
+              <div class="story-slide-wrapper">
+                <ul class="story-slide-list">
+                  <li>
+                    <div class="card story-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_card.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">더 가깝게</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title">
+                          무료로 여는<br />톡 안의 두 번째 매장
+                        </strong>
+                        <div class="tags-group">
+                          <span>#디지털전환</span>
+                          <span>#카카오톡채널</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_01.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card reverse">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_film.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">임팩트</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title">도로 위 히어로즈</strong>
+                        <div class="tags-group">
+                          <span>#카카오모빌리티</span>
+                          <span>#파트너상생</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_02.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_card.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">임팩트</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title">
+                          카카오가 꿈꾸는<br />지속가능한 미래
+                        </strong>
+                        <div class="tags-group">
+                          <span>#ESG</span>
+                          <span>#ESG보고서</span>
+                          <span>#약속과책임</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_03.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card reverse">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_film.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">서비스</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title"
+                          >진화에 누구보다<br />진심인 편</strong
+                        >
+                        <div class="tags-group">
+                          <span>#조승연의탐구생활</span>
+                          <span>#카카오톡</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_04.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="story-card card wide wide-kakao-map">
+                      <div class="wrap-text">
+                        <div class="info">
+                          <img
+                            class="ico-cate"
+                            src="./assets/images/kakao-icon/ico_picture.webp"
+                            alt=""
+                          />
+                          <span class="badge badge-white">뚝딱뚝딱 성장기</span>
+                          <button class="share-button">
+                            <svg viewBox="-10 0 24 24">
+                              <g stroke-width="1.6">
+                                <g>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="2"
+                                    r="2"
+                                  ></circle>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="10"
+                                    r="2"
+                                  ></circle>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="18"
+                                    r="2"
+                                  ></circle>
+                                </g>
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          class="link-area"
+                          href=""
+                        >
+                          <strong class="title lg-hidden xl-hidden">
+                            지역 정보 매체에서<br />위치 기반 상호작용<br />
+                            플랫폼으로
+                          </strong>
+                          <strong class="title sm-hidden md-hidden">
+                            지역 정보 매체에서<br />
+                            위치 기반 상호작용 플랫폼으로
+                          </strong>
+                          <span class="sub-text"
+                            >카카오맵에서 일어난<br />
+                            24년 간의 업데이트 이야기</span
+                          >
+                          <div class="tags-group">
+                            <span>#지도플랫폼</span>
+                            <span>#카카오맵</span>
+                          </div>
+                          <div class="thumb">
+                            <img
+                              class="default-img"
+                              src="./assets/images/story/img_story_05.webp"
+                              alt=""
+                            />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="wrap-img">
+                        <img
+                          class="wide-img"
+                          src="./assets/images/story/img_story_05_squre.webp"
+                          alt=""
+                        />
+                      </div>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card reverse">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_film.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">더 가깝게</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title"
+                          >웰 메이드<br />콘텐츠 IP의 저력</strong
+                        >
+                        <div class="tags-group">
+                          <span>#K콘텐츠</span>
+                          <span>#웹소설</span>
+                          <span>#웹툰</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_06.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_film.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">서비스</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title"
+                          >100명에게<br />물어봤습니다</strong
+                        >
+                        <div class="tags-group">
+                          <span>#K로드트립</span>
+                          <span>#카카오톡</span>
+                          <span>#카톡이지</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_07.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card reverse">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_film.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">서비스</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        class="link-area"
+                        href=""
+                      >
+                        <strong class="title">
+                          접근성<br />어디까지 고민해 봤나요?
+                        </strong>
+                        <div class="tags-group">
+                          <span>#K디지털접근성</span>
+                          <span>#카카오톡</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/story/img_story_08.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card story-card wide wide-kakao-channel">
+                      <div class="wrap-text">
+                        <div class="info">
+                          <img
+                            class="ico-cate"
+                            src="./assets/images/kakao-icon/ico_film.webp"
+                            alt=""
+                          />
+                          <span class="badge badge-white">임팩트</span>
+                          <button class="share-button">
+                            <svg viewBox="-10 0 24 24">
+                              <g stroke-width="1.6">
+                                <g>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="2"
+                                    r="2"
+                                  ></circle>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="10"
+                                    r="2"
+                                  ></circle>
+                                  <circle
+                                    data-v-ae75f7f2=""
+                                    cx="2"
+                                    cy="18"
+                                    r="2"
+                                  ></circle>
+                                </g>
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          class="link-area"
+                          href=""
+                        >
+                          <strong class="title">
+                            왕초보 사장님들의<br />단골 만들기 비법
+                          </strong>
+                          <span class="sub-text">
+                            마케팅이 어려웠던 사장님이<br />매출 500% 올린 비결
+                          </span>
+                          <div class="tags-group">
+                            <span>#K소상공인지원</span>
+                            <span>#카카오톡상생활동</span>
+                          </div>
+                          <div class="thumb">
+                            <img
+                              src="./assets/images/story/img_story_09.webp"
+                              alt=""
+                            />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="wrap-img">
+                        <img
+                          src="./assets/images/story/img_story_09_square.webp"
+                          alt=""
+                        />
+                      </div>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="section section-service">
+            <h3 class="section-title">더 나은 세상을 만드는 카카오 서비스</h3>
+            <div class="section-content">
+              <ul class="service-list">
+                <li class="service-item">
+                  <strong class="title">커뮤니케이션</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao.png);
+                      "
+                      ><span class="sr-only">카카오톡 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-daum.png);
+                      "
+                      ><span class="sr-only">다음 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item desktop-only"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-story.png);
+                      "
+                      ><span class="sr-only">카카오 스토리 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">커뮤니케이션 더보기</span></a
+                    >
+                  </div>
+                </li>
+                <li class="service-item">
+                  <strong class="title">비즈니스</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-channel.png);
+                      "
+                      ><span class="sr-only">카카오톡 채널 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-cloud.png);
+                      "
+                      ><span class="sr-only">카카오 클라우드 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item desktop-only"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-agit.png);
+                      "
+                      ><span class="sr-only">아지트 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">비즈니스 더보기</span></a
+                    >
+                  </div>
+                </li>
+                <li class="service-item">
+                  <strong class="title">일상편의</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-map.png);
+                      "
+                    >
+                      <span class="sr-only">카카오 맵 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakaoT.png);
+                      "
+                    >
+                      <span class="sr-only">카카오 티 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item desktop-only"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-bank.png);
+                      "
+                      ><span class="sr-only">카카오뱅크 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">일상편의 더보기</span></a
+                    >
+                  </div>
+                </li>
+                <li class="service-item">
+                  <strong class="title">쇼핑</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakaotalk-gift.png);
+                      "
+                      ><span class="sr-only">카카오톡 선물하기 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakaotalk-shopping.png);
+                      "
+                      ><span class="sr-only">카카오톡 쇼핑하기 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item desktop-only"
+                      style="
+                        background-image: url(./assets/images/service/service-zigzag.png);
+                      "
+                      ><span class="sr-only">지그재그 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">쇼핑 더보기</span></a
+                    >
+                  </div>
+                </li>
+                <li class="service-item">
+                  <strong class="title">엔터테인먼트</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-page.png);
+                      "
+                      ><span class="sr-only">카카오 페이지 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-piccoma.png);
+                      "
+                    >
+                      <span class="sr-only">픽코마 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item desktop-only"
+                      style="
+                        background-image: url(./assets/images/service/service-melon.png);
+                      "
+                      ><span class="sr-only">멜론 서비스</span></a
+                    >
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">엔터테인먼트 더보기</span></a
+                    >
+                  </div>
+                </li>
+                <li class="service-item">
+                  <strong class="title">소셜임팩트</strong>
+                  <div class="link-group">
+                    <a
+                      href=""
+                      class="item"
+                      style="
+                        background-image: url(./assets/images/service/service-kakao-together.png);
+                      "
+                      ><span class="sr-only">같이가치 서비스</span>
+                    </a>
+                    <a
+                      href=""
+                      class="item"
+                      ><span class="sr-only">소셜임팩트 더보기</span></a
+                    >
+                  </div>
+                </li>
+              </ul>
+              <a
+                class="round-link-btn"
+                href=""
+              >
+                서비스 전체보기
+                <img
+                  src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </section>
+          <section class="section section-news">
+            <h3 class="section-title">오늘의 뉴스</h3>
+            <div class="section-content">
+              <div class="wrap-top">
+                <div class="news-card-slide-wrap">
+                  <div class="news-card-slide">
+                    <div class="news-card card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_article.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">보도자료</span>
+                        <span class="date">2024.05.28</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        href=""
+                        class="link-area"
+                      >
+                        <strong class="title"
+                          >카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
+                          참여</strong
+                        >
+                        <div class="tags-group">
+                          <span>#카카오</span>
+                          <span>#카카오톡 예약하기</span>
+                          <span>#대한민국숙박세일페스타</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/news/thumb_article_01.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card news-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_article.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">보도자료</span>
+                        <span class="date">2024.05.27</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        href=""
+                        class="link-area"
+                      >
+                        <strong class="title"
+                          >카카오, 카카오쇼핑라이브 일주일간 ‘푸드 위크’
+                          진행</strong
+                        >
+                        <div class="tags-group">
+                          <span>#카카오쇼핑라이브</span>
+                          <span>#카쇼라</span>
+                          <span>#푸드위크</span>
+                          <span>#카쇼라 이벤트</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/news/thumb_article_02.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card news-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_article.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">보도자료</span>
+                        <span class="date">2024.05.28</span>
+                        <button class="share-button">
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        href=""
+                        class="link-area"
+                      >
+                        <strong class="title"
+                          >카카오톡 예약하기, 2024 대한민국 숙박세일 페스타
+                          참여</strong
+                        >
+                        <div class="tags-group">
+                          <span>#선물하기LuX</span>
+                          <span>#선물하기 명품</span>
+                          <span>#이커머스</span>
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="./assets/images/news/thumb_article_03.webp"
+                            alt=""
+                          />
+                        </div>
+                      </a>
 
-											<div class="share-overlay share-overlay-vertical">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="news-card-slide-arrows"></div>
-								</div>
-							</div>
-							<div class="wrap-bottom">
-								<div class="sm-news-card-slide-wrap">
-									<div class="sm-news-card-slide">
-										<div class="card sm-news-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_article.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">보도자료</span>
-												<span class="date">2024.05.20</span>
-												<button class="share-button" tabindex="0">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a href="" class="link-area">
-												<strong class="title">
-													카카오 톡학생증, 출시 1년 만에 누적 발급 수 100만 명
-													돌파
-												</strong>
-											</a>
+                      <div class="share-overlay share-overlay-vertical">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-card-slide-arrows"></div>
+                </div>
+              </div>
+              <div class="wrap-bottom">
+                <div class="sm-news-card-slide-wrap">
+                  <div class="sm-news-card-slide">
+                    <div class="card sm-news-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_article.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">보도자료</span>
+                        <span class="date">2024.05.20</span>
+                        <button
+                          class="share-button"
+                          tabindex="0"
+                        >
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        href=""
+                        class="link-area"
+                      >
+                        <strong class="title">
+                          카카오 톡학생증, 출시 1년 만에 누적 발급 수 100만 명
+                          돌파
+                        </strong>
+                      </a>
 
-											<div class="share-overlay share-overlay-horizontal">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-										<div class="card sm-news-card">
-											<div class="info">
-												<img
-													class="ico-cate"
-													src="./assets/images/kakao-icon/ico_article.webp"
-													alt=""
-												/>
-												<span class="badge badge-white">보도자료</span>
-												<span class="date">2024.05.16</span>
-												<button class="share-button" tabindex="0">
-													<svg viewBox="-10 0 24 24">
-														<g stroke-width="1.6">
-															<g>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="2"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="10"
-																	r="2"
-																></circle>
-																<circle
-																	data-v-ae75f7f2=""
-																	cx="2"
-																	cy="18"
-																	r="2"
-																></circle>
-															</g>
-														</g>
-													</svg>
-												</button>
-											</div>
-											<a href="" class="link-area">
-												<strong class="title"
-													>카카오, 디지털 소외계층 위한 ‘더 쉬운 카톡설명서’
-													공개</strong
-												>
-											</a>
-											<div class="share-overlay share-overlay-horizontal">
-												<button class="close-button">
-													<img
-														src="./assets/images/icon/ic_close_white.svg"
-														alt=""
-													/>
-												</button>
-												<div class="share-sns-icon-group">
-													<a
-														class="share-icon share-kakao"
-														href=""
-														aria-label="카카오톡으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-facebook"
-														href=""
-														aria-label="페이스북으로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<a
-														class="share-icon share-twitter"
-														href=""
-														aria-label="트위터로 공유하기, 새창열림"
-														target="_blank"
-													></a>
-													<button
-														class="share-icon share-link"
-														aria-label="링크 복사하기, 새창열림"
-														type="button"
-													></button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="news-link-button-group">
-									<a class="square-link-btn">
-										전체뉴스
-										<span>
-											바로가기
-											<img
-												src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-												alt=""
-											/>
-										</span>
-									</a>
-									<a href="" class="square-link-btn"
-										>보도자료
-										<span>
-											바로가기
-											<img
-												src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-												alt=""
-											/>
-										</span>
-									</a>
-									<a href="" class="square-link-btn"
-										>참고자료
-										<span>
-											바로가기
-											<img
-												src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-												alt=""
-											/>
-										</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="section section-responsible">
-						<h3 class="section-title">약속과 책임</h3>
-						<div class="section-content">
-							<div class="responsible-box esg">
-								<span class="title-area">
-									<span class="title">ESG</span>
-								</span>
-								<img
-									class="img-responsible"
-									src="./assets/images/responsible/esg_inner.gif"
-									alt=""
-								/>
-								<p class="text-responsible">
-									모두의 지속가능한 미래를 위한 카카오의 약속과 책임
-								</p>
-								<span class="link-button-area">
-									<a href="#a" class="link-button">
-										<span class="sr-only">ESG 페이지 바로가기</span>
-									</a>
-								</span>
-							</div>
-							<div class="responsible-box green">
-								<span class="title-area">
-									<span class="title">액티브그린</span>
-								</span>
-								<img
-									class="img-responsible"
-									src="./assets/images/responsible/green_inner.gif"
-									alt=""
-								/>
-								<p class="text-responsible">
-									카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록
-								</p>
-								<span class="link-button-area">
-									<a href="#a" class="link-button">
-										<span class="sr-only">액티브그린 페이지 바로가기</span>
-									</a>
-								</span>
-							</div>
-							<div class="responsible-box policy">
-								<span class="title-area">
-									<span class="title">정책매거진</span>
-								</span>
-								<img
-									class="img-responsible"
-									src="./assets/images/responsible/policy_inner.gif"
-									alt=""
-								/>
-								<p class="text-responsible">
-									기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다
-								</p>
-								<span class="link-button-area">
-									<a href="#a" class="link-button">
-										<span class="sr-only">정책 매거진 페이지 바로가기</span>
-									</a>
-								</span>
-							</div>
-						</div>
-					</section>
-					<section class="section section-help">
-						<h3 class="section-title">무엇을 도와드릴까요?</h3>
-						<div class="section-content">
-							<div class="wrap-top">
-								<div class="customer-center-box-group">
-									<a class="customer-center-box" href="" target="_blank">
-										<strong class="title">카카오 고객센터</strong>
-										<span class="sr-only">새창열림</span>
-										<span class="sub-text">바로가기</span>
-										<img
-											class="icon"
-											src="./assets/images/help/customer_center_kakao.webp"
-											alt=""
-										/>
-									</a>
-									<a class="customer-center-box" href="" target="_blank">
-										<strong class="title">다음 고객센터</strong>
-										<span class="sr-only">새창열림</span>
-										<span class="sub-text">바로가기</span>
-										<img
-											class="icon"
-											src="./assets/images/help/customer_center_daum.webp"
-											alt=""
-										/>
-									</a>
-									<a class="customer-center-box" href="" target="_blank">
-										<strong class="title">커머스 고객센터</strong>
-										<span class="sr-only">새창열림</span>
-										<span class="sub-text">바로가기</span>
-										<img
-											class="icon"
-											src="./assets/images/help/customer_center_commerce.webp"
-											alt=""
-										/>
-									</a>
-								</div>
-								<div class="color-box-group">
-									<div class="color-box social-box">
-										<strong class="title"
-											>카카오의 다양한 소식을 구독하세요!</strong
-										>
-										<span class="sub-text">공식 소셜 미디어 바로가기</span>
-										<div class="sns-icon-group">
-											<a class="kakao" target="_blank" href=""
-												><span class="sr-only">카카오채널 새창열기</span></a
-											>
-											<a class="youtube" target="_blank" href=""
-												><span class="sr-only">유튜브 새창열기</span></a
-											>
-											<a class="instagram" target="_blank" href=""
-												><span class="sr-only">인스타그램 새창열기</span></a
-											>
-											<a class="facebook" target="_blank" href=""
-												><span class="sr-only">페이스북 새창열기</span></a
-											>
-											<a class="linkedin" target="_blank" href=""
-												><span class="sr-only">링크드인 새창열기</span></a
-											>
-										</div>
-									</div>
-									<div class="color-box recruit-box">
-										<strong class="title"
-											>세상만사에 관심이 많다면,<br />
-											당신은 이미 카카오 크루</strong
-										>
-										<a class="sub-link" href=""
-											>영입소식
-											<span class="sr-only">새창열림</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="wrap-bottom">
-								<a class="ect-box kakao-ir-box" href="">
-									<strong class="title">투자정보</strong>
-									<span class="sub-text"
-										>바로가기<span class="sr-only">새창열림</span></span
-									>
-									<img
-										class="image"
-										src="./assets/images/help/kakao-ir.png"
-										alt=""
-									/>
-								</a>
-								<a class="ect-box kakao-privacy-box" href="">
-									<strong class="title"
-										>데이터의 연결과 보호의 균형을 위한 카카오의 노력</strong
-									>
-									<span class="sub-text"
-										>바로가기<span class="sr-only">새창열림</span></span
-									>
-									<img
-										class="image"
-										src="./assets/images/help/kakao-privacy.png"
-										alt=""
-									/>
-								</a>
-							</div>
-							<a href="" class="round-link-btn"
-								>카카오 소식 모아보기
-								<img
-									src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
-									alt=""
-								/>
-							</a>
-						</div>
-					</section>
-				</div>
-			</main>
-			<footer class="footer">
-				<div class="footer-inner">
-					<h2 class="sr-only">하단 메뉴</h2>
-					<h3 class="footer-title">오늘의 카카오</h3>
-					<div class="wrap-top">
-						<div class="main-service-group">
-							<ul class="main-service-list">
-								<li>
-									<a href="" class="inlink">카카오톡 공식 다운로드 </a>
-								</li>
-								<li>
-									<a href="">카카오톡백업</a>
-								</li>
-								<li>
-									<a href="">#카카오 이모티콘샵</a>
-								</li>
-								<li>
-									<a href="">#조용한채팅방</a>
-								</li>
-								<li>
-									<a href="">#카카오맵</a>
-								</li>
-								<li>
-									<a href="">#지속가능성</a>
-								</li>
-								<li>
-									<a href="">#개발자도구</a>
-								</li>
-							</ul>
-						</div>
-						<div class="wrap-service-group desktop-hidden">
-							<div class="service-group">
-								<button class="title" type="button">
-									카카오 그룹의 서비스
-								</button>
-								<ul class="service-list">
-									<li><a href="">커뮤니케이션</a></li>
-									<li><a href="">일상편의</a></li>
-									<li><a href="">비즈니스</a></li>
-									<li><a href="">쇼핑</a></li>
-									<li><a href="">엔터테인먼트</a></li>
-									<li><a href="">임팩트</a></li>
-								</ul>
-							</div>
-							<div class="service-group">
-								<button class="title" type="button">카카오 공동체</button>
-								<ul class="service-list">
-									<li><a href="">카카오</a></li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오페이
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오뱅크<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오모빌리티<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오스타일<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오엔터테인먼트<span class="sr-only"
-												>새창열림</span
-											></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오게임즈<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오픽코마<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오브레인<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오엔터프라이즈<span class="sr-only"
-												>새창열림</span
-											></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오헬스케어<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오벤처스<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오인베스트먼트<span class="sr-only"
-												>새창열림</span
-											></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>링키지랩<span class="sr-only">새창열림</span></a
-										>
-									</li>
-								</ul>
-							</div>
-							<div class="service-group">
-								<button class="title" type="button">IR</button>
-								<ul class="service-list">
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>기업지배구조<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>주가정보<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>재무정보<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>IR행사<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>공시정보<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>공고<span class="sr-only">새창열림</span></a
-										>
-									</li>
-								</ul>
-							</div>
-							<div class="service-group">
-								<button class="title" type="button">계정 및 지원</button>
-								<ul class="service-list">
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오계정<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오 프라이버시<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>카카오 고객센터<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>다음 고객센터<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>커머스 고객센터<span class="sr-only">새창열림</span></a
-										>
-									</li>
-									<li>
-										<a href="" class="outlink" target="_blank"
-											>인재영입<span class="sr-only">새창열림</span></a
-										>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="service-group desktop-only">
-							<strong class="title"> 카카오 그룹의 서비스 </strong>
-							<ul class="service-list">
-								<li><a href="">커뮤니케이션</a></li>
-								<li><a href="">일상편의</a></li>
-								<li><a href="">비즈니스</a></li>
-								<li><a href="">쇼핑</a></li>
-								<li><a href="">엔터테인먼트</a></li>
-								<li><a href="">임팩트</a></li>
-							</ul>
-						</div>
-						<div class="service-group desktop-only">
-							<strong class="title">카카오 그룹</strong>
-							<ul class="service-list">
-								<li><a href="">카카오</a></li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오페이<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오뱅크<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오모빌리티<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오스타일<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오엔터테인먼트<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오게임즈<span class="sr-only">새창열림</span></a
-									>
-								</li>
-							</ul>
-						</div>
-						<div class="service-group desktop-only">
-							<ul class="service-list">
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오픽코마<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오브레인<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오엔터프라이즈<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오헬스케어<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오벤처스<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오인베스트먼트<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>링키지랩<span class="sr-only">새창열림</span></a
-									>
-								</li>
-							</ul>
-						</div>
-						<div class="service-group desktop-only">
-							<strong class="title">IR</strong>
-							<ul class="service-list">
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>기업지배구조<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>주가정보<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>재무정보<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>IR행사<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>공시정보<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>공고<span class="sr-only">새창열림</span></a
-									>
-								</li>
-							</ul>
-						</div>
-						<div class="service-group desktop-only">
-							<strong class="title">계정 및 지원</strong>
-							<ul class="service-list">
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오계정<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오 프라이버시<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>카카오 고객센터<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>다음 고객센터<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>커머스 고객센터<span class="sr-only">새창열림</span></a
-									>
-								</li>
-								<li>
-									<a href="" class="outlink" target="_blank"
-										>인재영입<span class="sr-only">새창열림</span></a
-									>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="wrap-bottom">
-						<h2 class="sr-only">서비스 이용정보</h2>
-						<div class="wrap-info-group">
-							<div class="info-group is-closed">
-								<button class="text button" type="button">이용약관</button>
-								<div class="list-box">
-									<a href="" target="_blank">
-										<span class="outlink">카카오계정서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">카카오 서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">Daum 서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-								</div>
-							</div>
-							<div class="info-group is-closed">
-								<button class="text link-emph button" type="button">
-									위치정보 이용약관
-								</button>
-								<div class="list-box">
-									<a href="" target="_blank">
-										<span class="outlink">카카오 서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">Daum 서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-								</div>
-							</div>
-							<div class="info-group is-closed">
-								<button class="text link-emph button" type="button">
-									개인정보처리방침
-								</button>
-								<div class="list-box">
-									<a href=""><span>기업사이트</span></a>
-									<a href="" target="_blank"
-										><span class="outlink">카카오 서비스</span
-										><span class="sr-only">새창열림</span></a
-									>
-								</div>
-							</div>
-							<div class="info-group">
-								<a class="text" href="">운영정책</a>
-							</div>
-							<div class="info-group is-closed">
-								<button class="text button" type="button">
-									청소년보호정책
-								</button>
-								<div class="list-box">
-									<a href="" target="_blank">
-										<span class="outlink">카카오 서비스</span>
-										<span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">Daum 서비스</span
-										><span class="sr-only">새창열림</span>
-									</a>
-								</div>
-							</div>
-							<div class="info-group">
-								<a class="text">접근성 안내</a>
-							</div>
-							<div class="info-group">
-								<a class="text" href="">브랜드보호정책</a>
-							</div>
-							<div class="info-group">
-								<a class="text" href="">권리침해신고안내</a>
-							</div>
-							<div class="info-group is-closed">
-								<button class="text button" type="button">공지사항</button>
-								<div class="list-box">
-									<a href="">
-										<span>투자정보 공지</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">카카오 서비스</span>
-										<span class="sr-only">새창열림</span>
-									</a>
-									<a href="" target="_blank">
-										<span class="outlink">Daum 서비스</span>
-										<span class="sr-only">새창열림</span>
-									</a>
-								</div>
-							</div>
-							<div class="info-group">
-								<a class="text" href="">사이버윤리실</a>
-							</div>
-							<div class="info-group">
-								<a class="text" href="">Contact Us</a>
-							</div>
-						</div>
-						<div class="wrap-relation">
-							<div class="relation-group">
-								<button class="text relation-site-button" type="button">
-									관련사이트
-								</button>
-								<ul class="relation-site-list">
-									<li>
-										<a href="" target="_blank">
-											<span class="text">카카오 AI </span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" target="_blank">
-											<span class="text">카카오 프라이버시</span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" target="_blank">
-											<span class="text">카카오 디벨로퍼스</span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" target="_blank">
-											<span class="text">다음 포털 사이트</span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" target="_blank">
-											<span class="text">동반 성장 사이트</span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-									<li>
-										<a href="" target="_blank">
-											<span class="text">제주 with kakao</span>
-											<span class="sr-only">새창열림</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<small>
-							©<a href="">Kakao Corp.</a>
-							All rights reserved.
-						</small>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<script src="./js/header.js"></script>
-		<script src="./js/gnb.js"></script>
-		<script src="./js/story-slide.js"></script>
-		<script src="./js/news-card-slide.js"></script>
-		<script src="./js/card-overlay.js"></script>
-		<script src="./js/first-widget.js"></script>
-		<script src="./js/second-widget.js"></script>
-		<script src="./js/third-widget.js"></script>
-		<script src="./js/service-group.js"></script>
-		<script src="./js/relation-site.js"></script>
-		<script src="./js/info-group.js"></script>
-		<script src="./js/sidebar-gnb.js"></script>
-		<script src="./js/count.js"></script>
-	</body>
+                      <div class="share-overlay share-overlay-horizontal">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card sm-news-card">
+                      <div class="info">
+                        <img
+                          class="ico-cate"
+                          src="./assets/images/kakao-icon/ico_article.webp"
+                          alt=""
+                        />
+                        <span class="badge badge-white">보도자료</span>
+                        <span class="date">2024.05.16</span>
+                        <button
+                          class="share-button"
+                          tabindex="0"
+                        >
+                          <svg viewBox="-10 0 24 24">
+                            <g stroke-width="1.6">
+                              <g>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="2"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="10"
+                                  r="2"
+                                ></circle>
+                                <circle
+                                  data-v-ae75f7f2=""
+                                  cx="2"
+                                  cy="18"
+                                  r="2"
+                                ></circle>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                      <a
+                        href=""
+                        class="link-area"
+                      >
+                        <strong class="title"
+                          >카카오, 디지털 소외계층 위한 ‘더 쉬운 카톡설명서’
+                          공개</strong
+                        >
+                      </a>
+                      <div class="share-overlay share-overlay-horizontal">
+                        <button class="close-button">
+                          <img
+                            src="./assets/images/icon/ic_close_white.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="share-sns-icon-group">
+                          <a
+                            class="share-icon share-kakao"
+                            href=""
+                            aria-label="카카오톡으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-facebook"
+                            href=""
+                            aria-label="페이스북으로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <a
+                            class="share-icon share-twitter"
+                            href=""
+                            aria-label="트위터로 공유하기, 새창열림"
+                            target="_blank"
+                          ></a>
+                          <button
+                            class="share-icon share-link"
+                            aria-label="링크 복사하기, 새창열림"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-link-button-group">
+                  <a class="square-link-btn">
+                    전체뉴스
+                    <span>
+                      바로가기
+                      <img
+                        src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                        alt=""
+                      />
+                    </span>
+                  </a>
+                  <a
+                    href=""
+                    class="square-link-btn"
+                    >보도자료
+                    <span>
+                      바로가기
+                      <img
+                        src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                        alt=""
+                      />
+                    </span>
+                  </a>
+                  <a
+                    href=""
+                    class="square-link-btn"
+                    >참고자료
+                    <span>
+                      바로가기
+                      <img
+                        src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                        alt=""
+                      />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-responsible">
+            <h3 class="section-title">약속과 책임</h3>
+            <div class="section-content">
+              <div class="responsible-box esg">
+                <span class="title-area">
+                  <span class="title">ESG</span>
+                </span>
+                <img
+                  class="img-responsible"
+                  src="./assets/images/responsible/esg_inner.gif"
+                  alt=""
+                />
+                <p class="text-responsible">
+                  모두의 지속가능한 미래를 위한 카카오의 약속과 책임
+                </p>
+                <span class="link-button-area">
+                  <a
+                    href=""
+                    class="link-button"
+                  >
+                    <span class="sr-only">ESG 페이지 바로가기</span>
+                  </a>
+                </span>
+              </div>
+              <div class="responsible-box green">
+                <span class="title-area">
+                  <span class="title">액티브그린</span>
+                </span>
+                <img
+                  class="img-responsible"
+                  src="./assets/images/responsible/green_inner.gif"
+                  alt=""
+                />
+                <p class="text-responsible">
+                  카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록
+                </p>
+                <span class="link-button-area">
+                  <a
+                    href=""
+                    class="link-button"
+                  >
+                    <span class="sr-only">액티브그린 페이지 바로가기</span>
+                  </a>
+                </span>
+              </div>
+              <div class="responsible-box policy">
+                <span class="title-area">
+                  <span class="title">정책매거진</span>
+                </span>
+                <img
+                  class="img-responsible"
+                  src="./assets/images/responsible/policy_inner.gif"
+                  alt=""
+                />
+                <p class="text-responsible">
+                  기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다
+                </p>
+                <span class="link-button-area">
+                  <a
+                    href=""
+                    class="link-button"
+                  >
+                    <span class="sr-only">정책 매거진 페이지 바로가기</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </section>
+          <section class="section section-help">
+            <h3 class="section-title">무엇을 도와드릴까요?</h3>
+            <div class="section-content">
+              <div class="wrap-top">
+                <div class="customer-center-box-group">
+                  <a
+                    class="customer-center-box"
+                    href=""
+                    target="_blank"
+                  >
+                    <strong class="title">카카오 고객센터</strong>
+                    <span class="sr-only">새창열림</span>
+                    <span class="sub-text">바로가기</span>
+                    <img
+                      class="icon"
+                      src="./assets/images/help/customer_center_kakao.webp"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="customer-center-box"
+                    href=""
+                    target="_blank"
+                  >
+                    <strong class="title">다음 고객센터</strong>
+                    <span class="sr-only">새창열림</span>
+                    <span class="sub-text">바로가기</span>
+                    <img
+                      class="icon"
+                      src="./assets/images/help/customer_center_daum.webp"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="customer-center-box"
+                    href=""
+                    target="_blank"
+                  >
+                    <strong class="title">커머스 고객센터</strong>
+                    <span class="sr-only">새창열림</span>
+                    <span class="sub-text">바로가기</span>
+                    <img
+                      class="icon"
+                      src="./assets/images/help/customer_center_commerce.webp"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="color-box-group">
+                  <div class="color-box social-box">
+                    <strong class="title"
+                      >카카오의 다양한 소식을 구독하세요!</strong
+                    >
+                    <span class="sub-text">공식 소셜 미디어 바로가기</span>
+                    <div class="sns-icon-group">
+                      <a
+                        class="kakao"
+                        target="_blank"
+                        href=""
+                        ><span class="sr-only">카카오채널 새창열기</span></a
+                      >
+                      <a
+                        class="youtube"
+                        target="_blank"
+                        href=""
+                        ><span class="sr-only">유튜브 새창열기</span></a
+                      >
+                      <a
+                        class="instagram"
+                        target="_blank"
+                        href=""
+                        ><span class="sr-only">인스타그램 새창열기</span></a
+                      >
+                      <a
+                        class="facebook"
+                        target="_blank"
+                        href=""
+                        ><span class="sr-only">페이스북 새창열기</span></a
+                      >
+                      <a
+                        class="linkedin"
+                        target="_blank"
+                        href=""
+                        ><span class="sr-only">링크드인 새창열기</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="color-box recruit-box">
+                    <strong class="title"
+                      >세상만사에 관심이 많다면,<br />
+                      당신은 이미 카카오 크루</strong
+                    >
+                    <a
+                      class="sub-link"
+                      href=""
+                      >영입소식
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-bottom">
+                <a
+                  class="ect-box kakao-ir-box"
+                  href=""
+                >
+                  <strong class="title">투자정보</strong>
+                  <span class="sub-text"
+                    >바로가기<span class="sr-only">새창열림</span></span
+                  >
+                  <img
+                    class="image"
+                    src="./assets/images/help/kakao-ir.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="ect-box kakao-privacy-box"
+                  href=""
+                >
+                  <strong class="title"
+                    >데이터의 연결과 보호의 균형을 위한 카카오의 노력</strong
+                  >
+                  <span class="sub-text"
+                    >바로가기<span class="sr-only">새창열림</span></span
+                  >
+                  <img
+                    class="image"
+                    src="./assets/images/help/kakao-privacy.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <a
+                href=""
+                class="round-link-btn"
+                >카카오 소식 모아보기
+                <img
+                  src="./assets/images/icon/ic_circle_arrow_black_lg.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-inner">
+          <h2 class="sr-only">하단 메뉴</h2>
+          <h3 class="footer-title">오늘의 카카오</h3>
+          <div class="wrap-top">
+            <div class="main-service-group">
+              <ul class="main-service-list">
+                <li>
+                  <a
+                    href=""
+                    class="inlink"
+                    >카카오톡 공식 다운로드
+                  </a>
+                </li>
+                <li>
+                  <a href="">카카오톡백업</a>
+                </li>
+                <li>
+                  <a href="">#카카오 이모티콘샵</a>
+                </li>
+                <li>
+                  <a href="">#조용한채팅방</a>
+                </li>
+                <li>
+                  <a href="">#카카오맵</a>
+                </li>
+                <li>
+                  <a href="">#지속가능성</a>
+                </li>
+                <li>
+                  <a href="">#개발자도구</a>
+                </li>
+              </ul>
+            </div>
+            <div class="wrap-service-group desktop-hidden">
+              <div class="service-group">
+                <button
+                  class="title"
+                  type="button"
+                >
+                  카카오 그룹의 서비스
+                </button>
+                <ul class="service-list">
+                  <li><a href="">커뮤니케이션</a></li>
+                  <li><a href="">일상편의</a></li>
+                  <li><a href="">비즈니스</a></li>
+                  <li><a href="">쇼핑</a></li>
+                  <li><a href="">엔터테인먼트</a></li>
+                  <li><a href="">임팩트</a></li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button
+                  class="title"
+                  type="button"
+                >
+                  카카오 공동체
+                </button>
+                <ul class="service-list">
+                  <li><a href="">카카오</a></li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오페이
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오뱅크<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오모빌리티<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오스타일<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오엔터테인먼트<span class="sr-only"
+                        >새창열림</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오게임즈<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오픽코마<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오브레인<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오엔터프라이즈<span class="sr-only"
+                        >새창열림</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오헬스케어<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오벤처스<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오인베스트먼트<span class="sr-only"
+                        >새창열림</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >링키지랩<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button
+                  class="title"
+                  type="button"
+                >
+                  IR
+                </button>
+                <ul class="service-list">
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >기업지배구조<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >주가정보<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >재무정보<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >IR행사<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >공시정보<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >공고<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="service-group">
+                <button
+                  class="title"
+                  type="button"
+                >
+                  계정 및 지원
+                </button>
+                <ul class="service-list">
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오계정<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오 프라이버시<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >카카오 고객센터<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >다음 고객센터<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >커머스 고객센터<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="outlink"
+                      target="_blank"
+                      >인재영입<span class="sr-only">새창열림</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-group desktop-only">
+              <strong class="title"> 카카오 그룹의 서비스 </strong>
+              <ul class="service-list">
+                <li><a href="">커뮤니케이션</a></li>
+                <li><a href="">일상편의</a></li>
+                <li><a href="">비즈니스</a></li>
+                <li><a href="">쇼핑</a></li>
+                <li><a href="">엔터테인먼트</a></li>
+                <li><a href="">임팩트</a></li>
+              </ul>
+            </div>
+            <div class="service-group desktop-only">
+              <strong class="title">카카오 그룹</strong>
+              <ul class="service-list">
+                <li><a href="">카카오</a></li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오페이<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오뱅크<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오모빌리티<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오스타일<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오엔터테인먼트<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오게임즈<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="service-group desktop-only">
+              <ul class="service-list">
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오픽코마<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오브레인<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오엔터프라이즈<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오헬스케어<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오벤처스<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오인베스트먼트<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >링키지랩<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="service-group desktop-only">
+              <strong class="title">IR</strong>
+              <ul class="service-list">
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >기업지배구조<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >주가정보<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >재무정보<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >IR행사<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >공시정보<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >공고<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="service-group desktop-only">
+              <strong class="title">계정 및 지원</strong>
+              <ul class="service-list">
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오계정<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오 프라이버시<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >카카오 고객센터<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >다음 고객센터<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >커머스 고객센터<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="outlink"
+                    target="_blank"
+                    >인재영입<span class="sr-only">새창열림</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrap-bottom">
+            <h2 class="sr-only">서비스 이용정보</h2>
+            <div class="wrap-info-group">
+              <div class="info-group is-closed">
+                <button
+                  class="text button"
+                  type="button"
+                >
+                  이용약관
+                </button>
+                <div class="list-box">
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오계정서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오 서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">Daum 서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                </div>
+              </div>
+              <div class="info-group is-closed">
+                <button
+                  class="text link-emph button"
+                  type="button"
+                >
+                  위치정보 이용약관
+                </button>
+                <div class="list-box">
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오 서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">Daum 서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                </div>
+              </div>
+              <div class="info-group is-closed">
+                <button
+                  class="text link-emph button"
+                  type="button"
+                >
+                  개인정보처리방침
+                </button>
+                <div class="list-box">
+                  <a href=""><span>기업사이트</span></a>
+                  <a
+                    href=""
+                    target="_blank"
+                    ><span class="outlink">카카오 서비스</span
+                    ><span class="sr-only">새창열림</span></a
+                  >
+                </div>
+              </div>
+              <div class="info-group">
+                <a
+                  class="text"
+                  href=""
+                  >운영정책</a
+                >
+              </div>
+              <div class="info-group is-closed">
+                <button
+                  class="text button"
+                  type="button"
+                >
+                  청소년보호정책
+                </button>
+                <div class="list-box">
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오 서비스</span>
+                    <span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">Daum 서비스</span
+                    ><span class="sr-only">새창열림</span>
+                  </a>
+                </div>
+              </div>
+              <div class="info-group">
+                <a class="text">접근성 안내</a>
+              </div>
+              <div class="info-group">
+                <a
+                  class="text"
+                  href=""
+                  >브랜드보호정책</a
+                >
+              </div>
+              <div class="info-group">
+                <a
+                  class="text"
+                  href=""
+                  >권리침해신고안내</a
+                >
+              </div>
+              <div class="info-group is-closed">
+                <button
+                  class="text button"
+                  type="button"
+                >
+                  공지사항
+                </button>
+                <div class="list-box">
+                  <a href="">
+                    <span>투자정보 공지</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">카카오 서비스</span>
+                    <span class="sr-only">새창열림</span>
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                  >
+                    <span class="outlink">Daum 서비스</span>
+                    <span class="sr-only">새창열림</span>
+                  </a>
+                </div>
+              </div>
+              <div class="info-group">
+                <a
+                  class="text"
+                  href=""
+                  >사이버윤리실</a
+                >
+              </div>
+              <div class="info-group">
+                <a
+                  class="text"
+                  href=""
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="wrap-relation">
+              <div class="relation-group">
+                <button
+                  class="text relation-site-button"
+                  type="button"
+                >
+                  관련사이트
+                </button>
+                <ul class="relation-site-list">
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">카카오 AI </span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">카카오 프라이버시</span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">카카오 디벨로퍼스</span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">다음 포털 사이트</span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">동반 성장 사이트</span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_blank"
+                    >
+                      <span class="text">제주 with kakao</span>
+                      <span class="sr-only">새창열림</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <small>
+              ©<a href="">Kakao Corp.</a>
+              All rights reserved.
+            </small>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/gnb.js"></script>
+    <script src="./js/story-slide.js"></script>
+    <script src="./js/news-card-slide.js"></script>
+    <script src="./js/card-overlay.js"></script>
+    <script src="./js/first-widget.js"></script>
+    <script src="./js/second-widget.js"></script>
+    <script src="./js/third-widget.js"></script>
+    <script src="./js/service-group.js"></script>
+    <script src="./js/relation-site.js"></script>
+    <script src="./js/info-group.js"></script>
+    <script src="./js/sidebar-gnb.js"></script>
+    <script src="./js/count.js"></script>
+  </body>
 </html>

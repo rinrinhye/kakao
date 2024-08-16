@@ -168,7 +168,7 @@ button {
   }
 }
 
-@media screen and (width >= 1024px) and (width <= 1339px) {
+@media screen and (width >= 1024px) and (width <= 1439px) {
   .lg-hidden {
     display: none !important;
   }
@@ -600,7 +600,6 @@ button {
 
 .main-content {
   padding-bottom: 80px;
-  overflow-x: hidden;
 }
 
 .section:not(.section-story),
@@ -663,8 +662,6 @@ button {
   font-weight: 700;
   line-height: 21px;
   color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
   background: #333;
 }
 .direct-link a:focus {
@@ -835,6 +832,8 @@ button {
 }
 .section-story .story-slide-wrapper {
   display: flex;
+  margin: 0 -14px;
+  overflow-x: hidden;
 }
 .section-story .story-slide-list {
   display: flex;
@@ -1521,18 +1520,29 @@ button {
   .gnb .gnb-list {
     display: flex;
   }
-  .gnb .gnb-list .gnb-item {
-    position: relative;
-    padding: 0 20px;
-    cursor: pointer;
+  .gnb .gnb-list:hover {
+    color: #888;
   }
-  .gnb .gnb-list .gnb-item:hover {
+  .gnb .gnb-list:hover .gnb-link:last-child::after {
+    background: url("assets/images/icon/ic_outlink_gray.svg") no-repeat;
+  }
+  .gnb .gnb-item {
+    position: relative;
+  }
+  .gnb .gnb-item:hover {
     color: #000;
   }
-  .gnb .gnb-list .gnb-item:hover:last-child::after {
+  .gnb .gnb-item:last-child:hover .gnb-link:last-child::after {
     background: url("assets/images/icon/ic_outlink_black.svg") no-repeat;
   }
-  .gnb .gnb-list .gnb-item:last-child::after {
+  .gnb .gnb-link {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+  }
+  .gnb .gnb-link:last-child::after {
     position: absolute;
     top: 50%;
     right: 5%;
@@ -1542,12 +1552,6 @@ button {
     background: url("assets/images/icon/ic_outlink_black.svg") no-repeat;
     content: "";
     transform: translateY(-50%);
-  }
-  .gnb:hover {
-    color: #888;
-  }
-  .gnb:hover .gnb-item:last-child::after {
-    background: url("assets/images/icon/ic_outlink_gray.svg") no-repeat;
   }
   .gnb .gnb-item.is-active .lnb {
     display: block;
@@ -1582,7 +1586,7 @@ button {
   }
 }
 @media screen and (width >= 1440px) {
-  .gnb .gnb-list .gnb-item {
+  .gnb .gnb-list .gnb-item .gnb-link {
     padding: 0 30px;
   }
 }
@@ -3036,7 +3040,7 @@ button {
   font-weight: 600;
   line-height: 1.6;
   letter-spacing: -0.5px;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
 }
 .story-card .sub-text {
   display: none;
