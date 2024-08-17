@@ -5,6 +5,8 @@
 
   .section-content {
     position: relative;
+    margin: 0 -14px;
+    overflow: hidden;
   }
 
   .slide-button-wrapper {
@@ -32,8 +34,6 @@
 
   .story-slide-wrapper {
     display: flex;
-    margin: 0 -14px;
-    overflow-x: hidden;
   }
 
   .story-slide-list {
