@@ -14,7 +14,7 @@ $('.first-widget-slide').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        dots: true,
+        dots: false,
         fade: false,
         arrows: true,
       },
