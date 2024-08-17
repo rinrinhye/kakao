@@ -27,13 +27,15 @@ $('.first-widget-slide').on(
   function (e, slick, currentSlide) {
     const customPaging =
       document.documentElement.querySelector('.custom-paging');
-
     const currentNumberSpan = customPaging.querySelector('.num_current');
 
     if (currentSlide === 0) {
       currentNumberSpan.innerHTML = 2;
     } else {
       currentNumberSpan.innerHTML = 1;
+      if (slick.activeBreakpoint === null) {
+        countingStart();
+      }
     }
   }
 );

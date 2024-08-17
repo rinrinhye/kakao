@@ -1,4 +1,4 @@
-const countNumber = document.querySelector('.count-number');
+const countNumberWrap = document.querySelectorAll('.count-number');
 const targetNumber = 60194399;
 const targetNumberArray = targetNumber.toString().split('');
 
@@ -11,26 +11,31 @@ for (let i = 0; i < targetNumber.toString().length; i++) {
 }
 
 for (let i = 0; i < numberSpanArray.length; i++) {
-  countNumber.appendChild(numberSpanArray[i]);
+  countNumberWrap.forEach((countNumber) => {
+    countNumber.appendChild(numberSpanArray[i]);
+  });
 }
 
 if (targetNumberArray.length > 3) {
   const length = targetNumberArray.length;
-  const q = ~~(targetNumberArray.length / 3);
-  const r = targetNumberArray.length % 3;
+  const q = ~~(length / 3);
+  const r = length % 3;
   const span = document.createElement('span');
   span.innerHTML = ',';
-  console.log(length);
 
   if (q > 0 && r !== 0) {
     for (let i = 1; i <= q; i++) {
-      const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
-      span.before(',');
+      countNumberWrap.forEach((countNumber) => {
+        const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
+        span.before(',');
+      });
     }
   } else if (q > 0 && r === 0) {
     for (let i = 1; i < q; i++) {
-      const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
-      span.before(',');
+      countNumberWrap.forEach((countNumber) => {
+        const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
+        span.before(',');
+      });
     }
   }
 }
@@ -50,8 +55,13 @@ function counting(number, index) {
   }, 30);
 }
 
-numberSpanArray.forEach((number, index) => {
-  setTimeout(() => {
-    counting(number, index);
-  }, index * 100);
-});
+function countingStart() {
+  numberSpanArray.forEach((number, index) => {
+    number.innerHTML = 0;
+    setTimeout(() => {
+      counting(number, index);
+    }, index * 100);
+  });
+}
+
+countingStart();
