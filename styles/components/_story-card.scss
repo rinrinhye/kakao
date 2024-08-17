@@ -113,6 +113,11 @@
     .thumb {
       height: 174px;
     }
+
+    .share-button {
+      top: 38px;
+      right: 16px;
+    }
   }
 
   @include responsive(XL) {
@@ -132,6 +137,11 @@
         top: 0;
         right: 0;
         left: 0;
+      }
+
+      .share-button {
+        top: 224px;
+        right: 22px;
       }
     }
 
@@ -158,11 +168,19 @@
         .wrap-img {
           width: 439px;
         }
+
+        .share-button {
+          right: 460px;
+        }
       }
 
       &.wide-kakao-channel {
         .wrap-img {
           width: 778px;
+        }
+
+        .share-button {
+          right: 800px;
         }
       }
 
@@ -214,6 +232,11 @@
 
     .thumb {
       height: 179px;
+    }
+
+    .share-button {
+      top: 45px;
+      right: 20px;
     }
   }
 }

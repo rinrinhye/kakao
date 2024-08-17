@@ -1,6 +1,6 @@
 const overlays = document.querySelectorAll('.share-overlay');
 
-const shareButtons = document.querySelectorAll('.info .share-button');
+const shareButtons = document.querySelectorAll('.card .share-button');
 
 const slideArrowButtonGroup = document.querySelector(
   '.news-card-slide-wrap .news-card-slide-arrows'
@@ -14,10 +14,14 @@ shareButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     button.classList.add('is-disabled');
 
-    const card = button.parentElement.parentElement.closest('.card');
+    const card = button.parentElement.closest('.card');
 
     const overlay = card.querySelector('.share-overlay');
+    const buttons = overlay.querySelectorAll('button, a');
     overlay.classList.add('is-active');
+    buttons.forEach((button) => {
+      button.tabIndex = 0;
+    });
 
     if (window.innerWidth < 1024) {
       if (card.classList.contains('news-card')) {
@@ -32,8 +36,12 @@ closeButtons.forEach((closeButton) => {
     const card = e.target.closest('.card');
     const overlay = e.target.closest('.share-overlay');
     const shareButton = overlay.parentElement.querySelector('.share-button');
+    const buttons = overlay.querySelectorAll('button, a');
     shareButton.classList.remove('is-disabled');
     overlay.classList.remove('is-active');
+    buttons.forEach((button) => {
+      button.tabIndex = -1;
+    });
 
     if (window.innerWidth < 1024) {
       if (card.classList.contains('news-card')) {

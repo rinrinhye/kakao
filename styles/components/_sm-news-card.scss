@@ -50,6 +50,10 @@
     .title {
       font-size: 17px;
     }
+
+    .share-button {
+      top: 36px;
+    }
   }
 
   @include responsive(L) {
@@ -77,6 +81,11 @@
 
     .title {
       -webkit-line-clamp: 2;
+    }
+
+    .share-button {
+      top: 44px;
+      right: 16px;
     }
   }
 
@@ -109,6 +118,11 @@
 
     .title {
       font-size: 26px;
+    }
+
+    .share-button {
+      top: 57px;
+      right: 36px;
     }
   }
 }

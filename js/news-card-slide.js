@@ -2,6 +2,7 @@ $window = $(window);
 
 function newsCardSettings() {
   return $('.news-card-slide').slick({
+    accessibility: false,
     responsive: [
       {
         breakpoint: 9999,
@@ -24,6 +25,7 @@ function newsCardSettings() {
 
 function smNewsCardSettings() {
   return $('.sm-news-card-slide').slick({
+    accessibility: false,
     responsive: [
       {
         breakpoint: 9999,

@@ -132,6 +132,11 @@
     .thumb {
       height: 178px;
     }
+
+    .share-button {
+      top: 45px;
+      right: 16px;
+    }
   }
 
   @include responsive(XL) {
@@ -184,6 +189,11 @@
 
     .thumb {
       height: 249px;
+    }
+
+    .share-button {
+      top: 55px;
+      right: 31px;
     }
   }
 }
