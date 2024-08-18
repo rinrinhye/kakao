@@ -5,9 +5,6 @@ const sidebarGnbItems = sidebarGnb.querySelectorAll('.gnb-item');
 
 let currentGnbItems = [];
 
-hamburgerButton.addEventListener('click', openSidebarGnb);
-closeButton.addEventListener('click', closeSidebarGnb);
-
 function openSidebarGnb() {
   sidebarGnb.classList.add('is-active');
   document.body.style.overflowY = 'hidden';
@@ -16,6 +13,7 @@ function openSidebarGnb() {
 function closeSidebarGnb() {
   sidebarGnb.classList.remove('is-active');
   document.body.style.overflowY = 'auto';
+  currentGnbItems = [];
 
   sidebarGnbItems.forEach((item) => {
     const gnbLink = item.querySelector('.gnb-link');
@@ -23,10 +21,6 @@ function closeSidebarGnb() {
     gnbLink.ariaExpanded = false;
   });
 }
-
-sidebarGnbItems.forEach((item) => {
-  item.addEventListener('click', () => toggleSidebarGnbItem(item));
-});
 
 function toggleSidebarGnbItem(item) {
   const gnbLink = item.querySelector('.gnb-link');
@@ -44,3 +38,16 @@ function toggleSidebarGnbItem(item) {
     gnbLink.ariaExpanded = 'false';
   }
 }
+
+hamburgerButton.addEventListener('click', openSidebarGnb);
+closeButton.addEventListener('click', closeSidebarGnb);
+
+sidebarGnbItems.forEach((item) => {
+  item.addEventListener('click', () => toggleSidebarGnbItem(item));
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1024) {
+    closeSidebarGnb();
+  }
+});
