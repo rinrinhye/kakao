@@ -1424,7 +1424,7 @@ button {
 .sidebar-gnb .gnb-item {
   /* text */
 }
-.sidebar-gnb .gnb-item.is-active span:not(:last-child)::after {
+.sidebar-gnb .gnb-item.is-active button:not(:last-child)::after {
   margin-top: 0;
   border: 5px solid transparent;
   border-bottom: 5px solid #000;
@@ -1435,7 +1435,7 @@ button {
 .sidebar-gnb .gnb-item:not(:first-child) {
   margin-top: 36px;
 }
-.sidebar-gnb .gnb-item span {
+.sidebar-gnb .gnb-item .gnb-link {
   display: flex;
   align-items: center;
   height: 52px;
@@ -1445,7 +1445,7 @@ button {
   cursor: pointer;
   /* icon */
 }
-.sidebar-gnb .gnb-item span:not(:last-child)::after {
+.sidebar-gnb .gnb-item .gnb-link:not(:last-child)::after {
   display: inline-block;
   margin-top: 10px;
   margin-left: 14px;
@@ -1453,7 +1453,7 @@ button {
   border-top: 5px solid #000;
   content: "";
 }
-.sidebar-gnb .gnb-item span::before {
+.sidebar-gnb .gnb-item .gnb-link::before {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -1461,22 +1461,22 @@ button {
   background-size: contain;
   content: "";
 }
-.sidebar-gnb .gnb-item:nth-child(1) span::before {
+.sidebar-gnb .gnb-item:nth-child(1) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_ryan.png");
 }
-.sidebar-gnb .gnb-item:nth-child(2) span::before {
+.sidebar-gnb .gnb-item:nth-child(2) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_film.webp");
 }
-.sidebar-gnb .gnb-item:nth-child(3) span::before {
+.sidebar-gnb .gnb-item:nth-child(3) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_bulb.png");
 }
-.sidebar-gnb .gnb-item:nth-child(4) span::before {
+.sidebar-gnb .gnb-item:nth-child(4) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_heart.png");
 }
-.sidebar-gnb .gnb-item:nth-child(5) span::before {
+.sidebar-gnb .gnb-item:nth-child(5) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_article.webp");
 }
-.sidebar-gnb .gnb-item:nth-child(6) span::before {
+.sidebar-gnb .gnb-item:nth-child(6) .gnb-link::before {
   background-image: url("../../assets/images/kakao-icon/ico_graph.png");
 }
 .sidebar-gnb .lnb {
