@@ -1,8 +1,9 @@
-@import './base/reset';
-@import './base/globals';
-
 @import './constants/colors';
 @import './constants/z-indexes';
+@import './constants/layout-contstants';
+
+@import './base/reset';
+@import './base/globals';
 
 @import './mixins/responsive';
 @import './mixins/rounded-corner';

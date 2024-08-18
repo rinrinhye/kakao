@@ -1,14 +1,11 @@
-.main-content,
+/* main layout */
+.header,
+.main,
 .footer {
-  padding: 0 14px;
-}
-
-.main-content {
-  padding-bottom: 80px;
-  overflow: hidden;
+  padding: 0 $sm-margin;
 
   @include responsive(M) {
-    overflow: visible;
+    padding: 0;
   }
 }
 
@@ -31,9 +28,22 @@
   }
 }
 
+/* section 별 간격, 모바일에서 스크롤 생김 방지 */
+
 .section:not(.section-visual) {
   padding-top: 80px;
 }
+
+.main {
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  @include responsive(M) {
+    overflow: visible;
+  }
+}
+
+/* section-story 예외 처리 */
 
 .section-story .section-title-wrapper {
   max-width: 384px;

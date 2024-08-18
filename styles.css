@@ -144,31 +144,31 @@ button {
   background: transparent;
 }
 
-@media screen and (width <= 1023px) {
+@media screen and (width < 1024px) {
   .desktop-only {
     display: none !important;
   }
 }
 
-@media screen and (width >= 1025px) {
+@media screen and (width > 1024px) {
   .desktop-hidden {
     display: none !important;
   }
 }
 
-@media screen and (width <= 767px) {
+@media screen and (width < 768px) {
   .sm-hidden {
     display: none !important;
   }
 }
 
-@media screen and (width >= 768px) and (width <= 1023px) {
+@media screen and (width >= 768px) and (width < 1024px) {
   .md-hidden {
     display: none !important;
   }
 }
 
-@media screen and (width >= 1024px) and (width <= 1439px) {
+@media screen and (width >= 1024px) and (width < 1440px) {
   .lg-hidden {
     display: none !important;
   }
@@ -593,18 +593,17 @@ button {
   }
 }
 
-.main-content,
+/* main layout */
+.header,
+.main,
 .footer {
   padding: 0 14px;
 }
-
-.main-content {
-  padding-bottom: 80px;
-  overflow: hidden;
-}
 @media screen and (width >= 768px) {
-  .main-content {
-    overflow: visible;
+  .header,
+  .main,
+  .footer {
+    padding: 0;
   }
 }
 
@@ -633,10 +632,22 @@ button {
   }
 }
 
+/* section 별 간격, 모바일에서 스크롤 생김 방지 */
 .section:not(.section-visual) {
   padding-top: 80px;
 }
 
+.main {
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+@media screen and (width >= 768px) {
+  .main {
+    overflow: visible;
+  }
+}
+
+/* section-story 예외 처리 */
 .section-story .section-title-wrapper {
   max-width: 384px;
   margin: 0 auto;
@@ -691,7 +702,6 @@ button {
   justify-content: space-between;
   height: 72px;
   max-width: 412px;
-  padding: 0 14px;
   margin: 0 auto;
 }
 .header .btn-group {
@@ -862,6 +872,9 @@ button {
   .section-story .section-title::before {
     background-image: url("assets/images/kakao-icon/ico_tit_story.gif");
     background-size: contain;
+  }
+  .section-story .section-content {
+    margin: 0;
   }
   .section-story .slide-button-wrapper {
     width: 32px;
