@@ -4,7 +4,7 @@ const targetNumberArray = targetNumber.toString().split('');
 
 let numberSpanArray = [];
 
-for (let i = 0; i < targetNumber.toString().length; i++) {
+for (let i = 0; i < targetNumberArray.length; i++) {
   const numberSpan = document.createElement('span');
   numberSpan.innerHTML = 0;
   numberSpanArray = [...numberSpanArray, numberSpan];
@@ -42,7 +42,7 @@ if (targetNumberArray.length > 3) {
 
 function counting(number, index) {
   let count = 0;
-  let plus = setInterval(() => {
+  const plus = setInterval(() => {
     count++;
     if (count < 10) {
       number.innerHTML = count;

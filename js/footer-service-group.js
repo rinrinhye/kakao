@@ -1,12 +1,14 @@
 const serviceGroups = document.querySelectorAll('.service-group');
 
 serviceGroups.forEach((serviceGroup) => {
-  serviceGroup.addEventListener('click', (e) => {
-    const serviceGroup = e.target.closest('.service-group');
-
-    serviceGroup.classList.toggle('is-active');
-  });
+  serviceGroup.addEventListener('click', toggleClassListforServiceGroup);
 });
+
+function toggleClassListforServiceGroup(e) {
+  const serviceGroup = e.target.closest('.service-group');
+
+  serviceGroup.classList.toggle('is-active');
+}
 
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 1024) {

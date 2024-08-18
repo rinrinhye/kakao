@@ -9,15 +9,6 @@ const storySlideLists = document.querySelectorAll('.story-slide-list');
 
 let click = false;
 
-button.addEventListener('click', () => {
-  if (button.classList.contains('is-paused')) {
-    play();
-  } else {
-    puased();
-  }
-  click = !click;
-});
-
 function puased() {
   button.classList.add('is-paused');
   storySlideLists.forEach((list) => {
@@ -31,6 +22,17 @@ function play() {
     list.style.animationPlayState = 'running';
   });
 }
+
+function toggleButtonforSlide() {
+  if (button.classList.contains('is-paused')) {
+    play();
+  } else {
+    puased();
+  }
+  click = !click;
+}
+
+button.addEventListener('click', toggleButtonforSlide);
 
 storySlideWrapper.addEventListener('mouseenter', () => {
   if (click) return;
