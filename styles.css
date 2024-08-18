@@ -1528,6 +1528,17 @@ button {
   width: 24px;
   height: 24px;
 }
+@media screen and (width >= 768px) {
+  .sidebar-gnb .sidebar-gnb-inner {
+    max-width: 712px;
+    margin: 0 auto;
+  }
+}
+@media screen and (width >= 1024px) {
+  .sidebar-gnb {
+    display: none;
+  }
+}
 
 @media screen and (width >= 1024px) {
   .gnb {

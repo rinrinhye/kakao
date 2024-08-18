@@ -172,4 +172,15 @@
       }
     }
   }
+
+  @include responsive(M) {
+    .sidebar-gnb-inner {
+      max-width: 712px;
+      margin: 0 auto;
+    }
+  }
+
+  @include responsive(L) {
+    display: none;
+  }
 }
