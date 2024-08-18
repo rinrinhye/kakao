@@ -9,22 +9,23 @@
   }
 }
 
+.header-inner,
 .section:not(.section-story),
 .footer-inner {
-  max-width: 384px;
+  max-width: $sm-inner-width;
   margin: 0 auto;
 
   @include responsive(M) {
-    max-width: 712px;
+    max-width: $md-inner-width;
     padding: 0;
   }
 
   @include responsive(L) {
-    max-width: 948px;
+    max-width: $lg-inner-width;
   }
 
   @include responsive(XL) {
-    max-width: 1316px;
+    max-width: $xl-inner-width;
   }
 }
 

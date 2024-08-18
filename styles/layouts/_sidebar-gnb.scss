@@ -16,7 +16,7 @@
   }
 
   .sidebar-gnb-inner {
-    max-width: 384px;
+    max-width: $sm-inner-width;
     margin: 0 auto;
   }
 
@@ -175,7 +175,7 @@
 
   @include responsive(M) {
     .sidebar-gnb-inner {
-      max-width: 712px;
+      max-width: $md-inner-width;
       margin: 0 auto;
     }
   }

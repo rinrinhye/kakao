@@ -14,7 +14,6 @@
     display: flex;
     justify-content: space-between;
     height: 72px;
-    max-width: 412px;
     margin: 0 auto;
   }
 
@@ -43,17 +42,9 @@
     }
   }
 
-  @include responsive(M) {
-    .header-inner {
-      max-width: 712px;
-      padding: 0;
-    }
-  }
-
   @include responsive(L) {
     .header-inner {
       height: 84px;
-      max-width: 952px;
     }
 
     .logo {
@@ -97,7 +88,6 @@
   @include responsive(XL) {
     .header-inner {
       height: 92px;
-      max-width: 1316px;
     }
   }
 }
