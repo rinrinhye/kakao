@@ -2,49 +2,50 @@
   .service-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -12px 0 12px -12px;
-    font-size: 16px;
-    font-weight: 600;
+    margin-bottom: 12px;
+    gap: 12px;
   }
 
   .service-item {
-    position: relative;
-    flex: 1 1 40%;
-    padding: 20px 20px 82px;
-    margin: 12px 0 0 12px;
+    display: flex;
+    flex-basis: calc(50% - 6px);
+    flex-direction: column;
+    padding: 20px;
     background: $bg-gray;
     border-radius: 16px;
+    gap: 12px;
   }
 
   .title {
     font-size: 16px;
+    font-weight: 600;
     line-height: 26px;
     letter-spacing: -0.5px;
   }
 
   .link-group {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
     display: flex;
+    height: 46px;
     gap: 4px;
+  }
 
-    .item {
-      display: block;
-      width: 46px;
-      height: 46px;
-      background-size: cover;
+  .item {
+    display: block;
+    flex-basis: calc(33.3% - 4px);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-      &:last-child {
-        background: url('assets/images/service/service-link-btn.svg') no-repeat;
-        background-size: contain;
-      }
+    &:last-child {
+      background: url('assets/images/service/service-link-btn.svg') no-repeat;
+      background-position: bottom;
+      background-size: contain;
+    }
 
-      &:last-child:hover {
-        background: url('assets/images/service/service-link-btn-black.svg')
-          no-repeat;
-        background-size: contain;
-      }
+    &:last-child:hover {
+      background: url('assets/images/service/service-link-btn-black.svg')
+        no-repeat;
+      background-size: contain;
     }
   }
 
@@ -54,21 +55,15 @@
       background-size: contain;
     }
 
-    .section-content {
-      text-align: center;
-    }
-
     .service-list {
-      margin: -8px 0 0 -8px;
-      margin-bottom: 24px;
+      margin-bottom: 40px;
     }
 
     .service-item {
-      display: flex;
       align-items: center;
+      flex-direction: row;
       justify-content: space-between;
       padding: 32px 24px;
-      margin: 8px 0 0 8px;
     }
 
     .title {
@@ -76,20 +71,19 @@
     }
 
     .link-group {
-      position: static;
       gap: 9px;
+    }
+
+    .item {
+      flex-basis: auto;
+      width: 46px;
+      height: 46px;
     }
   }
 
   @include responsive(L) {
-    .service-list {
-      margin: -12px 0 0 -12px;
-      margin-bottom: 40px;
-    }
-
     .service-item {
       padding: 32px 36px;
-      margin: 12px 0 0 12px;
       border-radius: 24px;
     }
 
@@ -99,29 +93,17 @@
   }
 
   @include responsive(XL) {
-    .service-list {
-      margin: -16px 0 0 -16px;
-      margin-bottom: 40px;
-    }
-
     .service-item {
-      height: 160px;
       padding: 52px 42px;
-      margin: 16px 0 0 16px;
     }
 
     .title {
       font-size: 30px;
-      letter-spacing: -0.8px;
     }
 
-    .link-group {
-      gap: 12px;
-
-      .item {
-        width: 56px;
-        height: 56px;
-      }
+    .item {
+      width: 56px;
+      height: 56px;
     }
   }
 }
