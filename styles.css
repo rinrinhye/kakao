@@ -606,6 +606,7 @@ button {
   }
 }
 
+/* content-width */
 .header-inner,
 .section:not(.section-story),
 .footer-inner {
@@ -635,11 +636,12 @@ button {
   }
 }
 
-/* section 별 간격, 모바일에서 스크롤 생김 방지 */
+/* section 별 간격 */
 .section:not(.section-visual) {
   padding-top: 80px;
 }
 
+/* 모바일에서 스크롤 생김 방지 */
 .main {
   padding-bottom: 80px;
   overflow: hidden;
@@ -673,7 +675,7 @@ button {
   }
 }
 
-/* search-modal - active 시 */
+/* search-modal 오픈 */
 body.open-search {
   overflow-y: scroll;
 }
@@ -706,6 +708,7 @@ body.open-search .footer {
   }
 }
 
+/* sidebar-gnb 오픈 */
 body.open-sidebar-gnb {
   overflow-y: hidden;
 }
