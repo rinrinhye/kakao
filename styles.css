@@ -1620,7 +1620,7 @@ body.open-search .footer {
   flex-direction: column;
   justify-content: center;
   padding: 72px 0;
-  background: url("../../assets/images/kakao-icon/ico_bg_search.png") no-repeat;
+  background: url("assets/images/kakao-icon/ico_bg_search.png") no-repeat;
   background-position: 100% 67px;
   background-size: 63px 70px;
   opacity: 0;
@@ -1636,7 +1636,7 @@ body.open-search .footer {
   display: block;
   width: 22px;
   height: 22px;
-  background: url("../../assets/images/icon/ic_tail_black.svg") no-repeat;
+  background: url("assets/images/icon/ic_tail_black.svg") no-repeat;
   content: "";
 }
 .search-modal .search-form {
@@ -1691,7 +1691,7 @@ body.open-search .footer {
   width: 28px;
   height: 28px;
   cursor: pointer;
-  background: url("../../assets/images/icon/ic_close_black.png") no-repeat;
+  background: url("assets/images/icon/ic_close_black.png") no-repeat;
   background-size: contain;
 }
 @media screen and (width >= 768px) {
