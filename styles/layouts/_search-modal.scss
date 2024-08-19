@@ -23,7 +23,7 @@
   }
 
   &.is-active {
-    z-index: 3000;
+    z-index: $search-modal-level;
     opacity: 1;
 
     .search-group {

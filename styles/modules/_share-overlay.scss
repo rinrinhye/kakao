@@ -11,7 +11,7 @@
   transition: all 250ms ease-in-out;
 
   &.is-active {
-    z-index: 200;
+    z-index: $share-overlay-level;
     opacity: 1;
   }
 

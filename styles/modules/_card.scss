@@ -14,7 +14,6 @@
     position: absolute;
     top: 37px;
     right: 13px;
-    z-index: 40;
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -26,7 +25,6 @@
   }
 
   .title {
-    display: block;
     display: -webkit-box;
     overflow: hidden;
     word-break: keep-all;

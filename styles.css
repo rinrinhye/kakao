@@ -391,7 +391,6 @@ button {
   position: absolute;
   top: 37px;
   right: 13px;
-  z-index: 40;
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -401,7 +400,6 @@ button {
   opacity: 0;
 }
 .story-card .title, .sm-news-card .title, .news-card .title {
-  display: block;
   display: -webkit-box;
   overflow: hidden;
   word-break: keep-all;
@@ -425,7 +423,7 @@ button {
   transition: all 250ms ease-in-out;
 }
 .is-active.share-overlay-horizontal, .is-active.share-overlay-vertical {
-  z-index: 200;
+  z-index: 100;
   opacity: 1;
 }
 .share-overlay-horizontal .close-button, .share-overlay-vertical .close-button {
@@ -1418,7 +1416,7 @@ body.open-search .footer {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 3000;
   width: 100%;
   height: 100vh;
   padding: 0 14px;
