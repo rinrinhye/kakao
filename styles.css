@@ -1491,22 +1491,22 @@ body.open-search .footer {
   content: "";
 }
 .sidebar-gnb .gnb-item:nth-child(1) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_ryan.png");
+  background-image: url("assets/images/kakao-icon/ico_ryan.png");
 }
 .sidebar-gnb .gnb-item:nth-child(2) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_film.webp");
+  background-image: url("assets/images/kakao-icon/ico_film.webp");
 }
 .sidebar-gnb .gnb-item:nth-child(3) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_bulb.png");
+  background-image: url("assets/images/kakao-icon/ico_bulb.png");
 }
 .sidebar-gnb .gnb-item:nth-child(4) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_heart.png");
+  background-image: url("assets/images/kakao-icon/ico_heart.png");
 }
 .sidebar-gnb .gnb-item:nth-child(5) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_article.webp");
+  background-image: url("assets/images/kakao-icon/ico_article.webp");
 }
 .sidebar-gnb .gnb-item:nth-child(6) .gnb-link::before {
-  background-image: url("../../assets/images/kakao-icon/ico_graph.png");
+  background-image: url("assets/images/kakao-icon/ico_graph.png");
 }
 .sidebar-gnb .lnb {
   display: none;
