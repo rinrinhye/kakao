@@ -38,6 +38,7 @@
 .main {
   padding-bottom: 80px;
   overflow: hidden;
+  transition: transform 0.7s ease;
 
   @include responsive(M) {
     overflow: visible;
@@ -61,5 +62,46 @@
 
   @include responsive(XL) {
     max-width: 1316px;
+  }
+}
+
+/* search-modal - active 시 */
+
+body.open-search {
+  overflow-y: scroll;
+
+  .container {
+    height: calc(100vh - 72px);
+    overflow: hidden;
+  }
+
+  .main {
+    transform: translateY(220px);
+  }
+
+  .footer {
+    display: none;
+  }
+
+  @include responsive(M) {
+    .container {
+      height: calc(100vh - 84px);
+    }
+
+    .main {
+      transform: translateY(260px);
+    }
+  }
+
+  @include responsive(L) {
+    .main {
+      transform: translateY(310px);
+    }
+  }
+
+  @include responsive(XL) {
+    .container {
+      height: calc(100vh - 84px);
+    }
   }
 }

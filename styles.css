@@ -83,7 +83,8 @@ time,
 mark,
 audio,
 video,
-button {
+button,
+input {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -644,6 +645,7 @@ button {
 .main {
   padding-bottom: 80px;
   overflow: hidden;
+  transition: transform 0.7s ease;
 }
 @media screen and (width >= 768px) {
   .main {
@@ -670,6 +672,39 @@ button {
 @media screen and (width >= 1440px) {
   .section-story .section-title-wrapper {
     max-width: 1316px;
+  }
+}
+
+/* search-modal - active 시 */
+body.open-search {
+  overflow-y: scroll;
+}
+body.open-search .container {
+  height: calc(100vh - 72px);
+  overflow: hidden;
+}
+body.open-search .main {
+  transform: translateY(220px);
+}
+body.open-search .footer {
+  display: none;
+}
+@media screen and (width >= 768px) {
+  body.open-search .container {
+    height: calc(100vh - 84px);
+  }
+  body.open-search .main {
+    transform: translateY(260px);
+  }
+}
+@media screen and (width >= 1024px) {
+  body.open-search .main {
+    transform: translateY(310px);
+  }
+}
+@media screen and (width >= 1440px) {
+  body.open-search .container {
+    height: calc(100vh - 84px);
   }
 }
 
@@ -1382,6 +1417,7 @@ button {
 .sidebar-gnb {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10000;
   width: 100%;
   height: 100vh;
@@ -1532,6 +1568,208 @@ button {
 @media screen and (width >= 1024px) {
   .sidebar-gnb {
     display: none;
+  }
+}
+
+.search-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.search-modal::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  background: rgba(255, 255, 255, 0.6);
+  content: "";
+}
+.search-modal.is-active {
+  z-index: 3000;
+  opacity: 1;
+}
+.search-modal.is-active .search-group {
+  opacity: 1;
+  transform: translateY(0);
+}
+.search-modal-inner {
+  width: 100%;
+  padding: 0 24px;
+  background: #fff;
+}
+.search-modal-header {
+  height: 60px;
+  max-width: 384px;
+  margin: 0 auto;
+}
+.search-modal-body {
+  position: relative;
+  max-width: 384px;
+  margin: 0 auto;
+}
+.search-modal .search-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
+  background: url("../../assets/images/kakao-icon/ico_bg_search.png") no-repeat;
+  background-position: 100% 67px;
+  background-size: 63px 70px;
+  opacity: 0;
+  transform: translateY(-30%);
+  transition: opacity 0.6s 0.3s, transform 0.6s 0.3s;
+  gap: 30px;
+  /* 말풍선 꼬리 */
+}
+.search-modal .search-group::before {
+  position: absolute;
+  top: 114px;
+  right: 69px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/icon/ic_tail_black.svg") no-repeat;
+  content: "";
+}
+.search-modal .search-form {
+  position: relative;
+}
+.search-modal .search-input {
+  width: 81%;
+  height: 60px;
+  padding: 0 18px;
+  padding-left: 60px;
+  font-family: inherit;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  border: 0;
+  border-radius: 22px;
+  outline: none;
+}
+.search-modal .search-input::placeholder {
+  font-weight: 600;
+  color: #fff;
+}
+.search-modal .tags-group {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 334px;
+  gap: 6px;
+}
+.search-modal .search-icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+}
+.search-modal .link-tag {
+  display: block;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 34px;
+  background: #eee;
+  border-radius: 34px;
+}
+.search-modal .close-button {
+  position: absolute;
+  top: -37px;
+  right: 0;
+  display: block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: url("../../assets/images/icon/ic_close_black.png") no-repeat;
+  background-size: contain;
+}
+@media screen and (width >= 768px) {
+  .search-modal-header {
+    max-width: 712px;
+  }
+  .search-modal-body {
+    max-width: 712px;
+  }
+  .search-modal .search-group {
+    align-items: center;
+    padding: 84px 0;
+    background-position: 97% 70px;
+    background-size: 96px 106px;
+  }
+  .search-modal .search-group::before {
+    top: 126px;
+    right: 124px;
+  }
+  .search-modal .search-input {
+    width: 450px;
+  }
+  .search-modal .tags-group {
+    align-self: auto;
+  }
+  .search-modal .close-button {
+    right: 48px;
+  }
+}
+@media screen and (width >= 1024px) {
+  .search-modal-header {
+    max-width: 948px;
+  }
+  .search-modal-body {
+    max-width: 948px;
+  }
+  .search-modal .search-group {
+    padding: 96px 0;
+    background-size: 132px 146px;
+  }
+  .search-modal .search-group::before {
+    top: 138px;
+    right: 167px;
+  }
+  .search-modal .search-input {
+    width: 600px;
+  }
+  .search-modal .tags-group {
+    max-width: 448px;
+  }
+  .search-modal .close-button {
+    right: 0;
+  }
+}
+@media screen and (width >= 1440px) {
+  .search-modal-header {
+    max-width: 1316px;
+  }
+  .search-modal-body {
+    max-width: 1316px;
+  }
+  .search-modal .search-group {
+    padding: 120px 0;
+    background-position: 95% 70px;
+    background-size: 162px 178px;
+  }
+  .search-modal .search-group::before {
+    top: 174px;
+    right: 239px;
+  }
+  .search-modal .search-input {
+    width: 823px;
+    height: 72px;
+  }
+  .search-modal .tags-group {
+    max-width: 600px;
   }
 }
 
