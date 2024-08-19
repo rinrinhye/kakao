@@ -706,6 +706,10 @@ body.open-search .footer {
   }
 }
 
+body.open-sidebar-gnb {
+  overflow-y: hidden;
+}
+
 .direct-link {
   position: relative;
 }

@@ -7,12 +7,12 @@ let currentGnbItems = [];
 
 function openSidebarGnb() {
   sidebarGnb.classList.add('is-active');
-  document.body.style.overflowY = 'hidden';
+  document.body.classList.add('open-sidebar-gnb');
 }
 
 function closeSidebarGnb() {
   sidebarGnb.classList.remove('is-active');
-  document.body.style.overflowY = 'auto';
+  document.body.classList.remove('open-sidebar-gnb');
   currentGnbItems = [];
 
   sidebarGnbItems.forEach((item) => {
