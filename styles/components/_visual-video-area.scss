@@ -136,7 +136,8 @@
       @include rounded-corner(26);
       padding: 5px 5px 6px 17px;
 
-      &:hover {
+      &:hover,
+      &:focus {
         .text {
           z-index: $link-banner-level;
           display: block;
