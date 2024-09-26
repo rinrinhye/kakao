@@ -55,7 +55,7 @@ function counting(number, index) {
   }, 30);
 }
 
-function countingStart() {
+export function countingStart() {
   numberSpanArray.forEach((number, index) => {
     number.innerHTML = 0;
     setTimeout(() => {

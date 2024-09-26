@@ -1,3 +1,5 @@
+import { countingStart } from './count';
+
 $('.first-widget-slide').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
