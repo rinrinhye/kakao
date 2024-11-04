@@ -26,7 +26,7 @@ $('.first-widget-slide').slick({
 
 $('.first-widget-slide').on(
   'init reinit beforeChange',
-  function (e, slick, currentSlide) {
+  function (_, slick, currentSlide) {
     const customPaging =
       document.documentElement.querySelector('.custom-paging');
     const currentNumberSpan = customPaging.querySelector('.num_current');

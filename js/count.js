@@ -1,53 +1,44 @@
-const countNumberWrap = document.querySelectorAll('.count-number');
+const countNumberWrap = document.querySelector('.count-number');
 const targetNumber = 60194399;
 const targetNumberArray = targetNumber.toString().split('');
 
-let numberSpanArray = [];
-
-for (let i = 0; i < targetNumberArray.length; i++) {
+// <span> 0 </span> 을 타겟 넘버 숫자 개수만큼 만들기
+const numberSpanArray = targetNumberArray.map(() => {
   const numberSpan = document.createElement('span');
   numberSpan.innerHTML = 0;
-  numberSpanArray = [...numberSpanArray, numberSpan];
-}
 
-for (let i = 0; i < numberSpanArray.length; i++) {
-  countNumberWrap.forEach((countNumber) => {
-    countNumber.appendChild(numberSpanArray[i]);
-  });
-}
+  return numberSpan;
+});
 
+// countNumberWrap 자식으로 삽입
+numberSpanArray.forEach((span) => {
+  countNumberWrap.appendChild(span);
+});
+
+// 쉼표 삽입
 if (targetNumberArray.length > 3) {
   const length = targetNumberArray.length;
-  const q = ~~(length / 3);
-  const r = length % 3;
-  const span = document.createElement('span');
-  span.innerHTML = ',';
+  const q = Math.floor(length / 3);
 
-  if (q > 0 && r !== 0) {
-    for (let i = 1; i <= q; i++) {
-      countNumberWrap.forEach((countNumber) => {
-        const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
-        span.before(',');
-      });
-    }
-  } else if (q > 0 && r === 0) {
-    for (let i = 1; i < q; i++) {
-      countNumberWrap.forEach((countNumber) => {
-        const span = countNumber.querySelector(`span:nth-last-child(${i * 3})`);
-        span.before(',');
-      });
+  const numberSpans = countNumberWrap.querySelectorAll(`span`);
+
+  for (let i = 1; i <= q; i++) {
+    const index = i * 3 - 1;
+    if (index < length) {
+      numberSpans[index].before(',');
     }
   }
 }
 
-function counting(number, index) {
+// 숫자 count up
+function counting(span, index) {
   let count = 0;
+
   const plus = setInterval(() => {
     count++;
-    if (count < 10) {
-      number.innerHTML = count;
-    } else if (count >= 10) {
-      number.innerHTML = count.toString().substring(1);
+    span.innerHTML = count < 10 ? count : count.toString().substring(1);
+
+    if (count >= 10) {
       if (count.toString().substring(1) === targetNumberArray[index]) {
         clearInterval(plus);
       }
@@ -55,11 +46,12 @@ function counting(number, index) {
   }, 30);
 }
 
+// count 시작
 export function countingStart() {
-  numberSpanArray.forEach((number, index) => {
-    number.innerHTML = 0;
+  numberSpanArray.forEach((span, index) => {
+    span.innerHTML = 0;
     setTimeout(() => {
-      counting(number, index);
+      counting(span, index);
     }, index * 100);
   });
 }
